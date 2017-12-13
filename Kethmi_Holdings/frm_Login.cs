@@ -34,6 +34,9 @@ namespace Kethmi_Holdings
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            db.insertUpdateDelete("INSERT INTO tblUser values('something','"+tb_username.Text+"','"+tb_passsword.Text+"','manager','0766613021',0)");
+            MessageBox.Show("huraay");
+            (new frm_Main()).Show();
         }
     }
 }
