@@ -16,5 +16,10 @@ namespace Kethmi_Holdings
         {
             InitializeComponent();
         }
+
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+             
+        }
     }
 }
