@@ -16,10 +16,10 @@ namespace Kethmi_Holdings
         {
             InitializeComponent();
         }
-
+        Database db;
         private void frm_Login_Load(object sender, EventArgs e)
         {
-             
+            db = new Database();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -30,6 +30,10 @@ namespace Kethmi_Holdings
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
         }
     }
 }

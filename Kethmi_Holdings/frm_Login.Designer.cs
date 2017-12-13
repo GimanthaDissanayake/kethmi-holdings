@@ -43,12 +43,13 @@
             // btn_login
             // 
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.Location = new System.Drawing.Point(337, 266);
+            this.btn_login.Location = new System.Drawing.Point(415, 269);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(72, 32);
             this.btn_login.TabIndex = 0;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // pictureBox1
             // 

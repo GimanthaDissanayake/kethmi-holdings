@@ -18,7 +18,7 @@ namespace Kethmi_Holdings
 
         public Database()
         {
-            con = new SqlConnection("Data Source=DESKTOP-H8M7COJ\\SQLEXPRESS;Initial Catalog=Inventory_System;Integrated Security=True");
+            con = new SqlConnection("Data Source=DESKTOP-H8M7COJ;Initial Catalog=Kethmi_Holdings_Lands;Persist Security Info=True;User ID=admin;Password=12345");
         }
 
         public int insertUpdateDelete(String query)
