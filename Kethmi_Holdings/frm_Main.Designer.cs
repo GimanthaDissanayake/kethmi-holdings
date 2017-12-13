@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(995, 555);
             this.IsMdiContainer = true;
             this.Name = "frm_Main";
-            this.Text = "Kethmi Holdings Lands";
+            this.Text = "Kethmi Holdings (PVT) LTD.";
             this.ResumeLayout(false);
 
         }
