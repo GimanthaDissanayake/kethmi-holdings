@@ -67,6 +67,8 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
+            this.menuStrip1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuStrip1.BackgroundImage")));
+            this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.operationsToolStripMenuItem,
@@ -89,6 +91,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.White;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripButton,
             this.openToolStripButton,
@@ -332,6 +335,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(995, 555);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
