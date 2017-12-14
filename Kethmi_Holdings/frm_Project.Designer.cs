@@ -85,7 +85,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(420, 235);
+            this.groupBox1.Size = new System.Drawing.Size(432, 235);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "List Of Projects";
@@ -96,7 +96,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(9, 253);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(420, 366);
+            this.groupBox2.Size = new System.Drawing.Size(432, 366);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Results";
@@ -164,7 +164,7 @@
             this.dataGridView_projectList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_projectList.Location = new System.Drawing.Point(3, 18);
             this.dataGridView_projectList.Name = "dataGridView_projectList";
-            this.dataGridView_projectList.Size = new System.Drawing.Size(414, 214);
+            this.dataGridView_projectList.Size = new System.Drawing.Size(426, 214);
             this.dataGridView_projectList.TabIndex = 0;
             // 
             // dataGridView_results
@@ -173,7 +173,7 @@
             this.dataGridView_results.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_results.Location = new System.Drawing.Point(3, 18);
             this.dataGridView_results.Name = "dataGridView_results";
-            this.dataGridView_results.Size = new System.Drawing.Size(414, 345);
+            this.dataGridView_results.Size = new System.Drawing.Size(426, 345);
             this.dataGridView_results.TabIndex = 0;
             // 
             // label2
