@@ -33,8 +33,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_projectList = new System.Windows.Forms.DataGridView();
+            this.dataGridView_results = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,25 +63,25 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_unsellable = new System.Windows.Forms.TextBox();
+            this.txt_dedReservations = new System.Windows.Forms.TextBox();
+            this.txt_dedRoadways = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_sellable = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_sellableAreaCost = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_period = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_projectList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_results)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dataGridView_projectList);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -92,7 +92,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
+            this.groupBox2.Controls.Add(this.dataGridView_results);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(9, 253);
             this.groupBox2.Name = "groupBox2";
@@ -113,17 +113,17 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.txt_period);
             this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.txt_sellableAreaCost);
             this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.txt_sellable);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.txt_unsellable);
+            this.groupBox3.Controls.Add(this.txt_dedReservations);
+            this.groupBox3.Controls.Add(this.txt_dedRoadways);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.txt_totCost);
@@ -158,23 +158,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Add/Update Projects";
             // 
-            // dataGridView1
+            // dataGridView_projectList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(414, 214);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView_projectList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_projectList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_projectList.Location = new System.Drawing.Point(3, 18);
+            this.dataGridView_projectList.Name = "dataGridView_projectList";
+            this.dataGridView_projectList.Size = new System.Drawing.Size(414, 214);
+            this.dataGridView_projectList.TabIndex = 0;
             // 
-            // dataGridView2
+            // dataGridView_results
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 18);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(414, 345);
-            this.dataGridView2.TabIndex = 0;
+            this.dataGridView_results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_results.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_results.Location = new System.Drawing.Point(3, 18);
+            this.dataGridView_results.Name = "dataGridView_results";
+            this.dataGridView_results.Size = new System.Drawing.Size(414, 345);
+            this.dataGridView_results.TabIndex = 0;
             // 
             // label2
             // 
@@ -405,26 +405,26 @@
             this.label17.TabIndex = 31;
             this.label17.Text = "For Roadways";
             // 
-            // textBox1
+            // txt_unsellable
             // 
-            this.textBox1.Location = new System.Drawing.Point(225, 466);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 22);
-            this.textBox1.TabIndex = 30;
+            this.txt_unsellable.Location = new System.Drawing.Point(225, 466);
+            this.txt_unsellable.Name = "txt_unsellable";
+            this.txt_unsellable.Size = new System.Drawing.Size(111, 22);
+            this.txt_unsellable.TabIndex = 30;
             // 
-            // textBox2
+            // txt_dedReservations
             // 
-            this.textBox2.Location = new System.Drawing.Point(225, 435);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(111, 22);
-            this.textBox2.TabIndex = 29;
+            this.txt_dedReservations.Location = new System.Drawing.Point(225, 435);
+            this.txt_dedReservations.Name = "txt_dedReservations";
+            this.txt_dedReservations.Size = new System.Drawing.Size(111, 22);
+            this.txt_dedReservations.TabIndex = 29;
             // 
-            // textBox3
+            // txt_dedRoadways
             // 
-            this.textBox3.Location = new System.Drawing.Point(225, 407);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(111, 22);
-            this.textBox3.TabIndex = 28;
+            this.txt_dedRoadways.Location = new System.Drawing.Point(225, 407);
+            this.txt_dedRoadways.Name = "txt_dedRoadways";
+            this.txt_dedRoadways.Size = new System.Drawing.Size(111, 22);
+            this.txt_dedRoadways.TabIndex = 28;
             // 
             // label18
             // 
@@ -435,12 +435,12 @@
             this.label18.TabIndex = 35;
             this.label18.Text = "Sellable Area";
             // 
-            // textBox4
+            // txt_sellable
             // 
-            this.textBox4.Location = new System.Drawing.Point(225, 494);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(111, 22);
-            this.textBox4.TabIndex = 34;
+            this.txt_sellable.Location = new System.Drawing.Point(225, 494);
+            this.txt_sellable.Name = "txt_sellable";
+            this.txt_sellable.Size = new System.Drawing.Size(111, 22);
+            this.txt_sellable.TabIndex = 34;
             // 
             // label19
             // 
@@ -451,12 +451,12 @@
             this.label19.TabIndex = 37;
             this.label19.Text = "Cost of Sellable Area";
             // 
-            // textBox5
+            // txt_sellableAreaCost
             // 
-            this.textBox5.Location = new System.Drawing.Point(225, 522);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(249, 22);
-            this.textBox5.TabIndex = 36;
+            this.txt_sellableAreaCost.Location = new System.Drawing.Point(225, 522);
+            this.txt_sellableAreaCost.Name = "txt_sellableAreaCost";
+            this.txt_sellableAreaCost.Size = new System.Drawing.Size(249, 22);
+            this.txt_sellableAreaCost.TabIndex = 36;
             // 
             // label20
             // 
@@ -467,12 +467,12 @@
             this.label20.TabIndex = 39;
             this.label20.Text = "Period of Project(months)";
             // 
-            // textBox6
+            // txt_period
             // 
-            this.textBox6.Location = new System.Drawing.Point(225, 559);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(168, 22);
-            this.textBox6.TabIndex = 38;
+            this.txt_period.Location = new System.Drawing.Point(225, 559);
+            this.txt_period.Name = "txt_period";
+            this.txt_period.Size = new System.Drawing.Size(168, 22);
+            this.txt_period.TabIndex = 38;
             // 
             // frm_Project
             // 
@@ -490,8 +490,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_projectList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_results)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -499,9 +499,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_projectList;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView_results;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txt_broker;
@@ -527,17 +527,17 @@
         private System.Windows.Forms.TextBox txt_acres;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_period;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_sellableAreaCost;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_sellable;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_unsellable;
+        private System.Windows.Forms.TextBox txt_dedReservations;
+        private System.Windows.Forms.TextBox txt_dedRoadways;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_totCost;
