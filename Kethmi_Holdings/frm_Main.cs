@@ -23,5 +23,10 @@ namespace Kethmi_Holdings
             f.MdiParent = this;
             f.Show();
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
