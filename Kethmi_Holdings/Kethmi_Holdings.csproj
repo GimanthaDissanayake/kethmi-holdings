@@ -127,6 +127,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="icons\add.png" />
+    <None Include="icons\cancel.png" />
+    <None Include="icons\delete.png" />
+    <None Include="icons\edit.png" />
+    <None Include="icons\print.png" />
+    <None Include="icons\save.png" />
     <Content Include="logo.ico" />
     <None Include="icons\name.png" />
     <None Include="icons\kethmi.jpg" />
