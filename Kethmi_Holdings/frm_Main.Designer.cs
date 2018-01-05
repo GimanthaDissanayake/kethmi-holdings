@@ -30,14 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.newToolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.openToolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.saveToolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.printToolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.cutToolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btn_add = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_edit = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_save = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_print = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.Btn_delete = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cityDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,10 +50,6 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2.SuspendLayout();
@@ -63,15 +62,15 @@
             this.toolStrip2.AutoSize = false;
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripButton1,
+            this.btn_add,
             this.toolStripSeparator1,
-            this.openToolStripButton1,
+            this.btn_edit,
             this.toolStripSeparator2,
-            this.saveToolStripButton1,
+            this.btn_save,
             this.toolStripSeparator3,
-            this.printToolStripButton1,
+            this.btn_print,
             this.toolStripSeparator4,
-            this.cutToolStripButton1});
+            this.Btn_delete});
             this.toolStrip2.Location = new System.Drawing.Point(0, 24);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(81, 531);
@@ -79,65 +78,89 @@
             this.toolStrip2.Text = "ts_tools";
             this.toolStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip2_ItemClicked);
             // 
-            // newToolStripButton1
+            // btn_add
             // 
-            this.newToolStripButton1.BackColor = System.Drawing.Color.Transparent;
-            this.newToolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.newToolStripButton1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newToolStripButton1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.newToolStripButton1.Image = global::Kethmi_Holdings.Properties.Resources.add;
-            this.newToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.newToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newToolStripButton1.Name = "newToolStripButton1";
-            this.newToolStripButton1.Size = new System.Drawing.Size(79, 59);
-            this.newToolStripButton1.Tag = "";
-            this.newToolStripButton1.Text = " Add";
-            this.newToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.newToolStripButton1.Click += new System.EventHandler(this.newToolStripButton1_Click);
+            this.btn_add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_add.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_add.Image = global::Kethmi_Holdings.Properties.Resources.add;
+            this.btn_add.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btn_add.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(79, 59);
+            this.btn_add.Tag = "";
+            this.btn_add.Text = "Add";
+            this.btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // openToolStripButton1
+            // toolStripSeparator1
             // 
-            this.openToolStripButton1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openToolStripButton1.Image = global::Kethmi_Holdings.Properties.Resources.edit;
-            this.openToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.openToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.openToolStripButton1.Name = "openToolStripButton1";
-            this.openToolStripButton1.Size = new System.Drawing.Size(79, 59);
-            this.openToolStripButton1.Text = "&Open";
-            this.openToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(79, 6);
             // 
-            // saveToolStripButton1
+            // btn_edit
             // 
-            this.saveToolStripButton1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveToolStripButton1.Image = global::Kethmi_Holdings.Properties.Resources.save;
-            this.saveToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.saveToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripButton1.Name = "saveToolStripButton1";
-            this.saveToolStripButton1.Size = new System.Drawing.Size(79, 59);
-            this.saveToolStripButton1.Text = "&Save";
-            this.saveToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_edit.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.Image = global::Kethmi_Holdings.Properties.Resources.edit;
+            this.btn_edit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btn_edit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(79, 59);
+            this.btn_edit.Text = "Edit";
+            this.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
-            // printToolStripButton1
+            // toolStripSeparator2
             // 
-            this.printToolStripButton1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printToolStripButton1.Image = global::Kethmi_Holdings.Properties.Resources.print;
-            this.printToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.printToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripButton1.Name = "printToolStripButton1";
-            this.printToolStripButton1.Size = new System.Drawing.Size(79, 59);
-            this.printToolStripButton1.Text = "&Print";
-            this.printToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(79, 6);
             // 
-            // cutToolStripButton1
+            // btn_save
             // 
-            this.cutToolStripButton1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cutToolStripButton1.Image = global::Kethmi_Holdings.Properties.Resources.delete;
-            this.cutToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.cutToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.cutToolStripButton1.Name = "cutToolStripButton1";
-            this.cutToolStripButton1.Size = new System.Drawing.Size(79, 59);
-            this.cutToolStripButton1.Text = "C&ut";
-            this.cutToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_save.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.Image = global::Kethmi_Holdings.Properties.Resources.save;
+            this.btn_save.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btn_save.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(79, 59);
+            this.btn_save.Text = "Save";
+            this.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(79, 6);
+            // 
+            // btn_print
+            // 
+            this.btn_print.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_print.Image = global::Kethmi_Holdings.Properties.Resources.print;
+            this.btn_print.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btn_print.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(79, 59);
+            this.btn_print.Text = "Print";
+            this.btn_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(79, 6);
+            // 
+            // Btn_delete
+            // 
+            this.Btn_delete.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_delete.Image = global::Kethmi_Holdings.Properties.Resources.delete;
+            this.Btn_delete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.Btn_delete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Btn_delete.Name = "Btn_delete";
+            this.Btn_delete.Size = new System.Drawing.Size(79, 59);
+            this.Btn_delete.Text = "Delete";
+            this.Btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Btn_delete.Click += new System.EventHandler(this.Btn_delete_Click);
             // 
             // menuStrip1
             // 
@@ -162,17 +185,9 @@
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cityDetailsToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.fileToolStripMenuItem.Text = "Master Files";
-            // 
-            // cityDetailsToolStripMenuItem
-            // 
-            this.cityDetailsToolStripMenuItem.Name = "cityDetailsToolStripMenuItem";
-            this.cityDetailsToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.cityDetailsToolStripMenuItem.Text = "City Details";
             // 
             // operationsToolStripMenuItem
             // 
@@ -186,8 +201,8 @@
             // projectToolStripMenuItem
             // 
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
-            this.projectToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.projectToolStripMenuItem.Text = "Project";
+            this.projectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.projectToolStripMenuItem.Text = " Project Data";
             this.projectToolStripMenuItem.Click += new System.EventHandler(this.projectToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
@@ -231,26 +246,6 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
             this.toolStripMenuItem2.Text = " ";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(79, 6);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(79, 6);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(79, 6);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(79, 6);
             // 
             // toolStrip1
             // 
@@ -310,14 +305,13 @@
         private System.Windows.Forms.ToolStripMenuItem aboutUsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton newToolStripButton1;
-        private System.Windows.Forms.ToolStripButton openToolStripButton1;
-        private System.Windows.Forms.ToolStripButton saveToolStripButton1;
-        private System.Windows.Forms.ToolStripButton printToolStripButton1;
-        private System.Windows.Forms.ToolStripButton cutToolStripButton1;
+        private System.Windows.Forms.ToolStripButton btn_add;
+        private System.Windows.Forms.ToolStripButton btn_edit;
+        private System.Windows.Forms.ToolStripButton btn_save;
+        private System.Windows.Forms.ToolStripButton btn_print;
+        private System.Windows.Forms.ToolStripButton Btn_delete;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem cityDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem projectToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;

@@ -16,5 +16,21 @@ namespace Kethmi_Holdings
         {
             InitializeComponent();
         }
+        Form formArg;
+        public frm_Project(Form f)
+        {
+            InitializeComponent();
+            formArg = f;
+        }
+
+        private void frm_Project_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_Project_FormClosing(object sender, FormClosingEventArgs e) {
+            formArg = null;
+            MessageBox.Show(this,"Done");
+        }
     }
 }

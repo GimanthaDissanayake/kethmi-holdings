@@ -33,20 +33,42 @@ namespace Kethmi_Holdings
         {
 
         }
-
+        frm_Project frm;
         private void projectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_Project frm = new frm_Project();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void newToolStripButton1_Click(object sender, EventArgs e)
-        {
-
+            if (frm == null) {
+                frm = new frm_Project(frm);
+                frm.MdiParent = this;
+                frm.Show();
+            }
         }
 
         private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_delete_Click(object sender, EventArgs e)
         {
 
         }
