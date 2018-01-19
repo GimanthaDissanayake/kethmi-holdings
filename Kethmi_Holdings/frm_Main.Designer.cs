@@ -51,7 +51,17 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btnProjects = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnSales = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAdvertising = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnReports = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnReciepts = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnCustomers = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -76,7 +86,6 @@
             this.toolStrip2.Size = new System.Drawing.Size(81, 531);
             this.toolStrip2.TabIndex = 4;
             this.toolStrip2.Text = "ts_tools";
-            this.toolStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip2_ItemClicked);
             // 
             // btn_add
             // 
@@ -92,7 +101,6 @@
             this.btn_add.Tag = "";
             this.btn_add.Text = "Add";
             this.btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // toolStripSeparator1
             // 
@@ -109,7 +117,6 @@
             this.btn_edit.Size = new System.Drawing.Size(79, 59);
             this.btn_edit.Text = "Edit";
             this.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // toolStripSeparator2
             // 
@@ -126,7 +133,6 @@
             this.btn_save.Size = new System.Drawing.Size(79, 59);
             this.btn_save.Text = "Save";
             this.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // toolStripSeparator3
             // 
@@ -143,7 +149,6 @@
             this.btn_print.Size = new System.Drawing.Size(79, 59);
             this.btn_print.Text = "Print";
             this.btn_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // toolStripSeparator4
             // 
@@ -160,7 +165,6 @@
             this.Btn_delete.Size = new System.Drawing.Size(79, 59);
             this.Btn_delete.Text = "Delete";
             this.Btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Btn_delete.Click += new System.EventHandler(this.Btn_delete_Click);
             // 
             // menuStrip1
             // 
@@ -196,7 +200,6 @@
             this.operationsToolStripMenuItem.Name = "operationsToolStripMenuItem";
             this.operationsToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.operationsToolStripMenuItem.Text = "Operations";
-            this.operationsToolStripMenuItem.Click += new System.EventHandler(this.operationsToolStripMenuItem_Click);
             // 
             // projectToolStripMenuItem
             // 
@@ -249,22 +252,110 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.AutoSize = false;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
+            this.btnProjects,
+            this.toolStripSeparator5,
+            this.btnSales,
+            this.toolStripSeparator6,
+            this.btnAdvertising,
+            this.toolStripSeparator7,
+            this.btnReports,
+            this.toolStripSeparator8,
+            this.btnReciepts,
+            this.toolStripSeparator9,
+            this.btnCustomers});
             this.toolStrip1.Location = new System.Drawing.Point(81, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(914, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(914, 55);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // btnProjects
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.btnProjects.Image = global::Kethmi_Holdings.Properties.Resources.kethmi;
+            this.btnProjects.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnProjects.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnProjects.Name = "btnProjects";
+            this.btnProjects.Size = new System.Drawing.Size(90, 52);
+            this.btnProjects.Text = "Projects";
+            this.btnProjects.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnProjects.Click += new System.EventHandler(this.btnProjects_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 55);
+            // 
+            // btnSales
+            // 
+            this.btnSales.Image = ((System.Drawing.Image)(resources.GetObject("btnSales.Image")));
+            this.btnSales.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSales.Name = "btnSales";
+            this.btnSales.Size = new System.Drawing.Size(37, 52);
+            this.btnSales.Text = "Sales";
+            this.btnSales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 55);
+            // 
+            // btnAdvertising
+            // 
+            this.btnAdvertising.Image = ((System.Drawing.Image)(resources.GetObject("btnAdvertising.Image")));
+            this.btnAdvertising.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAdvertising.Name = "btnAdvertising";
+            this.btnAdvertising.Size = new System.Drawing.Size(71, 52);
+            this.btnAdvertising.Text = "Advertising";
+            this.btnAdvertising.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAdvertising.Click += new System.EventHandler(this.btnAdvertising_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 55);
+            // 
+            // btnReports
+            // 
+            this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
+            this.btnReports.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(51, 52);
+            this.btnReports.Text = "Reports";
+            this.btnReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 55);
+            // 
+            // btnReciepts
+            // 
+            this.btnReciepts.Image = ((System.Drawing.Image)(resources.GetObject("btnReciepts.Image")));
+            this.btnReciepts.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReciepts.Name = "btnReciepts";
+            this.btnReciepts.Size = new System.Drawing.Size(55, 52);
+            this.btnReciepts.Text = "Reciepts";
+            this.btnReciepts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReciepts.Click += new System.EventHandler(this.btnReciepts_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 55);
+            // 
+            // btnCustomers
+            // 
+            this.btnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomers.Image")));
+            this.btnCustomers.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCustomers.Name = "btnCustomers";
+            this.btnCustomers.Size = new System.Drawing.Size(68, 52);
+            this.btnCustomers.Text = "Customers";
+            this.btnCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
             // frm_Main
             // 
@@ -318,7 +409,17 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btnProjects;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton btnSales;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton btnAdvertising;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripButton btnReports;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripButton btnReciepts;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripButton btnCustomers;
     }
 }
 

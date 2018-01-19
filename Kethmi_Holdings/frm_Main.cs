@@ -12,6 +12,12 @@ namespace Kethmi_Holdings
 {
     public partial class frm_Main : Form
     {
+        frm_Project frmProject;
+        frm_Advertising frmAdvertising;
+        frm_Customers frmCustomers;
+        frm_Reports frmReports;
+        frm_Sales frmSales;
+        frm_Recipts frmRecipts;
         public frm_Main()
         {
             InitializeComponent();
@@ -24,53 +30,55 @@ namespace Kethmi_Holdings
             f.Show();
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
 
-        }
 
-        private void operationsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-        frm_Project frm;
         private void projectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (frm == null) {
-                frm = new frm_Project(frm);
-                frm.MdiParent = this;
-                frm.Show();
-            }
+            frmProject = new frm_Project();
+            frmProject.MdiParent = this;
+            frmProject.Show();
         }
 
-        private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void btnProjects_Click(object sender, EventArgs e)
         {
-
+            frmProject = new frm_Project();
+            frmProject.MdiParent = this;
+            frmProject.Show();
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
+        private void btnSales_Click(object sender, EventArgs e)
         {
-
+            frmSales = new frm_Sales();
+            frmSales.MdiParent = this;
+            frmSales.Show();
         }
 
-        private void btn_edit_Click(object sender, EventArgs e)
+        private void btnAdvertising_Click(object sender, EventArgs e)
         {
-
+            frmAdvertising = new frm_Advertising();
+            frmAdvertising.MdiParent = this;
+            frmAdvertising.Show();
         }
 
-        private void btn_save_Click(object sender, EventArgs e)
+        private void btnReports_Click(object sender, EventArgs e)
         {
-
+            frmReports = new frm_Reports();
+            frmReports.MdiParent = this;
+            frmReports.Show();
         }
 
-        private void btn_print_Click(object sender, EventArgs e)
+        private void btnReciepts_Click(object sender, EventArgs e)
         {
-
+            frmRecipts = new frm_Recipts();
+            frmRecipts.MdiParent = this;
+            frmRecipts.Show();
         }
 
-        private void Btn_delete_Click(object sender, EventArgs e)
+        private void btnCustomers_Click(object sender, EventArgs e)
         {
-
+            frmCustomers = new frm_Customers();
+            frmCustomers.MdiParent = this;
+            frmCustomers.Show();
         }
     }
 }
