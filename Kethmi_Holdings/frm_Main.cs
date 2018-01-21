@@ -23,31 +23,30 @@ namespace Kethmi_Holdings
             InitializeComponent();
         }
 
+        public bool setBtnAdd { set { btn_add.Enabled = value; } }
+        public bool setBtnEdit { set { btn_edit.Enabled = value; } }
+        public bool setBtnSave { set { btn_save.Enabled = value; } }
+        public bool setBtnPrint { set { btn_print.Enabled = value; } }
+        public bool setBtnDelete { set { Btn_delete.Enabled = value; } }
+
+
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_Login f = new frm_Login();
             f.MdiParent = this;
             f.Show();
         }
-
-
-
+        
         private void projectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProject = new frm_Project();
-            frmProject.FormClosed += new FormClosedEventHandler(frmProject_FormClosed);
-
-            frmProject.MdiParent = this;
-            frmProject.Show();
-            projectToolStripMenuItem.Enabled = false;
-            btnProjects.Enabled = false;
+            btnProjects_Click(sender,e);
         }
 
         private void btnProjects_Click(object sender, EventArgs e)
         {
             frmProject = new frm_Project();
             frmProject.FormClosed += new FormClosedEventHandler(frmProject_FormClosed);
-
+            CommonClass.setToolTipStates(true, true, false, false, true);
             frmProject.MdiParent = this;
             frmProject.Show();
             btnProjects.Enabled = false;
@@ -56,6 +55,7 @@ namespace Kethmi_Holdings
 
         private void frmProject_FormClosed(object sender, EventArgs e) {
             btnProjects.Enabled = true;
+            CommonClass.setToolTipStates(false);
             projectToolStripMenuItem.Enabled = true;
         }
 
@@ -126,6 +126,36 @@ namespace Kethmi_Holdings
         private void frmCustomers_FormClosed(object sender, EventArgs e)
         {
             btnCustomers.Enabled = true;
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void frm_Main_Load(object sender, EventArgs e)
+        {
+            //set all the side bar buttons into false
+            CommonClass.setToolTipStates(false);
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild == frmProject)
+            {
+                CommonClass.setToolTipStates(false, false, true, false, false);
+                frmProject.setGbProjectSearchEnabled = false;
+                frmProject.setTcProjectsEnabled = true;
+            }
+        }
+
+        private void frm_Main_Load_1(object sender, EventArgs e)
+        {
+            CommonClass.setToolTipStates(false);
+        }
+
+        private void ts_main_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

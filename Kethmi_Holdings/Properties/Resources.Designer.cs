@@ -153,6 +153,16 @@ namespace Kethmi_Holdings.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap projects {
+            get {
+                object obj = ResourceManager.GetObject("projects", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap receipts {
             get {
                 object obj = ResourceManager.GetObject("receipts", resourceCulture);

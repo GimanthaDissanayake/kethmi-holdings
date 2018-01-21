@@ -22,15 +22,18 @@ namespace Kethmi_Holdings
             InitializeComponent();
             formArg = f;
         }
+        
+        public bool setGbProjectSearchEnabled { set { gb_projectSearch.Enabled = value; } }
+        public bool setTcProjectsEnabled { set { tc_project.Enabled = value; } }
+
 
         private void frm_Project_Load(object sender, EventArgs e)
         {
-
+            tc_project.Enabled = false;
         }
 
         private void frm_Project_FormClosing(object sender, FormClosingEventArgs e) {
-            formArg = null;
-            MessageBox.Show(this,"Done");
+            
         }
 
         private void frm_Project_FormClosing_1(object sender, FormClosingEventArgs e)

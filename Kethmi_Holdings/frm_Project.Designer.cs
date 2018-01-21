@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Project));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gb_projectSearch = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.dataGridView_projectList = new System.Windows.Forms.DataGridView();
@@ -55,7 +55,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ProjectTabControl = new System.Windows.Forms.TabControl();
+            this.tc_project = new System.Windows.Forms.TabControl();
             this.tab_basic = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -213,9 +213,9 @@
             this.textBox53 = new System.Windows.Forms.TextBox();
             this.label65 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.groupBox1.SuspendLayout();
+            this.gb_projectSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_projectList)).BeginInit();
-            this.ProjectTabControl.SuspendLayout();
+            this.tc_project.SuspendLayout();
             this.tab_basic.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -235,18 +235,18 @@
             this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gb_projectSearch
             // 
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.txt_search);
-            this.groupBox1.Controls.Add(this.dataGridView_projectList);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(250, 484);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "List Of Projects";
+            this.gb_projectSearch.Controls.Add(this.label22);
+            this.gb_projectSearch.Controls.Add(this.txt_search);
+            this.gb_projectSearch.Controls.Add(this.dataGridView_projectList);
+            this.gb_projectSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.gb_projectSearch.Location = new System.Drawing.Point(12, 12);
+            this.gb_projectSearch.Name = "gb_projectSearch";
+            this.gb_projectSearch.Size = new System.Drawing.Size(250, 484);
+            this.gb_projectSearch.TabIndex = 0;
+            this.gb_projectSearch.TabStop = false;
+            this.gb_projectSearch.Text = "List Of Projects";
             // 
             // label22
             // 
@@ -474,18 +474,18 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Owner";
             // 
-            // ProjectTabControl
+            // tc_project
             // 
-            this.ProjectTabControl.Controls.Add(this.tab_basic);
-            this.ProjectTabControl.Controls.Add(this.tab_costofpurchase);
-            this.ProjectTabControl.Controls.Add(this.tabPage2);
-            this.ProjectTabControl.Controls.Add(this.tabPage3);
-            this.ProjectTabControl.Controls.Add(this.tabPage6);
-            this.ProjectTabControl.Location = new System.Drawing.Point(268, 13);
-            this.ProjectTabControl.Name = "ProjectTabControl";
-            this.ProjectTabControl.SelectedIndex = 0;
-            this.ProjectTabControl.Size = new System.Drawing.Size(738, 499);
-            this.ProjectTabControl.TabIndex = 3;
+            this.tc_project.Controls.Add(this.tab_basic);
+            this.tc_project.Controls.Add(this.tab_costofpurchase);
+            this.tc_project.Controls.Add(this.tabPage2);
+            this.tc_project.Controls.Add(this.tabPage3);
+            this.tc_project.Controls.Add(this.tabPage6);
+            this.tc_project.Location = new System.Drawing.Point(268, 13);
+            this.tc_project.Name = "tc_project";
+            this.tc_project.SelectedIndex = 0;
+            this.tc_project.Size = new System.Drawing.Size(738, 499);
+            this.tc_project.TabIndex = 3;
             // 
             // tab_basic
             // 
@@ -2162,8 +2162,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1018, 513);
-            this.Controls.Add(this.ProjectTabControl);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.tc_project);
+            this.Controls.Add(this.gb_projectSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(82, 65);
@@ -2173,10 +2173,10 @@
             this.Text = "Projects";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Project_FormClosing_1);
             this.Load += new System.EventHandler(this.frm_Project_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gb_projectSearch.ResumeLayout(false);
+            this.gb_projectSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_projectList)).EndInit();
-            this.ProjectTabControl.ResumeLayout(false);
+            this.tc_project.ResumeLayout(false);
             this.tab_basic.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
@@ -2211,7 +2211,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gb_projectSearch;
         private System.Windows.Forms.DataGridView dataGridView_projectList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_broker;
@@ -2236,7 +2236,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_totCost;
         private System.Windows.Forms.TextBox txt_search;
-        private System.Windows.Forms.TabControl ProjectTabControl;
+        private System.Windows.Forms.TabControl tc_project;
         private System.Windows.Forms.TabPage tab_basic;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label21;

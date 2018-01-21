@@ -184,6 +184,7 @@
     <None Include="icons\reports.png" />
     <None Include="icons\receipts.png" />
     <None Include="icons\customer.png" />
+    <None Include="icons\projects.png" />
     <Content Include="logo.ico" />
     <None Include="icons\name.png" />
     <None Include="icons\kethmi.jpg" />

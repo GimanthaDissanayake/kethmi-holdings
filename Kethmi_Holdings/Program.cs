@@ -8,6 +8,7 @@ namespace Kethmi_Holdings
 {
     static class Program
     {
+        static frm_Main main;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +17,11 @@ namespace Kethmi_Holdings
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Main());
+            main = new frm_Main();
+            Application.Run(main);
+        }
+        public static frm_Main getMainForm() {
+            return main;
         }
     }
 }
