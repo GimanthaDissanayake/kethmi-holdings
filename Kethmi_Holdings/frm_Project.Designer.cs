@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Project));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.dataGridView_projectList = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,6 +66,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.textBox65 = new System.Windows.Forms.TextBox();
+            this.label82 = new System.Windows.Forms.Label();
             this.tab_costofpurchase = new System.Windows.Forms.TabPage();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -210,9 +213,6 @@
             this.textBox53 = new System.Windows.Forms.TextBox();
             this.label65 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.textBox65 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_projectList)).BeginInit();
             this.ProjectTabControl.SuspendLayout();
@@ -247,6 +247,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "List Of Projects";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label22.Location = new System.Drawing.Point(6, 428);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(130, 13);
+            this.label22.TabIndex = 10;
+            this.label22.Text = "Search with Project Name";
             // 
             // txt_search
             // 
@@ -606,6 +616,24 @@
             this.groupBox9.TabIndex = 35;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Profile";
+            // 
+            // textBox65
+            // 
+            this.textBox65.Location = new System.Drawing.Point(488, 19);
+            this.textBox65.Multiline = true;
+            this.textBox65.Name = "textBox65";
+            this.textBox65.Size = new System.Drawing.Size(227, 94);
+            this.textBox65.TabIndex = 11;
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.Location = new System.Drawing.Point(418, 22);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(63, 13);
+            this.label82.TabIndex = 10;
+            this.label82.Text = "Introduction";
             // 
             // tab_costofpurchase
             // 
@@ -2128,34 +2156,6 @@
             this.label65.TabIndex = 0;
             this.label65.Text = "Cost of Project (LKR)";
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label22.Location = new System.Drawing.Point(6, 428);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(130, 13);
-            this.label22.TabIndex = 10;
-            this.label22.Text = "Search with Project Name";
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.Location = new System.Drawing.Point(418, 22);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(63, 13);
-            this.label82.TabIndex = 10;
-            this.label82.Text = "Introduction";
-            // 
-            // textBox65
-            // 
-            this.textBox65.Location = new System.Drawing.Point(488, 19);
-            this.textBox65.Multiline = true;
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(227, 94);
-            this.textBox65.TabIndex = 11;
-            // 
             // frm_Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2164,9 +2164,14 @@
             this.ClientSize = new System.Drawing.Size(1018, 513);
             this.Controls.Add(this.ProjectTabControl);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(82, 65);
+            this.MaximizeBox = false;
             this.Name = "frm_Project";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Projects";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Project_FormClosing_1);
             this.Load += new System.EventHandler(this.frm_Project_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

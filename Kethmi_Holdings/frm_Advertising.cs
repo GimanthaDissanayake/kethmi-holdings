@@ -16,5 +16,10 @@ namespace Kethmi_Holdings
         {
             InitializeComponent();
         }
+
+        private void frm_Advertising_Load(object sender, EventArgs e)
+        {
+             
+        }
     }
 }

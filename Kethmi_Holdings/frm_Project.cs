@@ -32,5 +32,9 @@ namespace Kethmi_Holdings
             formArg = null;
             MessageBox.Show(this,"Done");
         }
+
+        private void frm_Project_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }

@@ -320,7 +320,10 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txt_projectName);
             this.Controls.Add(this.label2);
+            this.Location = new System.Drawing.Point(82, 65);
+            this.MaximizeBox = false;
             this.Name = "frm_Main_Receipt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Input Reciept Details";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

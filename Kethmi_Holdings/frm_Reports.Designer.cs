@@ -35,6 +35,7 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 47);
@@ -44,18 +45,20 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(153, 12);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(12, 74);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 47);
+            this.button2.Size = new System.Drawing.Size(135, 47);
             this.button2.TabIndex = 1;
             this.button2.Text = "Customer Details Sheet";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(278, 12);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(12, 137);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 47);
+            this.button3.Size = new System.Drawing.Size(135, 47);
             this.button3.TabIndex = 2;
             this.button3.Text = "Advertising Details Report";
             this.button3.UseVisualStyleBackColor = true;
@@ -68,7 +71,10 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Location = new System.Drawing.Point(82, 65);
+            this.MaximizeBox = false;
             this.Name = "frm_Reports";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frm_Reports";
             this.ResumeLayout(false);
 

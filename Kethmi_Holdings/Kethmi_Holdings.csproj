@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonClass.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="frm_Advertising.cs">
       <SubType>Form</SubType>
@@ -121,6 +122,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_Advertising.resx">
+      <DependentUpon>frm_Advertising.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Customers.resx">
       <DependentUpon>frm_Customers.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Reports.resx">
       <DependentUpon>frm_Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Sales.resx">
+      <DependentUpon>frm_Sales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,6 +179,11 @@
     <None Include="icons\edit.png" />
     <None Include="icons\print.png" />
     <None Include="icons\save.png" />
+    <None Include="icons\sales.png" />
+    <None Include="icons\advert.png" />
+    <None Include="icons\reports.png" />
+    <None Include="icons\receipts.png" />
+    <None Include="icons\customer.png" />
     <Content Include="logo.ico" />
     <None Include="icons\name.png" />
     <None Include="icons\kethmi.jpg" />
