@@ -65,6 +65,7 @@
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.userControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_side.SuspendLayout();
             this.ts_main.SuspendLayout();
             this.ms_header.SuspendLayout();
@@ -117,11 +118,8 @@
             // 
             // ts_main
             // 
-            this.ts_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.ts_main.AutoSize = false;
             this.ts_main.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ts_main.Dock = System.Windows.Forms.DockStyle.None;
             this.ts_main.GripMargin = new System.Windows.Forms.Padding(0, 40, 450, 40);
             this.ts_main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnProjects,
@@ -362,23 +360,27 @@
             // projectManagementToolStripMenuItem
             // 
             this.projectManagementToolStripMenuItem.Name = "projectManagementToolStripMenuItem";
-            this.projectManagementToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.projectManagementToolStripMenuItem.Text = "Project Management";
+            this.projectManagementToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.projectManagementToolStripMenuItem.Text = "Project Management Report";
+            this.projectManagementToolStripMenuItem.Click += new System.EventHandler(this.projectManagementToolStripMenuItem_Click);
             // 
             // customerDetailsSheetToolStripMenuItem
             // 
             this.customerDetailsSheetToolStripMenuItem.Name = "customerDetailsSheetToolStripMenuItem";
-            this.customerDetailsSheetToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.customerDetailsSheetToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.customerDetailsSheetToolStripMenuItem.Text = "Customer Details Sheet";
+            this.customerDetailsSheetToolStripMenuItem.Click += new System.EventHandler(this.customerDetailsSheetToolStripMenuItem_Click);
             // 
             // advertisingDetailsToolStripMenuItem
             // 
             this.advertisingDetailsToolStripMenuItem.Name = "advertisingDetailsToolStripMenuItem";
-            this.advertisingDetailsToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.advertisingDetailsToolStripMenuItem.Text = "Advertising Details";
+            this.advertisingDetailsToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.advertisingDetailsToolStripMenuItem.Text = "Advertising Details Report";
             // 
             // adminstrationToolStripMenuItem
             // 
+            this.adminstrationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userControlToolStripMenuItem});
             this.adminstrationToolStripMenuItem.Name = "adminstrationToolStripMenuItem";
             this.adminstrationToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.adminstrationToolStripMenuItem.Text = "Adminstration";
@@ -406,6 +408,13 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 20);
             this.toolStripMenuItem1.Text = " ";
+            // 
+            // userControlToolStripMenuItem
+            // 
+            this.userControlToolStripMenuItem.Name = "userControlToolStripMenuItem";
+            this.userControlToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.userControlToolStripMenuItem.Text = "User Control";
+            this.userControlToolStripMenuItem.Click += new System.EventHandler(this.userControlToolStripMenuItem_Click);
             // 
             // frm_Main
             // 
@@ -474,6 +483,7 @@
         private System.Windows.Forms.ToolStripMenuItem customerDetailsSheetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem advertisingDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userControlToolStripMenuItem;
     }
 }
 

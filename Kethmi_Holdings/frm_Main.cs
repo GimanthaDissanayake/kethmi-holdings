@@ -18,6 +18,9 @@ namespace Kethmi_Holdings
         frm_Reports frmReports;
         frm_Sales frmSales;
         frm_Recipts frmRecipts;
+        RptProjects rptProjects;
+        RptCustomerDetails rptCusDetails;
+        frm_UserControl frmUserCtrl;
         public frm_Main()
         {
             InitializeComponent();
@@ -156,6 +159,27 @@ namespace Kethmi_Holdings
         private void ts_main_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void projectManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rptProjects = new RptProjects();
+            rptProjects.MdiParent = this;
+            rptProjects.Show();
+        }
+
+        private void customerDetailsSheetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rptCusDetails = new RptCustomerDetails();
+            rptCusDetails.MdiParent = this;
+            rptCusDetails.Show();
+        }
+
+        private void userControlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserCtrl = new frm_UserControl();
+            frmUserCtrl.MdiParent = this;
+            frmUserCtrl.Show();
         }
     }
 }

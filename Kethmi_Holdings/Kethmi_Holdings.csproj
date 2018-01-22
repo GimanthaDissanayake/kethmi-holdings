@@ -120,8 +120,26 @@
     <Compile Include="frm_Sales.Designer.cs">
       <DependentUpon>frm_Sales.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_UserControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_UserControl.Designer.cs">
+      <DependentUpon>frm_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RptCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptCustomerDetails.Designer.cs">
+      <DependentUpon>RptCustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptProjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptProjects.Designer.cs">
+      <DependentUpon>RptProjects.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frm_Advertising.resx">
       <DependentUpon>frm_Advertising.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +167,9 @@
     <EmbeddedResource Include="frm_Sales.resx">
       <DependentUpon>frm_Sales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_UserControl.resx">
+      <DependentUpon>frm_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -159,6 +180,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RptCustomerDetails.resx">
+      <DependentUpon>RptCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptProjects.resx">
+      <DependentUpon>RptProjects.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
