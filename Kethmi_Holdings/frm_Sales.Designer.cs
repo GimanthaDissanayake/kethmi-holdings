@@ -28,22 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(89, 122);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Under Development";
             // 
             // frm_Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Location = new System.Drawing.Point(82, 65);
+            this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(82, 0);
             this.MaximizeBox = false;
             this.Name = "frm_Sales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "frm_Sales";
+            this.Text = "Sales";
+            this.Activated += new System.EventHandler(this.frm_Sales_Activated);
+            this.Deactivate += new System.EventHandler(this.frm_Sales_Deactivate);
+            this.Load += new System.EventHandler(this.frm_Sales_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -16,5 +16,24 @@ namespace Kethmi_Holdings
         {
             InitializeComponent();
         }
+
+        public bool gb_CurrentUsersEnabled {set { gb_currentUsers.Enabled = value; }}
+        public bool gb_InputAreaEnabled { set { gb_inputArea.Enabled = value; } }
+
+        private void frm_UserControl_Activated(object sender, EventArgs e)
+        {
+            lastButtonStates.restore();
+        }
+
+        private void frm_UserControl_Deactivate(object sender, EventArgs e)
+        {
+            lastButtonStates.save();
+        }
+
+        ButtonsStates lastButtonStates;
+        private void frm_UserControl_Load(object sender, EventArgs e)
+        {
+            lastButtonStates = new ButtonsStates();
+        }
     }
 }

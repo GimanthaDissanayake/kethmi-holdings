@@ -68,7 +68,9 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
+            this.Location = new System.Drawing.Point(82, 0);
             this.Name = "RptCustomerDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "RptCustomerDetails";
             this.ResumeLayout(false);
             this.PerformLayout();

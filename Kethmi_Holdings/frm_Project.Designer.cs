@@ -2166,12 +2166,13 @@
             this.Controls.Add(this.gb_projectSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(82, 65);
+            this.Location = new System.Drawing.Point(82, 0);
             this.MaximizeBox = false;
             this.Name = "frm_Project";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Projects";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Project_FormClosing_1);
+            this.Activated += new System.EventHandler(this.frm_Project_Activated);
+            this.Deactivate += new System.EventHandler(this.frm_Project_Deactivate);
             this.Load += new System.EventHandler(this.frm_Project_Load);
             this.gb_projectSearch.ResumeLayout(false);
             this.gb_projectSearch.PerformLayout();

@@ -71,11 +71,11 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Location = new System.Drawing.Point(82, 65);
+            this.Location = new System.Drawing.Point(82, 0);
             this.MaximizeBox = false;
             this.Name = "frm_Reports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "frm_Reports";
+            this.Text = "Reports";
             this.ResumeLayout(false);
 
         }

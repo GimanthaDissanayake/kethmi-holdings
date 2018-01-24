@@ -16,5 +16,20 @@ namespace Kethmi_Holdings
         {
             InitializeComponent();
         }
+        ButtonsStates lastButtonStates;
+        private void frm_Sales_Load(object sender, EventArgs e)
+        {
+            lastButtonStates = new ButtonsStates();
+        }
+
+        private void frm_Sales_Activated(object sender, EventArgs e)
+        {
+            lastButtonStates.restore();
+        }
+
+        private void frm_Sales_Deactivate(object sender, EventArgs e)
+        {
+            lastButtonStates.save();
+        }
     }
 }

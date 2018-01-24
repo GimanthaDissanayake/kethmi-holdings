@@ -244,8 +244,10 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Location = new System.Drawing.Point(82, 0);
             this.Name = "RptProjects";
-            this.Text = "RptProjects";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Project Report";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

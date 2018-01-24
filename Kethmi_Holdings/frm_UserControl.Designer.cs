@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,30 +39,26 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.gb_inputArea = new System.Windows.Forms.GroupBox();
+            this.gb_currentUsers = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gb_inputArea.SuspendLayout();
+            this.gb_currentUsers.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 40);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 19);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 304);
+            this.dataGridView1.Size = new System.Drawing.Size(229, 303);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "List of Current Users";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(287, 84);
+            this.label2.Location = new System.Drawing.Point(16, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 2;
@@ -72,7 +67,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(287, 58);
+            this.label3.Location = new System.Drawing.Point(16, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 3;
@@ -81,7 +76,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(287, 113);
+            this.label4.Location = new System.Drawing.Point(16, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 4;
@@ -90,7 +85,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(287, 138);
+            this.label5.Location = new System.Drawing.Point(16, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 5;
@@ -99,17 +94,17 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(290, 177);
+            this.checkBox1.Location = new System.Drawing.Point(19, 144);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(81, 17);
+            this.checkBox1.Size = new System.Drawing.Size(90, 17);
             this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "User Active";
+            this.checkBox1.Text = "Activate User";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(387, 138);
+            this.radioButton1.Location = new System.Drawing.Point(116, 110);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(54, 17);
             this.radioButton1.TabIndex = 7;
@@ -120,7 +115,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(447, 138);
+            this.radioButton2.Location = new System.Drawing.Point(176, 110);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(47, 17);
             this.radioButton2.TabIndex = 8;
@@ -130,54 +125,91 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(387, 112);
+            this.textBox1.Location = new System.Drawing.Point(116, 79);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(248, 20);
             this.textBox1.TabIndex = 9;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(387, 81);
+            this.textBox2.Location = new System.Drawing.Point(116, 48);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(248, 20);
             this.textBox2.TabIndex = 10;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(387, 55);
+            this.textBox3.Location = new System.Drawing.Point(116, 22);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(248, 20);
             this.textBox3.TabIndex = 11;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(116, 144);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(103, 17);
+            this.checkBox2.TabIndex = 12;
+            this.checkBox2.Text = "Deactivate User";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // gb_inputArea
+            // 
+            this.gb_inputArea.Controls.Add(this.label3);
+            this.gb_inputArea.Controls.Add(this.checkBox2);
+            this.gb_inputArea.Controls.Add(this.label2);
+            this.gb_inputArea.Controls.Add(this.textBox3);
+            this.gb_inputArea.Controls.Add(this.label4);
+            this.gb_inputArea.Controls.Add(this.textBox2);
+            this.gb_inputArea.Controls.Add(this.label5);
+            this.gb_inputArea.Controls.Add(this.textBox1);
+            this.gb_inputArea.Controls.Add(this.checkBox1);
+            this.gb_inputArea.Controls.Add(this.radioButton2);
+            this.gb_inputArea.Controls.Add(this.radioButton1);
+            this.gb_inputArea.Enabled = false;
+            this.gb_inputArea.Location = new System.Drawing.Point(268, 12);
+            this.gb_inputArea.Name = "gb_inputArea";
+            this.gb_inputArea.Size = new System.Drawing.Size(388, 336);
+            this.gb_inputArea.TabIndex = 13;
+            this.gb_inputArea.TabStop = false;
+            this.gb_inputArea.Text = "Input Area";
+            // 
+            // gb_currentUsers
+            // 
+            this.gb_currentUsers.Controls.Add(this.dataGridView1);
+            this.gb_currentUsers.Location = new System.Drawing.Point(12, 12);
+            this.gb_currentUsers.Name = "gb_currentUsers";
+            this.gb_currentUsers.Size = new System.Drawing.Size(250, 336);
+            this.gb_currentUsers.TabIndex = 14;
+            this.gb_currentUsers.TabStop = false;
+            this.gb_currentUsers.Text = "Current Users";
             // 
             // frm_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 360);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(668, 354);
+            this.Controls.Add(this.gb_currentUsers);
+            this.Controls.Add(this.gb_inputArea);
+            this.Location = new System.Drawing.Point(82, 0);
             this.Name = "frm_UserControl";
-            this.Text = "frm_UserControl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "User Control";
+            this.Activated += new System.EventHandler(this.frm_UserControl_Activated);
+            this.Deactivate += new System.EventHandler(this.frm_UserControl_Deactivate);
+            this.Load += new System.EventHandler(this.frm_UserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gb_inputArea.ResumeLayout(false);
+            this.gb_inputArea.PerformLayout();
+            this.gb_currentUsers.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -188,5 +220,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.GroupBox gb_inputArea;
+        private System.Windows.Forms.GroupBox gb_currentUsers;
     }
 }
