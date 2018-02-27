@@ -21,9 +21,13 @@ namespace Kethmi_Holdings
         RptProjects rptProjects;
         RptCustomerDetails rptCusDetails;
         frm_UserControl frmUserCtrl;
-        public frm_Main()
+
+
+        string strUsername = "";
+        public frm_Main(string username)
         {
             InitializeComponent();
+            this.strUsername = username;
         }
 
         public bool BtnAdd { set { btn_add.Enabled = value; } get { return btn_add.Enabled; } }
@@ -144,23 +148,19 @@ namespace Kethmi_Holdings
                 frmRecipts.inputAreaEnabled = true;
                 frmRecipts.searchEnabled = false;
             }
-            if (this.ActiveMdiChild == frmUserCtrl) {
+            if (this.ActiveMdiChild == frmUserCtrl)
+            {
                 CommonClass.setToolTipButtonStates(false, false, true, false, false, true);
                 frmUserCtrl.gb_CurrentUsersEnabled = false;
                 frmUserCtrl.gb_InputAreaEnabled = true;
+                frmUserCtrl.ButtonAdd();
             }
+            
         }
 
         private void frm_Main_Load_1(object sender, EventArgs e)
         {
             CommonClass.setToolTipButtonStates(false);
-            this.TopMost = true;
-            tssl_time.Text = DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString();
-
-            tssl_loggedAs.Text = "--   logged in as : dilshan  --  ";
-            tssl_status.Text = "status : active";
-
-            timer1.Start();
         }
 
         private void ts_main_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -184,7 +184,7 @@ namespace Kethmi_Holdings
 
         private void userControlToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserCtrl = new frm_UserControl();
+            frmUserCtrl = new frm_UserControl(strUsername);
             frmUserCtrl.MdiParent = this;
             frmUserCtrl.FormClosed += new FormClosedEventHandler(frmUserCtrl_FormClosed);
             frmUserCtrl.Show();
@@ -219,14 +219,25 @@ namespace Kethmi_Holdings
 
         }
 
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        private void btn_clear_Click(object sender, EventArgs e)
         {
+
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void btn_save_Click(object sender, EventArgs e)
         {
-            tssl_time.Text = DateTime.Now.ToLongDateString()+"  "+DateTime.Now.ToLongTimeString();
+            if (this.ActiveMdiChild == frmUserCtrl)
+            {
+                CommonClass.setToolTipButtonStates(true, true, false, false, false, false);
+                frmUserCtrl.gb_CurrentUsersEnabled = false;
+                frmUserCtrl.gb_InputAreaEnabled = true;
+                frmUserCtrl.ButtonSave();
+            }
+        }
 
+        public static implicit operator frm_Main(frm_Login v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

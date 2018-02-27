@@ -29,7 +29,7 @@ namespace Kethmi_Holdings
 
         private void frm_Project_Load(object sender, EventArgs e)
         {
-            tc_project.Enabled = false;
+            tc_project.Enabled = true;
             lastButtonStates = new ButtonsStates();
             CommonClass.setToolTipButtonStates(true, true, false, false, true, false);
             lastButtonStates.save();
@@ -48,6 +48,11 @@ namespace Kethmi_Holdings
         private void frm_Project_Deactivate(object sender, EventArgs e)
         {
             lastButtonStates.save();
+        }
+
+        public void ButtonSave()
+        {
+
         }
     }
 }
