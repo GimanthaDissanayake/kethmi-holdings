@@ -39,7 +39,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.gb_inputArea = new System.Windows.Forms.GroupBox();
             this.gb_currentUsers = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -144,20 +143,9 @@
             this.textBox3.Size = new System.Drawing.Size(248, 20);
             this.textBox3.TabIndex = 11;
             // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(116, 144);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(103, 17);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.Text = "Deactivate User";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
             // gb_inputArea
             // 
             this.gb_inputArea.Controls.Add(this.label3);
-            this.gb_inputArea.Controls.Add(this.checkBox2);
             this.gb_inputArea.Controls.Add(this.label2);
             this.gb_inputArea.Controls.Add(this.textBox3);
             this.gb_inputArea.Controls.Add(this.label4);
@@ -220,7 +208,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.GroupBox gb_inputArea;
         private System.Windows.Forms.GroupBox gb_currentUsers;
     }

@@ -154,6 +154,13 @@ namespace Kethmi_Holdings
         private void frm_Main_Load_1(object sender, EventArgs e)
         {
             CommonClass.setToolTipButtonStates(false);
+            this.TopMost = true;
+            tssl_time.Text = DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString();
+
+            tssl_loggedAs.Text = "--   logged in as : dilshan  --  ";
+            tssl_status.Text = "status : active";
+
+            timer1.Start();
         }
 
         private void ts_main_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -209,6 +216,16 @@ namespace Kethmi_Holdings
 
         private void sToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tssl_time.Text = DateTime.Now.ToLongDateString()+"  "+DateTime.Now.ToLongTimeString();
 
         }
     }

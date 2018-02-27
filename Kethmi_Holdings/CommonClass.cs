@@ -39,8 +39,7 @@ namespace Kethmi_Holdings
     class ButtonsStates {
         bool btnAdd,btnDelete,btnEdit,btnSave,btnPrint,btnClear;
         static frm_Main main;
-
-        public ButtonsStates() { }
+        
 
         public void save() {
             main = Program.getMainForm();
@@ -51,8 +50,8 @@ namespace Kethmi_Holdings
             btnPrint = main.BtnPrint;
             btnDelete = main.BtnDelete;           
             btnClear = main.BtnClear;
-            
         }
+
         public void restore() {
             CommonClass.setToolTipButtonStates(btnAdd,btnEdit,btnSave,btnPrint, btnDelete, btnClear);
         }

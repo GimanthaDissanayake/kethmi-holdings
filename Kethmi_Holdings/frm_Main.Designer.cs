@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.ts_side = new System.Windows.Forms.ToolStrip();
             this.btn_add = new System.Windows.Forms.ToolStripButton();
@@ -60,9 +61,15 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tssl_time = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tssl_loggedAs = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tssl_status = new System.Windows.Forms.ToolStripStatusLabel();
             this.ts_side.SuspendLayout();
             this.ts_main.SuspendLayout();
             this.ms_header.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ts_side
@@ -372,6 +379,43 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssl_time,
+            this.tssl_loggedAs,
+            this.tssl_status});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 533);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1110, 22);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tssl_time
+            // 
+            this.tssl_time.Name = "tssl_time";
+            this.tssl_time.Size = new System.Drawing.Size(34, 17);
+            this.tssl_time.Text = "Time";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // tssl_loggedAs
+            // 
+            this.tssl_loggedAs.Name = "tssl_loggedAs";
+            this.tssl_loggedAs.Size = new System.Drawing.Size(99, 17);
+            this.tssl_loggedAs.Text = "logged username";
+            // 
+            // tssl_status
+            // 
+            this.tssl_status.BackColor = System.Drawing.Color.Chartreuse;
+            this.tssl_status.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tssl_status.Name = "tssl_status";
+            this.tssl_status.Size = new System.Drawing.Size(38, 17);
+            this.tssl_status.Text = "status";
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -379,6 +423,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1110, 555);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ts_main);
             this.Controls.Add(this.ts_side);
             this.Controls.Add(this.ms_header);
@@ -387,6 +432,7 @@
             this.MainMenuStrip = this.ms_header;
             this.MaximizeBox = false;
             this.Name = "frm_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Kethmi Holdings (PVT) LTD.";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Main_Load_1);
@@ -396,6 +442,8 @@
             this.ts_main.PerformLayout();
             this.ms_header.ResumeLayout(false);
             this.ms_header.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,6 +482,11 @@
         private System.Windows.Forms.ToolStripMenuItem userControlToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton btn_delete;
         private System.Windows.Forms.ToolStripMenuItem customerControlToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel tssl_time;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripStatusLabel tssl_loggedAs;
+        private System.Windows.Forms.ToolStripStatusLabel tssl_status;
     }
 }
 
