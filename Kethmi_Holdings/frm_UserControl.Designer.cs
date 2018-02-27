@@ -33,13 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chkActive = new System.Windows.Forms.CheckBox();
+            this.rbtAdmin = new System.Windows.Forms.RadioButton();
+            this.rbtUser = new System.Windows.Forms.RadioButton();
+            this.txtPW = new System.Windows.Forms.TextBox();
+            this.txtUserID = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.gb_inputArea = new System.Windows.Forms.GroupBox();
             this.gb_currentUsers = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -91,82 +90,74 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "User Type";
             // 
-            // checkBox1
+            // chkActive
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(19, 144);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(90, 17);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Activate User";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkActive.AutoSize = true;
+            this.chkActive.Location = new System.Drawing.Point(19, 144);
+            this.chkActive.Name = "chkActive";
+            this.chkActive.Size = new System.Drawing.Size(90, 17);
+            this.chkActive.TabIndex = 6;
+            this.chkActive.Text = "Activate User";
+            this.chkActive.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbtAdmin
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(116, 110);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 17);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Admin";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtAdmin.AutoSize = true;
+            this.rbtAdmin.Location = new System.Drawing.Point(116, 110);
+            this.rbtAdmin.Name = "rbtAdmin";
+            this.rbtAdmin.Size = new System.Drawing.Size(54, 17);
+            this.rbtAdmin.TabIndex = 7;
+            this.rbtAdmin.TabStop = true;
+            this.rbtAdmin.Text = "Admin";
+            this.rbtAdmin.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtUser
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(176, 110);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(47, 17);
-            this.radioButton2.TabIndex = 8;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "User";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtUser.AutoSize = true;
+            this.rbtUser.Location = new System.Drawing.Point(176, 110);
+            this.rbtUser.Name = "rbtUser";
+            this.rbtUser.Size = new System.Drawing.Size(47, 17);
+            this.rbtUser.TabIndex = 8;
+            this.rbtUser.TabStop = true;
+            this.rbtUser.Text = "User";
+            this.rbtUser.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtPW
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtPW.Location = new System.Drawing.Point(116, 79);
+            this.txtPW.MaxLength = 45;
+            this.txtPW.Name = "txtPW";
+            this.txtPW.Size = new System.Drawing.Size(248, 20);
+            this.txtPW.TabIndex = 9;
             // 
-            // textBox2
+            // txtUserID
             // 
-            this.textBox2.Location = new System.Drawing.Point(116, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(248, 20);
-            this.textBox2.TabIndex = 10;
+            this.txtUserID.Location = new System.Drawing.Point(116, 48);
+            this.txtUserID.MaxLength = 45;
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.Size = new System.Drawing.Size(248, 20);
+            this.txtUserID.TabIndex = 10;
             // 
-            // textBox3
+            // txtUserName
             // 
-            this.textBox3.Location = new System.Drawing.Point(116, 22);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(248, 20);
-            this.textBox3.TabIndex = 11;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(116, 144);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(103, 17);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.Text = "Deactivate User";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.txtUserName.Location = new System.Drawing.Point(116, 22);
+            this.txtUserName.MaxLength = 45;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(248, 20);
+            this.txtUserName.TabIndex = 11;
             // 
             // gb_inputArea
             // 
             this.gb_inputArea.Controls.Add(this.label3);
-            this.gb_inputArea.Controls.Add(this.checkBox2);
             this.gb_inputArea.Controls.Add(this.label2);
-            this.gb_inputArea.Controls.Add(this.textBox3);
+            this.gb_inputArea.Controls.Add(this.txtUserName);
             this.gb_inputArea.Controls.Add(this.label4);
-            this.gb_inputArea.Controls.Add(this.textBox2);
+            this.gb_inputArea.Controls.Add(this.txtUserID);
             this.gb_inputArea.Controls.Add(this.label5);
-            this.gb_inputArea.Controls.Add(this.textBox1);
-            this.gb_inputArea.Controls.Add(this.checkBox1);
-            this.gb_inputArea.Controls.Add(this.radioButton2);
-            this.gb_inputArea.Controls.Add(this.radioButton1);
+            this.gb_inputArea.Controls.Add(this.txtPW);
+            this.gb_inputArea.Controls.Add(this.chkActive);
+            this.gb_inputArea.Controls.Add(this.rbtUser);
+            this.gb_inputArea.Controls.Add(this.rbtAdmin);
             this.gb_inputArea.Enabled = false;
             this.gb_inputArea.Location = new System.Drawing.Point(268, 12);
             this.gb_inputArea.Name = "gb_inputArea";
@@ -214,13 +205,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox chkActive;
+        private System.Windows.Forms.RadioButton rbtAdmin;
+        private System.Windows.Forms.RadioButton rbtUser;
+        private System.Windows.Forms.TextBox txtPW;
+        private System.Windows.Forms.TextBox txtUserID;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.GroupBox gb_inputArea;
         private System.Windows.Forms.GroupBox gb_currentUsers;
     }

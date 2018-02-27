@@ -12,6 +12,7 @@ namespace Kethmi_Holdings
 {
     public partial class frm_Login : Form
     {
+        static string strUsername = "";
         public frm_Login()
         {
             InitializeComponent();
@@ -35,7 +36,8 @@ namespace Kethmi_Holdings
         private void btn_login_Click(object sender, EventArgs e)
         {
             this.Hide();
-            (new frm_Main()).Show();
+            (new frm_Main(strUsername)).Show();
+            strUsername = tb_username.Text;
         }
     }
 }

@@ -213,6 +213,7 @@
             this.textBox53 = new System.Windows.Forms.TextBox();
             this.label65 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button3 = new System.Windows.Forms.Button();
             this.gb_projectSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_projectList)).BeginInit();
             this.tc_project.SuspendLayout();
@@ -642,7 +643,7 @@
             this.tab_costofpurchase.Location = new System.Drawing.Point(4, 22);
             this.tab_costofpurchase.Name = "tab_costofpurchase";
             this.tab_costofpurchase.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_costofpurchase.Size = new System.Drawing.Size(730, 473);
+            this.tab_costofpurchase.Size = new System.Drawing.Size(730, 429);
             this.tab_costofpurchase.TabIndex = 1;
             this.tab_costofpurchase.Text = "Cost of Purchase";
             this.tab_costofpurchase.UseVisualStyleBackColor = true;
@@ -946,7 +947,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(730, 473);
+            this.tabPage2.Size = new System.Drawing.Size(730, 429);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Development & Utility";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1358,7 +1359,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(730, 473);
+            this.tabPage3.Size = new System.Drawing.Size(730, 429);
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "Travelling & Advertising";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1749,7 +1750,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(730, 473);
+            this.tabPage6.Size = new System.Drawing.Size(730, 429);
             this.tabPage6.TabIndex = 7;
             this.tabPage6.Text = "Cost, Sales and Profitability";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -2156,12 +2157,22 @@
             this.label65.TabIndex = 0;
             this.label65.Text = "Cost of Project (LKR)";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(594, 514);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(408, 37);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Save Temporary";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // frm_Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1018, 513);
+            this.ClientSize = new System.Drawing.Size(1018, 555);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.tc_project);
             this.Controls.Add(this.gb_projectSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -2396,5 +2407,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox65;
         private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Button button3;
     }
 }

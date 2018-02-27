@@ -49,5 +49,10 @@ namespace Kethmi_Holdings
         {
             lastButtonStates.save();
         }
+
+        public void ButtonSave()
+        {
+
+        }
     }
 }

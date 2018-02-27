@@ -30,7 +30,8 @@ namespace Kethmi_Holdings
             main.BtnClear = clear;
             
         }
-        public static void setToolTipButtonStates(bool all) {
+        public static void setToolTipButtonStates(bool all)
+        {
             main = Program.getMainForm();
             main.BtnAdd = main.BtnDelete = main.BtnEdit = main.BtnSave = main.BtnPrint = main.BtnClear = all;
         }

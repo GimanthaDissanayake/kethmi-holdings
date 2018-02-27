@@ -124,6 +124,7 @@
             this.btn_save.Size = new System.Drawing.Size(79, 59);
             this.btn_save.Text = "Save";
             this.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_print
             // 
@@ -155,8 +156,9 @@
             this.btn_clear.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(79, 67);
-            this.btn_clear.Text = "Clear";
+            this.btn_clear.Text = "Cancel";
             this.btn_clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // ts_main
             // 

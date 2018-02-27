@@ -12,9 +12,14 @@ namespace Kethmi_Holdings
 {
     public partial class frm_UserControl : Form
     {
-        public frm_UserControl()
+        Database db;
+        string strsql = "";
+        string userType = "";
+        string strUsername = "";
+        public frm_UserControl(string username)
         {
             InitializeComponent();
+            this.strUsername = username;
         }
 
         public bool gb_CurrentUsersEnabled {set { gb_currentUsers.Enabled = value; }}
@@ -34,6 +39,22 @@ namespace Kethmi_Holdings
         private void frm_UserControl_Load(object sender, EventArgs e)
         {
             lastButtonStates = new ButtonsStates();
+        }
+        public void ButtonAdd()
+        {
+
+        }
+        public void ButtonSave()
+        {
+            db = new Database();
+            if (rbtAdmin.Checked)
+                userType = "Admin";
+            else
+                userType = "User";
+            
+            strsql = "insert into userdetails (userid,username, password, addedDate, "+
+                "addedUser,usertype,active ) values ('"+txtUserID.Text+"','"+txtUserName.Text+"','"+txtPW.Text+"','"+DateTime.Now.ToString()+"','"+strUsername+"','"+userType+"','"+chkActive.Checked+"')";
+            db.insertUpdateDelete(strsql);
         }
     }
 }

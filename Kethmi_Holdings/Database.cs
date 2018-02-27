@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace Kethmi_Holdings
 {
@@ -15,10 +16,11 @@ namespace Kethmi_Holdings
         private SqlDataAdapter da;
         private DataTable dt;
         private SqlDataReader dr;
+        private string strConn = System.Configuration.ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
 
         public Database()
         {
-            con = new SqlConnection("Data Source=DESKTOP-H8M7COJ;Initial Catalog=Kethmi_Holdings_Lands;Persist Security Info=True;User ID=admin;Password=12345");
+            con = new SqlConnection(strConn);
         }
 
         public int insertUpdateDelete(String query)
