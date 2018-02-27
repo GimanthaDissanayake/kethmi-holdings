@@ -63,9 +63,9 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tssl_time = new System.Windows.Forms.ToolStripStatusLabel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tssl_loggedAs = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssl_status = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ts_side.SuspendLayout();
             this.ts_main.SuspendLayout();
             this.ms_header.SuspendLayout();
@@ -399,11 +399,6 @@
             this.tssl_time.Size = new System.Drawing.Size(34, 17);
             this.tssl_time.Text = "Time";
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // tssl_loggedAs
             // 
             this.tssl_loggedAs.Name = "tssl_loggedAs";
@@ -417,6 +412,10 @@
             this.tssl_status.Name = "tssl_status";
             this.tssl_status.Size = new System.Drawing.Size(38, 17);
             this.tssl_status.Text = "status";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
             // 
             // frm_Main
             // 
