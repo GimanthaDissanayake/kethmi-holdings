@@ -1,103 +1,83 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Configuration;
+using System.Data;
 
 namespace Kethmi_Holdings
 {
-    class Database
+    public class Database
     {
+
+        #region feilds
         private SqlConnection con;
+        DataSet ds;
         private SqlCommand cmd;
         private SqlDataAdapter da;
         private DataTable dt;
-        private SqlDataReader dr;
-        private string strConn = System.Configuration.ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        //private ReportDataSource rds;
+        private string conString = "Data Source=MADUSHANKA-PC\\SERVERME;Initial Catalog=finalProject;Integrated Security=True";
+        #endregion
 
+        #region methods
+        //inizialize sql connection when the instance of database call is created!
         public Database()
         {
-            con = new SqlConnection(strConn);
+            con = new SqlConnection(conString);
         }
 
-        public int insertUpdateDelete(String query)
+        /*this will return single value for the query
+        example "SELECT name from employee where employeeID=10"*/
+        public String getValue(String query)
         {
-            con.Open();
-            cmd = new SqlCommand(query, con);
-            int a = cmd.ExecuteNonQuery();
-            con.Close();
-            return a;
-        }
-
-        public String getData(String query)
-        {
-            String Value = "";
-            con.Open();
-            cmd = new SqlCommand(query, con);
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+            String foundValue = "";
+            con.ConnectionString = conString;
+            using (con)
             {
-                Value = dr[0].ToString();
-            }
-            con.Close();
-            return Value;
-        }
-
-        public List<String> getList(String query, int index)
-        {
-            con.Open();
-            List<String> list = new List<String>();
-            cmd = new SqlCommand(query, con);
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                list.Add(dr.GetString(index));
-            }
-            con.Close();
-            return list;
-        }
-
-        public List<Int32> getNumbers(String query, int index)
-        {
-            con.Open();
-            List<Int32> list = new List<Int32>();
-            cmd = new SqlCommand(query, con);
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                try
+                using (SqlCommand command = new SqlCommand(query, con))
                 {
-                    list.Add(dr.GetInt32(index));
+                    con.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            foundValue = reader[0].ToString();
+                        }
+                    }
                 }
-                catch (Exception)
-                {
-                    return list;
-                }
-
             }
             con.Close();
-            return list;
+            return foundValue;
         }
-
-        public DataTable selectData(String query)
+        /*
+        public ReportDataSource getReportDataSource(String query)
         {
-            try
-            {
-                con.Open();
-                da = new SqlDataAdapter(query, con);
-                dt = new DataTable();
-                da.Fill(dt);
-                con.Close();
-            }
-            catch (SqlException ex)
-            {
-                Console.WriteLine(ex);
-            }
+            //con = new SqlConnection(@"Data Source=MADUSHANKA-PC\SERVERME;Initial Catalog=SuperMarket;Integrated Security=True");
+            ds = new DataSet();
+            da = new SqlDataAdapter(query, con);
+            da.Fill(ds, ds.Tables[0].TableName);
+            rds = new ReportDataSource("DataSet1", ds.Tables[0]);
+            return rds;
+        }*/
+
+        public void insertUpdateDelete(String query)
+        {
+            //SqlConnection con2 = new SqlConnection("Data Source=MADUSHANKA-PC\\SERVERME;Initial Catalog=SuperMarket;Integrated Security=True");
+            con.ConnectionString = conString;
+            con.Open();
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+        public DataTable select(String query)
+        {
+            con.Open();
+            da = new SqlDataAdapter(query, con);
+            dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
             return dt;
         }
+        #endregion
+
+
     }
 }
-

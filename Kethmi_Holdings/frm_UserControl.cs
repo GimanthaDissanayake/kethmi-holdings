@@ -51,7 +51,9 @@ namespace Kethmi_Holdings
                 userType = "Admin";
             else
                 userType = "User";
-            
+
+            db.select("SELECT * FROM UserDetails WHERE userID = {txtUserID.Text}");
+
             strsql = "insert into userdetails (userid,username, password, addedDate, "+
                 "addedUser,usertype,active ) values ('"+txtUserID.Text+"','"+txtUserName.Text+"','"+txtPW.Text+"','"+DateTime.Now.ToString()+"','"+strUsername+"','"+userType+"','"+chkActive.Checked+"')";
             db.insertUpdateDelete(strsql);
