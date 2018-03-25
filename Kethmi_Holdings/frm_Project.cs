@@ -16,6 +16,8 @@ namespace Kethmi_Holdings
         {
             InitializeComponent();
         }
+        Database db;
+        string strsql = "";
         Form formArg;
         public frm_Project(Form f)
         {
@@ -52,7 +54,8 @@ namespace Kethmi_Holdings
 
         public void ButtonSave()
         {
-
+            db = new Database();
+            //strsql = "INSERT INTO ProjectBasicDetails() VALUES"
         }
     }
 }

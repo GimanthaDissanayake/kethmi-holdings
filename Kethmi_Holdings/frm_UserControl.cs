@@ -42,8 +42,8 @@ namespace Kethmi_Holdings
         }
         public void ButtonAdd()
         {
-
         }
+
         public void ButtonSave()
         {
             db = new Database();
