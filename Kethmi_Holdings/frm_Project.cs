@@ -55,7 +55,13 @@ namespace Kethmi_Holdings
         public void ButtonSave()
         {
             db = new Database();
-            //strsql = "INSERT INTO ProjectBasicDetails() VALUES"
+            strsql = "INSERT INTO ProjectMaster(projName) VALUES('"+txt_projectName.Text+"')";
+            db.insertUpdateDelete(strsql);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ButtonSave();
         }
     }
 }
