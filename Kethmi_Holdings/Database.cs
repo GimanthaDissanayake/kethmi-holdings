@@ -14,7 +14,7 @@ namespace Kethmi_Holdings
         private SqlDataAdapter da;
         private DataTable dt;
         //private ReportDataSource rds;
-        private string conString = "Data Source=MADUSHANKA-PC\\SERVERME;Initial Catalog=finalProject;Integrated Security=True";
+        private string conString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=KethmiHoldings;Integrated Security=True";
         #endregion
 
         #region methods
@@ -60,7 +60,6 @@ namespace Kethmi_Holdings
 
         public void insertUpdateDelete(String query)
         {
-            //SqlConnection con2 = new SqlConnection("Data Source=MADUSHANKA-PC\\SERVERME;Initial Catalog=SuperMarket;Integrated Security=True");
             con.ConnectionString = conString;
             con.Open();
             cmd = new SqlCommand(query, con);
