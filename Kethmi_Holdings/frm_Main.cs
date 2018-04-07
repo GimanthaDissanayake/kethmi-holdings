@@ -52,7 +52,7 @@ namespace Kethmi_Holdings
 
         private void btnProjects_Click(object sender, EventArgs e)
         {
-            frmProject = new frm_Project();
+            frmProject = new frm_Project(strUsername);
             frmProject.FormClosed += new FormClosedEventHandler(frmProject_FormClosed);
             frmProject.MdiParent = this;
             frmProject.Show();

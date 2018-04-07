@@ -35,6 +35,7 @@ namespace Kethmi_Holdings
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            strUsername = tb_username.Text;
             this.Hide();
             (new frm_Main(strUsername)).Show();
             strUsername = tb_username.Text;

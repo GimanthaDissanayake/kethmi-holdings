@@ -12,12 +12,14 @@ namespace Kethmi_Holdings
 {
     public partial class frm_Project : Form
     {
-        public frm_Project()
+        public frm_Project(String s)
         {
             InitializeComponent();
+            strUsername = s;
         }
         Database db;
         string strsql = "";
+        string strUsername = "";
         Form formArg;
         public frm_Project(Form f)
         {
@@ -55,8 +57,11 @@ namespace Kethmi_Holdings
         public void ButtonSave()
         {
             db = new Database();
-            strsql = "INSERT INTO ProjectMaster(projName) VALUES('"+txt_projectName.Text+"')";
+            strsql = "INSERT INTO ProjectMaster(projName,date,addedDate,addedUser) VALUES('"+txt_projectName.Text+"','"+dateTimePicker1.Value.ToShortDateString()+"','"+DateTime.Now+"','"+strUsername+"')";
             db.insertUpdateDelete(strsql);
+            int pId;
+            pId = Convert.ToInt32(db.getValue("SELECT TOP 1 projID FROM ProjectMaster ORDER BY projID DESC"));
+            strsql = "INSERT INTO ProdectBasicDetails() VALUES();";
         }
 
         private void button3_Click(object sender, EventArgs e)
