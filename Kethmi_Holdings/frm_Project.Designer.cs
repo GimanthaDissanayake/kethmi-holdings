@@ -35,7 +35,7 @@
             this.dataGridView_projectList = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txt_totCost = new System.Windows.Forms.TextBox();
+            this.txt_reservation = new System.Windows.Forms.TextBox();
             this.txt_roadways = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_agreedValuePP = new System.Windows.Forms.TextBox();
@@ -62,11 +62,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_commonArea = new System.Windows.Forms.TextBox();
+            this.txt_valExpectedByOwner = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.textBox65 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txt_introduction = new System.Windows.Forms.TextBox();
             this.label82 = new System.Windows.Forms.Label();
             this.tab_costofpurchase = new System.Windows.Forms.TabPage();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
@@ -214,8 +216,8 @@
             this.label65 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button3 = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txt_sellableArea = new System.Windows.Forms.TextBox();
+            this.label83 = new System.Windows.Forms.Label();
             this.gb_projectSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_projectList)).BeginInit();
             this.tc_project.SuspendLayout();
@@ -303,15 +305,15 @@
             this.label13.TabIndex = 26;
             this.label13.Text = "Reservation (Perch)";
             // 
-            // txt_totCost
+            // txt_reservation
             // 
-            this.txt_totCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_totCost.Location = new System.Drawing.Point(309, 183);
-            this.txt_totCost.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_totCost.Name = "txt_totCost";
-            this.txt_totCost.Size = new System.Drawing.Size(299, 23);
-            this.txt_totCost.TabIndex = 25;
-            this.txt_totCost.Text = "0.00";
+            this.txt_reservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_reservation.Location = new System.Drawing.Point(309, 183);
+            this.txt_reservation.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_reservation.Name = "txt_reservation";
+            this.txt_reservation.Size = new System.Drawing.Size(299, 23);
+            this.txt_reservation.TabIndex = 25;
+            this.txt_reservation.Text = "0.00";
             // 
             // txt_roadways
             // 
@@ -533,6 +535,8 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.txt_sellableArea);
+            this.groupBox10.Controls.Add(this.label83);
             this.groupBox10.Controls.Add(this.groupBox2);
             this.groupBox10.Controls.Add(this.label11);
             this.groupBox10.Controls.Add(this.txt_totalPerches);
@@ -542,10 +546,10 @@
             this.groupBox10.Controls.Add(this.label9);
             this.groupBox10.Controls.Add(this.label10);
             this.groupBox10.Controls.Add(this.label12);
-            this.groupBox10.Controls.Add(this.textBox2);
+            this.groupBox10.Controls.Add(this.txt_commonArea);
             this.groupBox10.Controls.Add(this.txt_roadways);
-            this.groupBox10.Controls.Add(this.textBox1);
-            this.groupBox10.Controls.Add(this.txt_totCost);
+            this.groupBox10.Controls.Add(this.txt_valExpectedByOwner);
+            this.groupBox10.Controls.Add(this.txt_reservation);
             this.groupBox10.Controls.Add(this.label21);
             this.groupBox10.Controls.Add(this.label13);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -608,25 +612,25 @@
             this.label10.TabIndex = 31;
             this.label10.Text = "Common Area (Perch)";
             // 
-            // textBox2
+            // txt_commonArea
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(309, 151);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(299, 23);
-            this.textBox2.TabIndex = 30;
-            this.textBox2.Text = "0.00";
+            this.txt_commonArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_commonArea.Location = new System.Drawing.Point(309, 151);
+            this.txt_commonArea.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_commonArea.Name = "txt_commonArea";
+            this.txt_commonArea.Size = new System.Drawing.Size(299, 23);
+            this.txt_commonArea.TabIndex = 30;
+            this.txt_commonArea.Text = "0.00";
             // 
-            // textBox1
+            // txt_valExpectedByOwner
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(309, 55);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(299, 23);
-            this.textBox1.TabIndex = 29;
-            this.textBox1.Text = "0.00";
+            this.txt_valExpectedByOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_valExpectedByOwner.Location = new System.Drawing.Point(309, 55);
+            this.txt_valExpectedByOwner.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_valExpectedByOwner.Name = "txt_valExpectedByOwner";
+            this.txt_valExpectedByOwner.Size = new System.Drawing.Size(299, 23);
+            this.txt_valExpectedByOwner.TabIndex = 29;
+            this.txt_valExpectedByOwner.Text = "0.00";
             // 
             // label21
             // 
@@ -643,7 +647,7 @@
             // 
             this.groupBox9.Controls.Add(this.dateTimePicker1);
             this.groupBox9.Controls.Add(this.label35);
-            this.groupBox9.Controls.Add(this.textBox65);
+            this.groupBox9.Controls.Add(this.txt_introduction);
             this.groupBox9.Controls.Add(this.label82);
             this.groupBox9.Controls.Add(this.label1);
             this.groupBox9.Controls.Add(this.txt_broker);
@@ -663,14 +667,32 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Profile";
             // 
-            // textBox65
+            // dateTimePicker1
             // 
-            this.textBox65.Location = new System.Drawing.Point(651, 23);
-            this.textBox65.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox65.Multiline = true;
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(301, 180);
-            this.textBox65.TabIndex = 11;
+            this.dateTimePicker1.Location = new System.Drawing.Point(175, 157);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(365, 23);
+            this.dateTimePicker1.TabIndex = 13;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(27, 157);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(38, 17);
+            this.label35.TabIndex = 12;
+            this.label35.Text = "Date";
+            // 
+            // txt_introduction
+            // 
+            this.txt_introduction.Location = new System.Drawing.Point(651, 23);
+            this.txt_introduction.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_introduction.Multiline = true;
+            this.txt_introduction.Name = "txt_introduction";
+            this.txt_introduction.Size = new System.Drawing.Size(301, 180);
+            this.txt_introduction.TabIndex = 11;
             // 
             // label82
             // 
@@ -2365,23 +2387,26 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label35
+            // txt_sellableArea
             // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(27, 157);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(38, 17);
-            this.label35.TabIndex = 12;
-            this.label35.Text = "Date";
+            this.txt_sellableArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_sellableArea.Location = new System.Drawing.Point(309, 218);
+            this.txt_sellableArea.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_sellableArea.Name = "txt_sellableArea";
+            this.txt_sellableArea.Size = new System.Drawing.Size(299, 23);
+            this.txt_sellableArea.TabIndex = 35;
+            this.txt_sellableArea.Text = "0.00";
             // 
-            // dateTimePicker1
+            // label83
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(175, 157);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(365, 23);
-            this.dateTimePicker1.TabIndex = 13;
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.Location = new System.Drawing.Point(27, 222);
+            this.label83.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(139, 17);
+            this.label83.TabIndex = 36;
+            this.label83.Text = "Sellable Area(Perch)";
             // 
             // frm_Project
             // 
@@ -2464,17 +2489,17 @@
         private System.Windows.Forms.TextBox txt_roods;
         private System.Windows.Forms.TextBox txt_acres;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txt_totCost;
+        private System.Windows.Forms.TextBox txt_reservation;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.TabControl tc_project;
         private System.Windows.Forms.TabPage tab_basic;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_valExpectedByOwner;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TabPage tab_costofpurchase;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_commonArea;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label19;
@@ -2623,10 +2648,12 @@
         private System.Windows.Forms.Label label81;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox65;
+        private System.Windows.Forms.TextBox txt_introduction;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox txt_sellableArea;
+        private System.Windows.Forms.Label label83;
     }
 }
