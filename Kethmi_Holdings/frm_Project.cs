@@ -58,11 +58,17 @@ namespace Kethmi_Holdings
         public void ButtonSave()
         {
             db = new Database();
+            
+            //Save to Project Master
             strsql = "INSERT INTO ProjectMaster(projName,date,addedDate,addedUser)"+
                 " VALUES('"+txt_projectName.Text+"','"+dateTimePicker1.Value.ToShortDateString()+"','"+DateTime.Now+"','"+strUsername+"')";
             db.insertUpdateDelete(strsql);
+            
+            //get Project ID
             int pId;
             pId = Convert.ToInt32(db.getValue("SELECT TOP 1 projID FROM ProjectMaster ORDER BY projID DESC"));
+            
+            //Save Project Basic Details
             strsql = "INSERT INTO ProjectBasicDetails(projID,landOwner,location,brokerName,introduction,"+
                 "totPerchs,valExpectedByOwner,valAgreedByOwner,roadways,commonArea,reservation,acres,roods,"+
                 "perchs,sellableArea,addedUser,addedDate)"+
@@ -70,6 +76,21 @@ namespace Kethmi_Holdings
                 "'"+txt_totalPerches.Text+"','"+txt_valExpectedByOwner.Text+"','"+txt_agreedValuePP.Text+"',"+
                 "'"+txt_roadways.Text+"','"+txt_commonArea.Text+"','"+txt_reservation.Text+"','"+txt_acres.Text+"',"+
                 "'"+txt_roods.Text+"','"+txt_perches.Text+"','"+txt_sellableArea.Text+"','"+strUsername+"','"+DateTime.Now+"')";
+            db.insertUpdateDelete(strsql);
+
+            //Save Project Cost of Purchase
+            strsql = "INSERT INTO ProjectCostofPurchase(projID,titleInsurance,stampFees,legalFees,valuationReport,titleReports,"+
+                "commision,totCostOfPurchase,addedUser,addedDate)"+
+                " VALUES('"+pId+"','"+txt_titleInsurance.Text+"','"+txt_stampFees.Text+"','"+txt_legalFees.Text+"',"+
+                "'"+txt_valuationReport.Text+"','"+txt_titleReports.Text+"','"+txt_commision.Text+"',"+
+                "'"+txt_totCostOfPurchase.Text+"','"+strUsername+"','"+DateTime.Now+"')";
+            db.insertUpdateDelete(strsql);
+
+            //Save Project Survey Charges
+            strsql = "INSERT INTO ProjectSurvayCharges(projID,parameterSurvay,dimaBlocks,blockingOutPlanes,individualPlans,"+
+                "contourSurvayPlans,totSurvayCost,addedUser,addedDate)"+
+                " Values('"+pId+"','"+txt_parameterSurvey.Text+"','"+txt_dimaBlocks.Text+",'"+txt__blockingOutPlans.Text+"',"+
+                "'"+txt_extract.Text+"','"+txt_ContourSurveyingPlans.Text+"','"+txt_totSurveyCost.Text+ "','" + strUsername + "','" + DateTime.Now + "')";
             db.insertUpdateDelete(strsql);
         }
 
