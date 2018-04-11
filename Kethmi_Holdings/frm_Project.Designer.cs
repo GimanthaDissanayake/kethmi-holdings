@@ -104,78 +104,74 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label53 = new System.Windows.Forms.Label();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
+            this.txt_totUtilityCost = new System.Windows.Forms.TextBox();
+            this.txt_providingElectricity = new System.Windows.Forms.TextBox();
+            this.txt_providingWater = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txt_clearingOfLand = new System.Windows.Forms.TextBox();
+            this.txt_totDevCost = new System.Windows.Forms.TextBox();
+            this.txt_fillingAndLeveling = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txt_contingencies = new System.Windows.Forms.TextBox();
+            this.txt_culvertsAndDrains = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txt_interiorRoadWays = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txt_donation = new System.Windows.Forms.TextBox();
+            this.txt_RetainerWall = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.txt_pradeshiyaSabha = new System.Windows.Forms.TextBox();
+            this.txt_Huts = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.txt_maintenance = new System.Windows.Forms.TextBox();
+            this.txt_incidentalCost = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.txt_projectOfficer = new System.Windows.Forms.TextBox();
+            this.txt_fencing = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.txt_boungryStones = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox52 = new System.Windows.Forms.TextBox();
-            this.label64 = new System.Windows.Forms.Label();
-            this.textBox51 = new System.Windows.Forms.TextBox();
+            this.txt_mobileUnit = new System.Windows.Forms.TextBox();
             this.label63 = new System.Windows.Forms.Label();
-            this.textBox50 = new System.Windows.Forms.TextBox();
+            this.txt_press = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
-            this.textBox49 = new System.Windows.Forms.TextBox();
+            this.txt_holdings = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
-            this.textBox48 = new System.Windows.Forms.TextBox();
+            this.txt_handbills = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
-            this.textBox47 = new System.Windows.Forms.TextBox();
+            this.txt_radioTV = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
+            this.txt_totAdCost = new System.Windows.Forms.TextBox();
+            this.txt_banners = new System.Windows.Forms.TextBox();
+            this.txt_water = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label55 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.txt_execDirectors = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.txt_entertainment = new System.Windows.Forms.TextBox();
+            this.txt_DGM = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.txt_totTravCost = new System.Windows.Forms.TextBox();
+            this.txt_managerProject = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.txt_teleAllowance = new System.Windows.Forms.TextBox();
+            this.txt_projOfficer = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -1077,9 +1073,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label53);
-            this.groupBox4.Controls.Add(this.textBox40);
-            this.groupBox4.Controls.Add(this.textBox39);
-            this.groupBox4.Controls.Add(this.textBox41);
+            this.groupBox4.Controls.Add(this.txt_totUtilityCost);
+            this.groupBox4.Controls.Add(this.txt_providingElectricity);
+            this.groupBox4.Controls.Add(this.txt_providingWater);
             this.groupBox4.Controls.Add(this.label52);
             this.groupBox4.Controls.Add(this.label51);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1103,36 +1099,36 @@
             this.label53.TabIndex = 115;
             this.label53.Text = "Total Utility Cost (LKR)";
             // 
-            // textBox40
+            // txt_totUtilityCost
             // 
-            this.textBox40.Enabled = false;
-            this.textBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox40.Location = new System.Drawing.Point(333, 516);
-            this.textBox40.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(125, 23);
-            this.textBox40.TabIndex = 114;
-            this.textBox40.Text = "0.00";
+            this.txt_totUtilityCost.Enabled = false;
+            this.txt_totUtilityCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_totUtilityCost.Location = new System.Drawing.Point(333, 516);
+            this.txt_totUtilityCost.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_totUtilityCost.Name = "txt_totUtilityCost";
+            this.txt_totUtilityCost.Size = new System.Drawing.Size(125, 23);
+            this.txt_totUtilityCost.TabIndex = 114;
+            this.txt_totUtilityCost.Text = "0.00";
             // 
-            // textBox39
+            // txt_providingElectricity
             // 
-            this.textBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox39.Location = new System.Drawing.Point(333, 48);
-            this.textBox39.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(125, 23);
-            this.textBox39.TabIndex = 115;
-            this.textBox39.Text = "0.00";
+            this.txt_providingElectricity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_providingElectricity.Location = new System.Drawing.Point(333, 48);
+            this.txt_providingElectricity.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_providingElectricity.Name = "txt_providingElectricity";
+            this.txt_providingElectricity.Size = new System.Drawing.Size(125, 23);
+            this.txt_providingElectricity.TabIndex = 115;
+            this.txt_providingElectricity.Text = "0.00";
             // 
-            // textBox41
+            // txt_providingWater
             // 
-            this.textBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox41.Location = new System.Drawing.Point(333, 16);
-            this.textBox41.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(125, 23);
-            this.textBox41.TabIndex = 114;
-            this.textBox41.Text = "0.00";
+            this.txt_providingWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_providingWater.Location = new System.Drawing.Point(333, 16);
+            this.txt_providingWater.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_providingWater.Name = "txt_providingWater";
+            this.txt_providingWater.Size = new System.Drawing.Size(125, 23);
+            this.txt_providingWater.TabIndex = 114;
+            this.txt_providingWater.Text = "0.00";
             // 
             // label52
             // 
@@ -1160,34 +1156,34 @@
             // 
             this.groupBox3.Controls.Add(this.label34);
             this.groupBox3.Controls.Add(this.label44);
-            this.groupBox3.Controls.Add(this.textBox22);
-            this.groupBox3.Controls.Add(this.textBox32);
-            this.groupBox3.Controls.Add(this.textBox21);
+            this.groupBox3.Controls.Add(this.txt_clearingOfLand);
+            this.groupBox3.Controls.Add(this.txt_totDevCost);
+            this.groupBox3.Controls.Add(this.txt_fillingAndLeveling);
             this.groupBox3.Controls.Add(this.label26);
             this.groupBox3.Controls.Add(this.label33);
-            this.groupBox3.Controls.Add(this.textBox14);
-            this.groupBox3.Controls.Add(this.textBox20);
+            this.groupBox3.Controls.Add(this.txt_contingencies);
+            this.groupBox3.Controls.Add(this.txt_culvertsAndDrains);
             this.groupBox3.Controls.Add(this.label32);
-            this.groupBox3.Controls.Add(this.textBox19);
+            this.groupBox3.Controls.Add(this.txt_interiorRoadWays);
             this.groupBox3.Controls.Add(this.label41);
             this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Controls.Add(this.textBox29);
-            this.groupBox3.Controls.Add(this.textBox18);
+            this.groupBox3.Controls.Add(this.txt_donation);
+            this.groupBox3.Controls.Add(this.txt_RetainerWall);
             this.groupBox3.Controls.Add(this.label42);
             this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.textBox30);
-            this.groupBox3.Controls.Add(this.textBox28);
+            this.groupBox3.Controls.Add(this.txt_pradeshiyaSabha);
+            this.groupBox3.Controls.Add(this.txt_Huts);
             this.groupBox3.Controls.Add(this.label43);
             this.groupBox3.Controls.Add(this.label40);
-            this.groupBox3.Controls.Add(this.textBox31);
-            this.groupBox3.Controls.Add(this.textBox27);
+            this.groupBox3.Controls.Add(this.txt_maintenance);
+            this.groupBox3.Controls.Add(this.txt_incidentalCost);
             this.groupBox3.Controls.Add(this.label36);
             this.groupBox3.Controls.Add(this.label39);
-            this.groupBox3.Controls.Add(this.textBox24);
-            this.groupBox3.Controls.Add(this.textBox26);
+            this.groupBox3.Controls.Add(this.txt_projectOfficer);
+            this.groupBox3.Controls.Add(this.txt_fencing);
             this.groupBox3.Controls.Add(this.label37);
             this.groupBox3.Controls.Add(this.label38);
-            this.groupBox3.Controls.Add(this.textBox25);
+            this.groupBox3.Controls.Add(this.txt_boungryStones);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(8, 7);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -1220,36 +1216,36 @@
             this.label44.TabIndex = 113;
             this.label44.Text = "Total Development Cost (LKR)";
             // 
-            // textBox22
+            // txt_clearingOfLand
             // 
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(300, 14);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(125, 23);
-            this.textBox22.TabIndex = 80;
-            this.textBox22.Text = "0.00";
+            this.txt_clearingOfLand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_clearingOfLand.Location = new System.Drawing.Point(300, 14);
+            this.txt_clearingOfLand.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_clearingOfLand.Name = "txt_clearingOfLand";
+            this.txt_clearingOfLand.Size = new System.Drawing.Size(125, 23);
+            this.txt_clearingOfLand.TabIndex = 80;
+            this.txt_clearingOfLand.Text = "0.00";
             // 
-            // textBox32
+            // txt_totDevCost
             // 
-            this.textBox32.Enabled = false;
-            this.textBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox32.Location = new System.Drawing.Point(300, 517);
-            this.textBox32.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(125, 23);
-            this.textBox32.TabIndex = 112;
-            this.textBox32.Text = "0.00";
+            this.txt_totDevCost.Enabled = false;
+            this.txt_totDevCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_totDevCost.Location = new System.Drawing.Point(300, 517);
+            this.txt_totDevCost.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_totDevCost.Name = "txt_totDevCost";
+            this.txt_totDevCost.Size = new System.Drawing.Size(125, 23);
+            this.txt_totDevCost.TabIndex = 112;
+            this.txt_totDevCost.Text = "0.00";
             // 
-            // textBox21
+            // txt_fillingAndLeveling
             // 
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(300, 46);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(125, 23);
-            this.textBox21.TabIndex = 82;
-            this.textBox21.Text = "0.00";
+            this.txt_fillingAndLeveling.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_fillingAndLeveling.Location = new System.Drawing.Point(300, 46);
+            this.txt_fillingAndLeveling.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_fillingAndLeveling.Name = "txt_fillingAndLeveling";
+            this.txt_fillingAndLeveling.Size = new System.Drawing.Size(125, 23);
+            this.txt_fillingAndLeveling.TabIndex = 82;
+            this.txt_fillingAndLeveling.Text = "0.00";
             // 
             // label26
             // 
@@ -1269,29 +1265,29 @@
             this.label33.Location = new System.Drawing.Point(8, 52);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(146, 17);
+            this.label33.Size = new System.Drawing.Size(170, 17);
             this.label33.TabIndex = 83;
-            this.label33.Text = "Filling & Leveling (LKR)";
+            this.label33.Text = "Filling and Leveling (LKR)";
             // 
-            // textBox14
+            // txt_contingencies
             // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(300, 430);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(125, 23);
-            this.textBox14.TabIndex = 110;
-            this.textBox14.Text = "0.00";
+            this.txt_contingencies.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_contingencies.Location = new System.Drawing.Point(300, 430);
+            this.txt_contingencies.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_contingencies.Name = "txt_contingencies";
+            this.txt_contingencies.Size = new System.Drawing.Size(125, 23);
+            this.txt_contingencies.TabIndex = 110;
+            this.txt_contingencies.Text = "0.00";
             // 
-            // textBox20
+            // txt_culvertsAndDrains
             // 
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(300, 78);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(125, 23);
-            this.textBox20.TabIndex = 84;
-            this.textBox20.Text = "0.00";
+            this.txt_culvertsAndDrains.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_culvertsAndDrains.Location = new System.Drawing.Point(300, 78);
+            this.txt_culvertsAndDrains.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_culvertsAndDrains.Name = "txt_culvertsAndDrains";
+            this.txt_culvertsAndDrains.Size = new System.Drawing.Size(125, 23);
+            this.txt_culvertsAndDrains.TabIndex = 84;
+            this.txt_culvertsAndDrains.Text = "0.00";
             // 
             // label32
             // 
@@ -1300,19 +1296,19 @@
             this.label32.Location = new System.Drawing.Point(8, 81);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(251, 17);
+            this.label32.Size = new System.Drawing.Size(275, 17);
             this.label32.TabIndex = 85;
-            this.label32.Text = "Construction Of Culverts & Drains (LKR)";
+            this.label32.Text = "Construction Of Culverts and Drains (LKR)";
             // 
-            // textBox19
+            // txt_interiorRoadWays
             // 
-            this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(300, 142);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(125, 23);
-            this.textBox19.TabIndex = 86;
-            this.textBox19.Text = "0.00";
+            this.txt_interiorRoadWays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_interiorRoadWays.Location = new System.Drawing.Point(300, 142);
+            this.txt_interiorRoadWays.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_interiorRoadWays.Name = "txt_interiorRoadWays";
+            this.txt_interiorRoadWays.Size = new System.Drawing.Size(125, 23);
+            this.txt_interiorRoadWays.TabIndex = 86;
+            this.txt_interiorRoadWays.Text = "0.00";
             // 
             // label41
             // 
@@ -1336,25 +1332,25 @@
             this.label31.TabIndex = 87;
             this.label31.Text = "Construction Of Interior Road Ways (LKR)";
             // 
-            // textBox29
+            // txt_donation
             // 
-            this.textBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox29.Location = new System.Drawing.Point(300, 398);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(125, 23);
-            this.textBox29.TabIndex = 106;
-            this.textBox29.Text = "0.00";
+            this.txt_donation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_donation.Location = new System.Drawing.Point(300, 398);
+            this.txt_donation.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_donation.Name = "txt_donation";
+            this.txt_donation.Size = new System.Drawing.Size(125, 23);
+            this.txt_donation.TabIndex = 106;
+            this.txt_donation.Text = "0.00";
             // 
-            // textBox18
+            // txt_RetainerWall
             // 
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(300, 110);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(125, 23);
-            this.textBox18.TabIndex = 88;
-            this.textBox18.Text = "0.00";
+            this.txt_RetainerWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_RetainerWall.Location = new System.Drawing.Point(300, 110);
+            this.txt_RetainerWall.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_RetainerWall.Name = "txt_RetainerWall";
+            this.txt_RetainerWall.Size = new System.Drawing.Size(125, 23);
+            this.txt_RetainerWall.TabIndex = 88;
+            this.txt_RetainerWall.Text = "0.00";
             // 
             // label42
             // 
@@ -1378,25 +1374,25 @@
             this.label30.TabIndex = 89;
             this.label30.Text = "Construction Of Parapet/Retainer Wall (LKR)";
             // 
-            // textBox30
+            // txt_pradeshiyaSabha
             // 
-            this.textBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox30.Location = new System.Drawing.Point(300, 334);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(125, 23);
-            this.textBox30.TabIndex = 104;
-            this.textBox30.Text = "0.00";
+            this.txt_pradeshiyaSabha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_pradeshiyaSabha.Location = new System.Drawing.Point(300, 334);
+            this.txt_pradeshiyaSabha.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_pradeshiyaSabha.Name = "txt_pradeshiyaSabha";
+            this.txt_pradeshiyaSabha.Size = new System.Drawing.Size(125, 23);
+            this.txt_pradeshiyaSabha.TabIndex = 104;
+            this.txt_pradeshiyaSabha.Text = "0.00";
             // 
-            // textBox28
+            // txt_Huts
             // 
-            this.textBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox28.Location = new System.Drawing.Point(300, 174);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(125, 23);
-            this.textBox28.TabIndex = 92;
-            this.textBox28.Text = "0.00";
+            this.txt_Huts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Huts.Location = new System.Drawing.Point(300, 174);
+            this.txt_Huts.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Huts.Name = "txt_Huts";
+            this.txt_Huts.Size = new System.Drawing.Size(125, 23);
+            this.txt_Huts.TabIndex = 92;
+            this.txt_Huts.Text = "0.00";
             // 
             // label43
             // 
@@ -1407,7 +1403,7 @@
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(178, 17);
             this.label43.TabIndex = 103;
-            this.label43.Text = "Project Maintanance (LKR)";
+            this.label43.Text = "Project Maintenance (LKR)";
             // 
             // label40
             // 
@@ -1420,25 +1416,25 @@
             this.label40.TabIndex = 93;
             this.label40.Text = "Construction of Huts (LKR)";
             // 
-            // textBox31
+            // txt_maintenance
             // 
-            this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox31.Location = new System.Drawing.Point(300, 366);
-            this.textBox31.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(125, 23);
-            this.textBox31.TabIndex = 102;
-            this.textBox31.Text = "0.00";
+            this.txt_maintenance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_maintenance.Location = new System.Drawing.Point(300, 366);
+            this.txt_maintenance.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_maintenance.Name = "txt_maintenance";
+            this.txt_maintenance.Size = new System.Drawing.Size(125, 23);
+            this.txt_maintenance.TabIndex = 102;
+            this.txt_maintenance.Text = "0.00";
             // 
-            // textBox27
+            // txt_incidentalCost
             // 
-            this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox27.Location = new System.Drawing.Point(300, 206);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(125, 23);
-            this.textBox27.TabIndex = 94;
-            this.textBox27.Text = "0.00";
+            this.txt_incidentalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_incidentalCost.Location = new System.Drawing.Point(300, 206);
+            this.txt_incidentalCost.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_incidentalCost.Name = "txt_incidentalCost";
+            this.txt_incidentalCost.Size = new System.Drawing.Size(125, 23);
+            this.txt_incidentalCost.TabIndex = 94;
+            this.txt_incidentalCost.Text = "0.00";
             // 
             // label36
             // 
@@ -1462,25 +1458,25 @@
             this.label39.TabIndex = 95;
             this.label39.Text = "Incidental Cost (LKR)";
             // 
-            // textBox24
+            // txt_projectOfficer
             // 
-            this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(300, 270);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(125, 23);
-            this.textBox24.TabIndex = 100;
-            this.textBox24.Text = "0.00";
+            this.txt_projectOfficer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_projectOfficer.Location = new System.Drawing.Point(300, 270);
+            this.txt_projectOfficer.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_projectOfficer.Name = "txt_projectOfficer";
+            this.txt_projectOfficer.Size = new System.Drawing.Size(125, 23);
+            this.txt_projectOfficer.TabIndex = 100;
+            this.txt_projectOfficer.Text = "0.00";
             // 
-            // textBox26
+            // txt_fencing
             // 
-            this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox26.Location = new System.Drawing.Point(300, 238);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(125, 23);
-            this.textBox26.TabIndex = 96;
-            this.textBox26.Text = "0.00";
+            this.txt_fencing.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_fencing.Location = new System.Drawing.Point(300, 238);
+            this.txt_fencing.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_fencing.Name = "txt_fencing";
+            this.txt_fencing.Size = new System.Drawing.Size(125, 23);
+            this.txt_fencing.TabIndex = 96;
+            this.txt_fencing.Text = "0.00";
             // 
             // label37
             // 
@@ -1504,15 +1500,15 @@
             this.label38.TabIndex = 97;
             this.label38.Text = "Fencing (LKR)";
             // 
-            // textBox25
+            // txt_boungryStones
             // 
-            this.textBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox25.Location = new System.Drawing.Point(300, 302);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(125, 23);
-            this.textBox25.TabIndex = 98;
-            this.textBox25.Text = "0.00";
+            this.txt_boungryStones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_boungryStones.Location = new System.Drawing.Point(300, 302);
+            this.txt_boungryStones.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_boungryStones.Name = "txt_boungryStones";
+            this.txt_boungryStones.Size = new System.Drawing.Size(125, 23);
+            this.txt_boungryStones.TabIndex = 98;
+            this.txt_boungryStones.Text = "0.00";
             // 
             // tabPage3
             // 
@@ -1529,22 +1525,20 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox52);
-            this.groupBox5.Controls.Add(this.label64);
-            this.groupBox5.Controls.Add(this.textBox51);
+            this.groupBox5.Controls.Add(this.txt_mobileUnit);
             this.groupBox5.Controls.Add(this.label63);
-            this.groupBox5.Controls.Add(this.textBox50);
+            this.groupBox5.Controls.Add(this.txt_press);
             this.groupBox5.Controls.Add(this.label62);
-            this.groupBox5.Controls.Add(this.textBox49);
+            this.groupBox5.Controls.Add(this.txt_holdings);
             this.groupBox5.Controls.Add(this.label61);
-            this.groupBox5.Controls.Add(this.textBox48);
+            this.groupBox5.Controls.Add(this.txt_handbills);
             this.groupBox5.Controls.Add(this.label60);
-            this.groupBox5.Controls.Add(this.textBox47);
+            this.groupBox5.Controls.Add(this.txt_radioTV);
             this.groupBox5.Controls.Add(this.label59);
             this.groupBox5.Controls.Add(this.label56);
-            this.groupBox5.Controls.Add(this.textBox44);
-            this.groupBox5.Controls.Add(this.textBox45);
-            this.groupBox5.Controls.Add(this.textBox46);
+            this.groupBox5.Controls.Add(this.txt_totAdCost);
+            this.groupBox5.Controls.Add(this.txt_banners);
+            this.groupBox5.Controls.Add(this.txt_water);
             this.groupBox5.Controls.Add(this.label57);
             this.groupBox5.Controls.Add(this.label58);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1557,36 +1551,15 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Advertising";
             // 
-            // textBox52
+            // txt_mobileUnit
             // 
-            this.textBox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox52.Location = new System.Drawing.Point(333, 240);
-            this.textBox52.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new System.Drawing.Size(125, 23);
-            this.textBox52.TabIndex = 127;
-            this.textBox52.Text = "0.00";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(8, 246);
-            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(119, 17);
-            this.label64.TabIndex = 126;
-            this.label64.Text = "Mobile Unit (LKR)";
-            // 
-            // textBox51
-            // 
-            this.textBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox51.Location = new System.Drawing.Point(333, 208);
-            this.textBox51.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new System.Drawing.Size(125, 23);
-            this.textBox51.TabIndex = 125;
-            this.textBox51.Text = "0.00";
+            this.txt_mobileUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mobileUnit.Location = new System.Drawing.Point(333, 208);
+            this.txt_mobileUnit.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_mobileUnit.Name = "txt_mobileUnit";
+            this.txt_mobileUnit.Size = new System.Drawing.Size(125, 23);
+            this.txt_mobileUnit.TabIndex = 125;
+            this.txt_mobileUnit.Text = "0.00";
             // 
             // label63
             // 
@@ -1599,15 +1572,15 @@
             this.label63.TabIndex = 124;
             this.label63.Text = "Mobile Unit (LKR)";
             // 
-            // textBox50
+            // txt_press
             // 
-            this.textBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox50.Location = new System.Drawing.Point(333, 176);
-            this.textBox50.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new System.Drawing.Size(125, 23);
-            this.textBox50.TabIndex = 123;
-            this.textBox50.Text = "0.00";
+            this.txt_press.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_press.Location = new System.Drawing.Point(333, 176);
+            this.txt_press.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_press.Name = "txt_press";
+            this.txt_press.Size = new System.Drawing.Size(125, 23);
+            this.txt_press.TabIndex = 123;
+            this.txt_press.Text = "0.00";
             // 
             // label62
             // 
@@ -1620,15 +1593,15 @@
             this.label62.TabIndex = 122;
             this.label62.Text = "Press Add. (LKR)";
             // 
-            // textBox49
+            // txt_holdings
             // 
-            this.textBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox49.Location = new System.Drawing.Point(333, 144);
-            this.textBox49.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(125, 23);
-            this.textBox49.TabIndex = 121;
-            this.textBox49.Text = "0.00";
+            this.txt_holdings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_holdings.Location = new System.Drawing.Point(333, 144);
+            this.txt_holdings.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_holdings.Name = "txt_holdings";
+            this.txt_holdings.Size = new System.Drawing.Size(125, 23);
+            this.txt_holdings.TabIndex = 121;
+            this.txt_holdings.Text = "0.00";
             // 
             // label61
             // 
@@ -1641,15 +1614,15 @@
             this.label61.TabIndex = 120;
             this.label61.Text = "Holdings (LKR)";
             // 
-            // textBox48
+            // txt_handbills
             // 
-            this.textBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox48.Location = new System.Drawing.Point(333, 80);
-            this.textBox48.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(125, 23);
-            this.textBox48.TabIndex = 119;
-            this.textBox48.Text = "0.00";
+            this.txt_handbills.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_handbills.Location = new System.Drawing.Point(333, 80);
+            this.txt_handbills.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_handbills.Name = "txt_handbills";
+            this.txt_handbills.Size = new System.Drawing.Size(125, 23);
+            this.txt_handbills.TabIndex = 119;
+            this.txt_handbills.Text = "0.00";
             // 
             // label60
             // 
@@ -1662,15 +1635,15 @@
             this.label60.TabIndex = 118;
             this.label60.Text = "Hand Bills (LKR)";
             // 
-            // textBox47
+            // txt_radioTV
             // 
-            this.textBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox47.Location = new System.Drawing.Point(333, 112);
-            this.textBox47.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(125, 23);
-            this.textBox47.TabIndex = 117;
-            this.textBox47.Text = "0.00";
+            this.txt_radioTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_radioTV.Location = new System.Drawing.Point(333, 112);
+            this.txt_radioTV.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_radioTV.Name = "txt_radioTV";
+            this.txt_radioTV.Size = new System.Drawing.Size(125, 23);
+            this.txt_radioTV.TabIndex = 117;
+            this.txt_radioTV.Text = "0.00";
             // 
             // label59
             // 
@@ -1694,36 +1667,36 @@
             this.label56.TabIndex = 115;
             this.label56.Text = "Total Advertising Cost (LKR)";
             // 
-            // textBox44
+            // txt_totAdCost
             // 
-            this.textBox44.Enabled = false;
-            this.textBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox44.Location = new System.Drawing.Point(333, 510);
-            this.textBox44.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(125, 23);
-            this.textBox44.TabIndex = 114;
-            this.textBox44.Text = "0.00";
+            this.txt_totAdCost.Enabled = false;
+            this.txt_totAdCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_totAdCost.Location = new System.Drawing.Point(333, 510);
+            this.txt_totAdCost.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_totAdCost.Name = "txt_totAdCost";
+            this.txt_totAdCost.Size = new System.Drawing.Size(125, 23);
+            this.txt_totAdCost.TabIndex = 114;
+            this.txt_totAdCost.Text = "0.00";
             // 
-            // textBox45
+            // txt_banners
             // 
-            this.textBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox45.Location = new System.Drawing.Point(333, 48);
-            this.textBox45.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(125, 23);
-            this.textBox45.TabIndex = 115;
-            this.textBox45.Text = "0.00";
+            this.txt_banners.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_banners.Location = new System.Drawing.Point(333, 48);
+            this.txt_banners.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_banners.Name = "txt_banners";
+            this.txt_banners.Size = new System.Drawing.Size(125, 23);
+            this.txt_banners.TabIndex = 115;
+            this.txt_banners.Text = "0.00";
             // 
-            // textBox46
+            // txt_water
             // 
-            this.textBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox46.Location = new System.Drawing.Point(333, 16);
-            this.textBox46.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(125, 23);
-            this.textBox46.TabIndex = 114;
-            this.textBox46.Text = "0.00";
+            this.txt_water.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_water.Location = new System.Drawing.Point(333, 16);
+            this.txt_water.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_water.Name = "txt_water";
+            this.txt_water.Size = new System.Drawing.Size(125, 23);
+            this.txt_water.TabIndex = 114;
+            this.txt_water.Text = "0.00";
             // 
             // label57
             // 
@@ -1749,21 +1722,19 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.label55);
             this.groupBox6.Controls.Add(this.label48);
-            this.groupBox6.Controls.Add(this.textBox43);
-            this.groupBox6.Controls.Add(this.textBox38);
+            this.groupBox6.Controls.Add(this.txt_execDirectors);
             this.groupBox6.Controls.Add(this.label54);
             this.groupBox6.Controls.Add(this.label50);
-            this.groupBox6.Controls.Add(this.textBox42);
-            this.groupBox6.Controls.Add(this.textBox37);
+            this.groupBox6.Controls.Add(this.txt_entertainment);
+            this.groupBox6.Controls.Add(this.txt_DGM);
             this.groupBox6.Controls.Add(this.label45);
             this.groupBox6.Controls.Add(this.label49);
-            this.groupBox6.Controls.Add(this.textBox33);
-            this.groupBox6.Controls.Add(this.textBox36);
+            this.groupBox6.Controls.Add(this.txt_totTravCost);
+            this.groupBox6.Controls.Add(this.txt_managerProject);
             this.groupBox6.Controls.Add(this.label46);
-            this.groupBox6.Controls.Add(this.textBox35);
-            this.groupBox6.Controls.Add(this.textBox34);
+            this.groupBox6.Controls.Add(this.txt_teleAllowance);
+            this.groupBox6.Controls.Add(this.txt_projOfficer);
             this.groupBox6.Controls.Add(this.label47);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(8, 7);
@@ -1774,17 +1745,6 @@
             this.groupBox6.TabIndex = 116;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Travelling";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(19, 224);
-            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(137, 17);
-            this.label55.TabIndex = 95;
-            this.label55.Text = "Entertainment (LKR)";
             // 
             // label48
             // 
@@ -1797,25 +1757,15 @@
             this.label48.TabIndex = 85;
             this.label48.Text = "Manager Project (LKR)";
             // 
-            // textBox43
+            // txt_execDirectors
             // 
-            this.textBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox43.Location = new System.Drawing.Point(283, 222);
-            this.textBox43.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(132, 23);
-            this.textBox43.TabIndex = 94;
-            this.textBox43.Text = "0.00";
-            // 
-            // textBox38
-            // 
-            this.textBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox38.Location = new System.Drawing.Point(283, 30);
-            this.textBox38.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(132, 23);
-            this.textBox38.TabIndex = 80;
-            this.textBox38.Text = "0.00";
+            this.txt_execDirectors.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_execDirectors.Location = new System.Drawing.Point(283, 30);
+            this.txt_execDirectors.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_execDirectors.Name = "txt_execDirectors";
+            this.txt_execDirectors.Size = new System.Drawing.Size(132, 23);
+            this.txt_execDirectors.TabIndex = 80;
+            this.txt_execDirectors.Text = "0.00";
             // 
             // label54
             // 
@@ -1839,25 +1789,25 @@
             this.label50.TabIndex = 81;
             this.label50.Text = "Executive Directors (LKR)";
             // 
-            // textBox42
+            // txt_entertainment
             // 
-            this.textBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox42.Location = new System.Drawing.Point(283, 190);
-            this.textBox42.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(132, 23);
-            this.textBox42.TabIndex = 92;
-            this.textBox42.Text = "0.00";
+            this.txt_entertainment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_entertainment.Location = new System.Drawing.Point(283, 190);
+            this.txt_entertainment.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_entertainment.Name = "txt_entertainment";
+            this.txt_entertainment.Size = new System.Drawing.Size(132, 23);
+            this.txt_entertainment.TabIndex = 92;
+            this.txt_entertainment.Text = "0.00";
             // 
-            // textBox37
+            // txt_DGM
             // 
-            this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox37.Location = new System.Drawing.Point(283, 62);
-            this.textBox37.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(132, 23);
-            this.textBox37.TabIndex = 82;
-            this.textBox37.Text = "0.00";
+            this.txt_DGM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DGM.Location = new System.Drawing.Point(283, 62);
+            this.txt_DGM.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_DGM.Name = "txt_DGM";
+            this.txt_DGM.Size = new System.Drawing.Size(132, 23);
+            this.txt_DGM.TabIndex = 82;
+            this.txt_DGM.Text = "0.00";
             // 
             // label45
             // 
@@ -1881,26 +1831,25 @@
             this.label49.TabIndex = 83;
             this.label49.Text = "Director General Manager (LKR)";
             // 
-            // textBox33
+            // txt_totTravCost
             // 
-            this.textBox33.Enabled = false;
-            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox33.Location = new System.Drawing.Point(283, 511);
-            this.textBox33.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(132, 23);
-            this.textBox33.TabIndex = 90;
-            this.textBox33.Text = "0.00";
+            this.txt_totTravCost.Enabled = false;
+            this.txt_totTravCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_totTravCost.Location = new System.Drawing.Point(283, 511);
+            this.txt_totTravCost.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_totTravCost.Name = "txt_totTravCost";
+            this.txt_totTravCost.Size = new System.Drawing.Size(132, 23);
+            this.txt_totTravCost.TabIndex = 90;
             // 
-            // textBox36
+            // txt_managerProject
             // 
-            this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox36.Location = new System.Drawing.Point(283, 94);
-            this.textBox36.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(132, 23);
-            this.textBox36.TabIndex = 84;
-            this.textBox36.Text = "0.00";
+            this.txt_managerProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_managerProject.Location = new System.Drawing.Point(283, 94);
+            this.txt_managerProject.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_managerProject.Name = "txt_managerProject";
+            this.txt_managerProject.Size = new System.Drawing.Size(132, 23);
+            this.txt_managerProject.TabIndex = 84;
+            this.txt_managerProject.Text = "0.00";
             // 
             // label46
             // 
@@ -1913,25 +1862,25 @@
             this.label46.TabIndex = 89;
             this.label46.Text = "Project officer (LKR)";
             // 
-            // textBox35
+            // txt_teleAllowance
             // 
-            this.textBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox35.Location = new System.Drawing.Point(283, 158);
-            this.textBox35.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(132, 23);
-            this.textBox35.TabIndex = 86;
-            this.textBox35.Text = "0.00";
+            this.txt_teleAllowance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_teleAllowance.Location = new System.Drawing.Point(283, 158);
+            this.txt_teleAllowance.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_teleAllowance.Name = "txt_teleAllowance";
+            this.txt_teleAllowance.Size = new System.Drawing.Size(132, 23);
+            this.txt_teleAllowance.TabIndex = 86;
+            this.txt_teleAllowance.Text = "0.00";
             // 
-            // textBox34
+            // txt_projOfficer
             // 
-            this.textBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox34.Location = new System.Drawing.Point(283, 126);
-            this.textBox34.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(132, 23);
-            this.textBox34.TabIndex = 88;
-            this.textBox34.Text = "0.00";
+            this.txt_projOfficer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_projOfficer.Location = new System.Drawing.Point(283, 126);
+            this.txt_projOfficer.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_projOfficer.Name = "txt_projOfficer";
+            this.txt_projOfficer.Size = new System.Drawing.Size(132, 23);
+            this.txt_projOfficer.TabIndex = 88;
+            this.txt_projOfficer.Text = "0.00";
             // 
             // label47
             // 
@@ -2519,79 +2468,75 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txt_contingencies;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox txt_donation;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox textBox30;
+        private System.Windows.Forms.TextBox txt_pradeshiyaSabha;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox textBox31;
+        private System.Windows.Forms.TextBox txt_maintenance;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txt_projectOfficer;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox txt_boungryStones;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox txt_fencing;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.TextBox txt_incidentalCost;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.TextBox txt_Huts;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txt_RetainerWall;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txt_interiorRoadWays;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox txt_culvertsAndDrains;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txt_fillingAndLeveling;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox txt_clearingOfLand;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.TextBox txt_totDevCost;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox textBox33;
+        private System.Windows.Forms.TextBox txt_totTravCost;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox textBox34;
+        private System.Windows.Forms.TextBox txt_projOfficer;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox35;
+        private System.Windows.Forms.TextBox txt_teleAllowance;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.TextBox txt_managerProject;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.TextBox txt_DGM;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox textBox38;
+        private System.Windows.Forms.TextBox txt_execDirectors;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.TextBox textBox41;
+        private System.Windows.Forms.TextBox txt_totUtilityCost;
+        private System.Windows.Forms.TextBox txt_providingElectricity;
+        private System.Windows.Forms.TextBox txt_providingWater;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label51;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox textBox43;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.TextBox textBox42;
+        private System.Windows.Forms.TextBox txt_entertainment;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.TextBox textBox44;
-        private System.Windows.Forms.TextBox textBox45;
-        private System.Windows.Forms.TextBox textBox46;
+        private System.Windows.Forms.TextBox txt_totAdCost;
+        private System.Windows.Forms.TextBox txt_banners;
+        private System.Windows.Forms.TextBox txt_water;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox52;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.TextBox textBox51;
+        private System.Windows.Forms.TextBox txt_mobileUnit;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.TextBox textBox50;
+        private System.Windows.Forms.TextBox txt_press;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.TextBox textBox49;
+        private System.Windows.Forms.TextBox txt_holdings;
         private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.TextBox textBox48;
+        private System.Windows.Forms.TextBox txt_handbills;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.TextBox textBox47;
+        private System.Windows.Forms.TextBox txt_radioTV;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox8;
