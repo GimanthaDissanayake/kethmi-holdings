@@ -272,12 +272,21 @@
             // 
             // dataGridView_projectList
             // 
+            this.dataGridView_projectList.AllowUserToAddRows = false;
+            this.dataGridView_projectList.AllowUserToDeleteRows = false;
+            this.dataGridView_projectList.AllowUserToResizeColumns = false;
+            this.dataGridView_projectList.AllowUserToResizeRows = false;
             this.dataGridView_projectList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_projectList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView_projectList.Location = new System.Drawing.Point(7, 26);
             this.dataGridView_projectList.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_projectList.Name = "dataGridView_projectList";
+            this.dataGridView_projectList.ReadOnly = true;
+            this.dataGridView_projectList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridView_projectList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_projectList.Size = new System.Drawing.Size(319, 480);
             this.dataGridView_projectList.TabIndex = 0;
+            this.dataGridView_projectList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_projectList_MouseClick);
             // 
             // label1
             // 

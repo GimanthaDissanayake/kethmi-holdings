@@ -68,6 +68,7 @@ namespace Kethmi_Holdings
         }
         public DataTable select(String query)
         {
+            con.ConnectionString = conString;
             con.Open();
             da = new SqlDataAdapter(query, con);
             dt = new DataTable();

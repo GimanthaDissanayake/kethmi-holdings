@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Kethmi_Holdings
 {
@@ -21,13 +23,16 @@ namespace Kethmi_Holdings
         string strsql = "";
         string strUsername = "";
         Form formArg;
+        int pId;
+        DataTable dt;
+
         /*
         public frm_Project(Form f)
         {
             InitializeComponent();
             formArg = f;
         }*/
-        
+
         public bool setGbProjectSearchEnabled { set { gb_projectSearch.Enabled = value; } }
         public bool setTcProjectsEnabled { set { tc_project.Enabled = value; } }
 
@@ -38,6 +43,7 @@ namespace Kethmi_Holdings
             lastButtonStates = new ButtonsStates();
             CommonClass.setToolTipButtonStates(true, true, false, false, true, false);
             lastButtonStates.save();
+            loadData();
         }
 
         private void frm_Project_FormClosing(object sender, FormClosingEventArgs e) {
@@ -65,7 +71,6 @@ namespace Kethmi_Holdings
             db.insertUpdateDelete(strsql);
             
             //get Project ID
-            int pId;
             pId = Convert.ToInt32(db.getValue("SELECT TOP 1 projID FROM ProjectMaster ORDER BY projID DESC"));
             
             //Save Project Basic Details
@@ -125,9 +130,52 @@ namespace Kethmi_Holdings
             db.insertUpdateDelete(strsql);
         }
 
+        public void loadData()
+        {
+            db = new Database();
+            strsql = "SELECT projID as 'ID',projName as 'Project Name' FROM ProjectMaster";
+           dataGridView_projectList.DataSource = db.select(strsql);
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             ButtonSave();
+        }
+
+        private void dataGridView_projectList_MouseClick(object sender, MouseEventArgs e)
+        {
+            Console.Out.WriteLine("fsdfdfsd");
+
+            db = new Database();
+            dt = new DataTable();
+
+            pId = Convert.ToInt32(dataGridView_projectList.SelectedRows[0].Cells[0].Value);
+
+            strsql = "SELECT projName FROM ProjectMaster WHERE projID='" + pId + "'";
+            txt_projectName.Text = db.getValue(strsql);
+            
+            strsql = "SELECT * FROM ProjectBasicDetails WHERE projID='"+pId+"'";
+            dt = db.select(strsql);
+            
+            foreach (DataRow row in dt.Rows)
+            {
+                txt_owner.Text = row[1].ToString();
+                txt_location.Text = row[2].ToString();
+                txt_broker.Text = row[3].ToString();
+                dateTimePicker1.Text = row[16].ToString();
+                txt_introduction.Text = row[4].ToString();
+                txt_totalPerches.Text = row[5].ToString();
+                txt_valExpectedByOwner.Text = row[6].ToString();
+                txt_agreedValuePP.Text = row[7].ToString();
+                txt_roadways.Text = row[8].ToString();
+                txt_commonArea.Text = row[9].ToString();
+                txt_reservation.Text = row[10].ToString();
+                txt_sellableArea.Text = row[14].ToString();
+                txt_acres.Text = row[11].ToString();
+                txt_roods.Text = row[12].ToString();
+                txt_perches.Text = row[13].ToString();
+            }
+
         }
     }
 }
