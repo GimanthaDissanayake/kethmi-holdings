@@ -214,6 +214,8 @@
             this.label65 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.gb_projectSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_projectList)).BeginInit();
             this.tc_project.SuspendLayout();
@@ -1849,6 +1851,7 @@
             this.txt_totTravCost.Name = "txt_totTravCost";
             this.txt_totTravCost.Size = new System.Drawing.Size(132, 23);
             this.txt_totTravCost.TabIndex = 90;
+            this.txt_totTravCost.Text = "0.00";
             // 
             // txt_managerProject
             // 
@@ -2357,14 +2360,36 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(792, 633);
+            this.button3.Location = new System.Drawing.Point(16, 624);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(544, 46);
+            this.button3.Size = new System.Drawing.Size(198, 46);
             this.button3.TabIndex = 4;
             this.button3.Text = "Save Temporary";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(234, 624);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(198, 46);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Edit";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(453, 624);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(198, 46);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "New";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // frm_Project
             // 
@@ -2372,6 +2397,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1357, 683);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tc_project);
             this.Controls.Add(this.gb_projectSearch);
@@ -2609,5 +2636,7 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox txt_sellableArea;
         private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
