@@ -30,13 +30,11 @@ namespace Kethmi_Holdings
             this.strUsername = username;
         }
 
-        public bool BtnAdd { set { btn_add.Enabled = value; } get { return btn_add.Enabled; } }
-        public bool BtnEdit { set { btn_edit.Enabled = value; } get { return btn_edit.Enabled; } }
-        public bool BtnSave { set { btn_save.Enabled = value; } get { return btn_save.Enabled; } }
-        public bool BtnPrint { set { btn_print.Enabled = value; } get { return btn_print.Enabled; } }
-        public bool BtnDelete { set { btn_delete.Enabled = value; } get { return btn_delete.Enabled; } }
-        public bool BtnClear { set { btn_clear.Enabled = value; } get { return btn_clear.Enabled; } }
-        
+        public frm_Main()
+        {
+            InitializeComponent();            
+        }
+         
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -57,6 +55,7 @@ namespace Kethmi_Holdings
             frmProject.MdiParent = this;
             frmProject.Show();
             btnProjects.Enabled = false;
+            ts_side.Visible = true;
         }
         
 
@@ -74,6 +73,7 @@ namespace Kethmi_Holdings
             frmSales.Show();
             CommonClass.setToolTipButtonStates(false);
             btnSales.Enabled = false;
+            ts_side.Visible = true;
         }
         private void frmSales_FormClosed(object sender, EventArgs e) {
             btnSales.Enabled = true;
@@ -88,6 +88,7 @@ namespace Kethmi_Holdings
             frmAdvertising.MdiParent = this;
             frmAdvertising.Show();
             btnAdvertising.Enabled = false;
+            ts_side.Visible = true;
         }
         private void frmAdvertising_FormClosed(object sender, EventArgs e)
         {
@@ -102,6 +103,7 @@ namespace Kethmi_Holdings
             frmRecipts.Show();
             CommonClass.setToolTipButtonStates(true,true,false,true,false,false);
             btnReciepts.Enabled = false;
+            ts_side.Visible = true;
         }
 
         private void frmRecipts_FormClosed(object sender, EventArgs e)
@@ -118,6 +120,7 @@ namespace Kethmi_Holdings
             frmCustomers.MdiParent = this;
             frmCustomers.Show();
             btnCustomers.Enabled = false;
+            ts_side.Visible = true;
         }
 
         private void frmCustomers_FormClosed(object sender, EventArgs e)
@@ -139,9 +142,7 @@ namespace Kethmi_Holdings
         {
             if (this.ActiveMdiChild == frmProject)
             {
-                CommonClass.setToolTipButtonStates(false, false, true, false, false, true);
-                frmProject.setGbProjectSearchEnabled = false;
-                frmProject.setTcProjectsEnabled = true;
+                frmProject.ButtonNew();        
             }
             if (this.ActiveMdiChild == frmRecipts) {
                 CommonClass.setToolTipButtonStates(false, false, false, true, false, true);
@@ -160,6 +161,7 @@ namespace Kethmi_Holdings
 
         private void frm_Main_Load_1(object sender, EventArgs e)
         {
+            ts_side.Visible = false;
             CommonClass.setToolTipButtonStates(false);
         }
 
@@ -221,8 +223,11 @@ namespace Kethmi_Holdings
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-
-        }
+            if (this.ActiveMdiChild == frmProject)
+            {
+                frmProject.ButtonClear();
+            }
+            }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
@@ -238,6 +243,27 @@ namespace Kethmi_Holdings
         public static implicit operator frm_Main(frm_Login v)
         {
             throw new NotImplementedException();
+        }
+
+        private void frm_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild == frmProject)
+            {
+                frmProject.ButtonDelete();
+            }
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild == frmProject)
+            {
+                frmProject.ButtonEdit();
+            }
         }
     }
 }

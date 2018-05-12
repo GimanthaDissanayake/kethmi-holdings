@@ -16,5 +16,11 @@ namespace Kethmi_Holdings
         {
             InitializeComponent();
         }
+
+        private void frm_Reports_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ButtonsStates btnStat = new ButtonsStates();
+            btnStat.CloseToolStrip((frm_Main)this.MdiParent);
+        }
     }
 }

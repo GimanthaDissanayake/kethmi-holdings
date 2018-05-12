@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 namespace Kethmi_Holdings
 {
@@ -13,15 +14,16 @@ namespace Kethmi_Holdings
         private SqlCommand cmd;
         private SqlDataAdapter da;
         private DataTable dt;
-        //private ReportDataSource rds;
-        private string conString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=KethmiHoldings;Integrated Security=True";
+        //use the app config connection string for the system. so we do not need to rebuild the application when changing the server.
+        private string strConn = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+
         #endregion
 
         #region methods
         //inizialize sql connection when the instance of database call is created!
         public Database()
         {
-            con = new SqlConnection(conString);
+            con = new SqlConnection(strConn);
         }
 
         /*this will return single value for the query
@@ -29,7 +31,7 @@ namespace Kethmi_Holdings
         public String getValue(String query)
         {
             String foundValue = "";
-            con.ConnectionString = conString;
+            con.ConnectionString = strConn;
             using (con)
             {
                 using (SqlCommand command = new SqlCommand(query, con))
@@ -60,7 +62,7 @@ namespace Kethmi_Holdings
 
         public void insertUpdateDelete(String query)
         {
-            con.ConnectionString = conString;
+            con.ConnectionString = strConn;
             con.Open();
             cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
@@ -68,7 +70,7 @@ namespace Kethmi_Holdings
         }
         public DataTable select(String query)
         {
-            con.ConnectionString = conString;
+            con.ConnectionString = strConn;
             con.Open();
             da = new SqlDataAdapter(query, con);
             dt = new DataTable();

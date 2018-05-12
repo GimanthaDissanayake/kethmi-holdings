@@ -76,6 +76,7 @@
             this.Name = "frm_Reports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Reports";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Reports_FormClosing);
             this.ResumeLayout(false);
 
         }

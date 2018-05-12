@@ -272,6 +272,7 @@
             this.Text = "Recipts";
             this.Activated += new System.EventHandler(this.frm_Recipts_Activated);
             this.Deactivate += new System.EventHandler(this.frm_Recipts_Deactivate);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Recipts_FormClosing);
             this.Load += new System.EventHandler(this.frm_Recipts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

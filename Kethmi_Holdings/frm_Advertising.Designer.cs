@@ -51,6 +51,8 @@
             this.Name = "frm_Advertising";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Advertising";
+            this.Activated += new System.EventHandler(this.frm_Advertising_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Advertising_FormClosing);
             this.Load += new System.EventHandler(this.frm_Advertising_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

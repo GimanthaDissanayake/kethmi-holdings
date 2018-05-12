@@ -31,5 +31,11 @@ namespace Kethmi_Holdings
         {
             lastButtonStates.save();
         }
+
+        private void frm_Sales_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ButtonsStates btnStat = new ButtonsStates();
+            btnStat.CloseToolStrip((frm_Main)this.MdiParent);
+        }
     }
 }

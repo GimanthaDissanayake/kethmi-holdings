@@ -325,6 +325,8 @@
             this.Name = "frm_Main_Receipt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Input Reciept Details";
+            this.Activated += new System.EventHandler(this.frm_Main_Receipt_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Main_Receipt_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -53,6 +53,7 @@
             this.Text = "Sales";
             this.Activated += new System.EventHandler(this.frm_Sales_Activated);
             this.Deactivate += new System.EventHandler(this.frm_Sales_Deactivate);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Sales_FormClosing);
             this.Load += new System.EventHandler(this.frm_Sales_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -189,6 +189,7 @@
             this.Text = "User Control";
             this.Activated += new System.EventHandler(this.frm_UserControl_Activated);
             this.Deactivate += new System.EventHandler(this.frm_UserControl_Deactivate);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_UserControl_FormClosing);
             this.Load += new System.EventHandler(this.frm_UserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gb_inputArea.ResumeLayout(false);

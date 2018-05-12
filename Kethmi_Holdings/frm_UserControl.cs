@@ -58,5 +58,11 @@ namespace Kethmi_Holdings
                 "addedUser,usertype,active ) values ('"+txtUserID.Text+"','"+txtUserName.Text+"','"+txtPW.Text+"','"+DateTime.Now.ToString()+"','"+strUsername+"','"+userType+"','"+chkActive.Checked+"')";
             db.insertUpdateDelete(strsql);
         }
+
+        private void frm_UserControl_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ButtonsStates btnStat = new ButtonsStates();
+            btnStat.CloseToolStrip((frm_Main)this.MdiParent);
+        }
     }
 }

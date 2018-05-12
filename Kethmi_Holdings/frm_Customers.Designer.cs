@@ -193,6 +193,8 @@
             this.Name = "frm_Customers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Customer Control";
+            this.Activated += new System.EventHandler(this.frm_Customers_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Customers_FormClosing);
             this.Load += new System.EventHandler(this.frm_Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
