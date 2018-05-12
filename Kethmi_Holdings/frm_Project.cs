@@ -483,7 +483,7 @@ namespace Kethmi_Holdings
                 txt_press.Enabled = false;
                 txt_mobileUnit.Enabled = false;
                 txt_totAdCost.Enabled = false;
-                /*sm missing*/
+                /*some text fields missing*/
             }
         }
 
