@@ -135,7 +135,7 @@ namespace Kethmi_Holdings
                     "'" + txt_holdings.Text + "','" + txt_press.Text + "','" + txt_mobileUnit.Text + "','" + txt_totAdCost.Text + "','" + strUsername + "','" + DateTime.Now + "')";
                 db.insertUpdateDelete(strsql);
 
-                //Save Cost Sales and Profitability1
+                //Save Cost Sales and Profitability
 
                 //Clear Data Fields
                 clearData();

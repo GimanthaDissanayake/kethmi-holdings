@@ -40,5 +40,7 @@ namespace Kethmi_Holdings
             (new frm_Main(strUsername)).Show();
             strUsername = tb_username.Text;
         }
+
+        // THIS IS A TEST
     }
 }
