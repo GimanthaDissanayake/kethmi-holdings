@@ -65,6 +65,8 @@ namespace Kethmi_Holdings
                 btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
             }
         }
+
+
         public void ButtonSave()
         {
             if (mode == "New")
@@ -143,8 +145,12 @@ namespace Kethmi_Holdings
             else if (mode == "Edit")
             {
                 //update queries
+                db = new Database();
                 
                 //update Project Master
+                strsql = "UPDATE ProjectMaster SET projName='" + txt_projectName.Text + "',date='" + dateTimePicker1.Value.ToShortDateString() + "',"+
+                    "changedDate='"+DateTime.Now+"',changedUser='"+strUsername+"' WHERE projID='"+pId+"'";
+                db.insertUpdateDelete(strsql);
             }
         }
 
