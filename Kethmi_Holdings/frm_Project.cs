@@ -178,7 +178,7 @@ namespace Kethmi_Holdings
                         " WHERE projID='"+pId+"')";
                     db.insertUpdateDelete(strsql);
 
-                    //Save Project Development Cost
+                    //Update Project Development Cost
                     strsql = "UPDATE ProjectDevCost SET clearing='" + txt_clearingOfLand.Text + "',fillingLeveling='" + txt_fillingAndLeveling.Text + "'"+
                         ",culvertsDrains='" + txt_culvertsAndDrains.Text + "',parapet='" + txt_RetainerWall.Text + "'"+
                         ",roadWays='" + txt_interiorRoadWays.Text + "',huts='" + txt_Huts.Text + "',incidentalCost='" + txt_incidentalCost.Text + "'"+
@@ -189,27 +189,29 @@ namespace Kethmi_Holdings
                         "WHERE projID='" + pId + "')";
                     db.insertUpdateDelete(strsql);
 
-                    //Save Project Utilities
-                    strsql = "INSERT INTO ProjectUtilCost(projID,water,elec,totUtilCost,addedUser,addedDate)" +
-                        " VALUES('" + pId + "','" + txt_providingWater.Text + "','" + txt_providingElectricity.Text + "','" + txt_totUtilityCost.Text + "'," +
-                        "'" + strUsername + "','" + DateTime.Now + "')";
+                    //Update Project Utilities
+                    strsql = "UPDATE ProjectUtilCost SET water='" + txt_providingWater.Text + "',elec='" + txt_providingElectricity.Text + "'"+
+                        ",totUtilCost='" + txt_totUtilityCost.Text + "',changedUser='" + strUsername + "',changedDAte='" + DateTime.Now + "' " +
+                        "WHERE projID='" + pId + "')";
                     db.insertUpdateDelete(strsql);
 
-                    //Save Project Traveling
-                    strsql = "INSERT INTO ProjectTravellingCost(projID,execDirectors,dgm,manager,officer,telephone,entertainment,totTravellingCost," +
-                        "addedUser,addedDate) " +
-                        "VALUES('" + pId + "','" + txt_execDirectors.Text + "','" + txt_DGM.Text + "','" + txt_managerProject.Text + "','" + txt_projOfficer.Text + "'," +
-                        "'" + txt_teleAllowance.Text + "','" + txt_entertainment.Text + "','" + txt_totTravCost.Text + "','" + strUsername + "','" + DateTime.Now + "')";
+                    //Update Project Traveling
+                    strsql = "Update ProjectTravellingCost SET execDirectors='" + txt_execDirectors.Text + "',dgm='" + txt_DGM.Text + "'"+
+                        ",manager='" + txt_managerProject.Text + "',officer='" + txt_projOfficer.Text + "',telephone='" + txt_teleAllowance.Text + "'"+
+                        ",entertainment='" + txt_entertainment.Text + "',totTravellingCost='" + txt_totTravCost.Text + "'," +
+                        ",changedUser='" + strUsername + "',changedDAte='" + DateTime.Now + "' " +
+                        "WHERE projID='" + pId + "')";
                     db.insertUpdateDelete(strsql);
 
-                    //Save Project Advertising
-                    strsql = "INSERT INTO ProjectAdvertisingCost(projID,water,banners,handBills,radioTV,holdings,pressAd,mobile,totAdCost," +
-                        "addedUser,addedDate) " +
-                        "VALUES('" + pId + "','" + txt_water.Text + "','" + txt_banners.Text + "','" + txt_handbills.Text + "','" + txt_radioTV.Text + "'," +
-                        "'" + txt_holdings.Text + "','" + txt_press.Text + "','" + txt_mobileUnit.Text + "','" + txt_totAdCost.Text + "','" + strUsername + "','" + DateTime.Now + "')";
+                    //Update Project Advertising
+                    strsql = "Update ProjectAdvertisingCost SET water='" + txt_water.Text + "',banners='" + txt_banners.Text + "'"+
+                        ",handBills='" + txt_handbills.Text + "',radioTV='" + txt_radioTV.Text + "',holdings='" + txt_holdings.Text + "'"+
+                        ",pressAd='" + txt_press.Text + "',mobile='" + txt_mobileUnit.Text + "',totAdCost='" + txt_totAdCost.Text + "'," +
+                        ",changedUser='" + strUsername + "',changedDAte='" + DateTime.Now + "' " +
+                        "WHERE projID='" + pId + "')";
                     db.insertUpdateDelete(strsql);
 
-                    //Save Cost Sales and Profitability
+                    //Update Cost Sales and Profitability
 
                     //Clear Data Fields
                     clearData();
