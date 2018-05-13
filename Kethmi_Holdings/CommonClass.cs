@@ -62,7 +62,7 @@ namespace Kethmi_Holdings
             t = (ToolStrip)frmMdi.Controls["ts_side"];
             t.Visible = false;
         }
-
+        //a
         public void VisibleToolStrip(frm_Main frmMdi)
         {
             ToolStrip t = new ToolStrip();
