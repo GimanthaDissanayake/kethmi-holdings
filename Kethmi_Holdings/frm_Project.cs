@@ -143,6 +143,8 @@ namespace Kethmi_Holdings
             else if (mode == "Edit")
             {
                 //update queries
+
+                //update Project Master
             }
         }
 
