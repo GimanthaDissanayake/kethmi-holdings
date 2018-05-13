@@ -179,14 +179,14 @@ namespace Kethmi_Holdings
                     db.insertUpdateDelete(strsql);
 
                     //Save Project Development Cost
-                    strsql = "INSERT INTO ProjectDevCost(projID,clearing,fillingLeveling,culvertsDrains,parapet,roadWays,huts," +
-                        "incidentalCost,fencing,watcherProjOfficer,boundryStones,pradeshiyaSabha,maintenance,donation" +
-                        ",contingencies,totDevCost,addedUser,addedDate)" +
-                        " VALUES('" + pId + "','" + txt_clearingOfLand.Text + "','" + txt_fillingAndLeveling.Text + "','" + txt_culvertsAndDrains.Text + "'" +
-                        ",'" + txt_RetainerWall.Text + "','" + txt_interiorRoadWays.Text + "','" + txt_Huts.Text + "','" + txt_incidentalCost.Text + "'," +
-                        "'" + txt_fencing.Text + "','" + txt_projectOfficer.Text + "','" + txt_boungryStones.Text + "','" + txt_pradeshiyaSabha.Text + "'," +
-                        "'" + txt_maintenance.Text + "','" + txt_donation.Text + "','" + txt_contingencies.Text + "','" + txt_totDevCost.Text + "'," +
-                        "'" + strUsername + "','" + DateTime.Now + "')";
+                    strsql = "UPDATE ProjectDevCost SET clearing='" + txt_clearingOfLand.Text + "',fillingLeveling='" + txt_fillingAndLeveling.Text + "'"+
+                        ",culvertsDrains='" + txt_culvertsAndDrains.Text + "',parapet='" + txt_RetainerWall.Text + "'"+
+                        ",roadWays='" + txt_interiorRoadWays.Text + "',huts='" + txt_Huts.Text + "',incidentalCost='" + txt_incidentalCost.Text + "'"+
+                        ",fencing='" + txt_fencing.Text + "',watcherProjOfficer='" + txt_projectOfficer.Text + "'"+
+                        ",boundryStones='" + txt_boungryStones.Text + "',pradeshiyaSabha='" + txt_pradeshiyaSabha.Text + "'"+
+                        ",maintenance='" + txt_maintenance.Text + "',donation='" + txt_donation.Text + "',contingencies='" + txt_contingencies.Text + "'"+
+                        ",totDevCost='" + txt_totDevCost.Text + "',changedUser='"+strUsername+"',changedDAte='"+DateTime.Now+"' "+
+                        "WHERE projID='" + pId + "')";
                     db.insertUpdateDelete(strsql);
 
                     //Save Project Utilities
