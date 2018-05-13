@@ -238,6 +238,10 @@ namespace Kethmi_Holdings
                 frmUserCtrl.gb_InputAreaEnabled = true;
                 frmUserCtrl.ButtonSave();
             }
+            else if (this.ActiveMdiChild==frmProject)
+            {
+                frmProject.ButtonSave();
+            }
         }
 
         public static implicit operator frm_Main(frm_Login v)
