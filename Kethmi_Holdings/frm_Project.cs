@@ -146,12 +146,23 @@ namespace Kethmi_Holdings
             {
                 //update queries
                 db = new Database();
+
                 if (MessageBox.Show("Are you sure you want to Update data?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     //update Project Master
                     strsql = "UPDATE ProjectMaster SET projName='" + txt_projectName.Text + "',date='" + dateTimePicker1.Value.ToShortDateString() + "'," +
                         "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE projID='" + pId + "'";
                     db.insertUpdateDelete(strsql);
+
+                    //Update Project Basic Details
+                    strsql = "UPDATE ProjectBasicDetails SET landOwner='" + txt_owner.Text + "',location='"+txt_location.Text+"'"+
+                        ",brokerName='"+txt_broker.Text+"',introduction='"+txt_introduction.Text+"',totPerchs='"+txt_totalPerches.Text+"'"+
+                        ",valExpectedByOwner='"+txt_valExpectedByOwner.Text+"',valAgreedByOwner='"+txt_agreedValuePP.Text+"'"+
+                        ",roadways='"+txt_roadways.Text+"',commonArea='"+txt_commonArea.Text+"',reservation='"+txt_reservation.Text+"'"+
+                        ",acres='"+txt_acres.Text+"',roods='"+txt_roods.Text+"',perchs='"+txt_perches.Text+"'"+
+                        ",sellableArea='"+txt_sellableArea.Text+"',changedUser='"+strUsername+"',changedDate='"+DateTime.Now+"' WHERE projID='" + pId+"'";
+                    db.insertUpdateDelete(strsql);
+
                 }
                 
             }
