@@ -169,6 +169,50 @@ namespace Kethmi_Holdings
                         ",commision='" + txt_commision.Text + "',totCostOfPurchase='" + txt_totCostOfPurchase.Text + "'" +
                         ",changedUser='" + strUsername + "',changedDate='" + DateTime.Now + "' WHERE projID='" + pId + "')";
                     db.insertUpdateDelete(strsql);
+
+                    //Update Project Survey Charges
+                    strsql = "UPDATE ProjectSurvayCharges SET parameterSurvay='" + txt_parameterSurvey.Text + "' "+
+                        ",dimaBlocks='" + txt_dimaBlocks.Text + "',blockingOutPlanes='" + txt__blockingOutPlans.Text + "'"+
+                        ",individualPlans='" + txt_extract.Text + "',contourSurvayPlans='" + txt_ContourSurveyingPlans.Text + "'"+
+                        ",totSurvayCost='" + txt_totSurveyCost.Text + "',changedUser='"+strUsername+"',changedDate='"+DateTime.Now+"'"+
+                        " WHERE projID='"+pId+"')";
+                    db.insertUpdateDelete(strsql);
+
+                    //Save Project Development Cost
+                    strsql = "INSERT INTO ProjectDevCost(projID,clearing,fillingLeveling,culvertsDrains,parapet,roadWays,huts," +
+                        "incidentalCost,fencing,watcherProjOfficer,boundryStones,pradeshiyaSabha,maintenance,donation" +
+                        ",contingencies,totDevCost,addedUser,addedDate)" +
+                        " VALUES('" + pId + "','" + txt_clearingOfLand.Text + "','" + txt_fillingAndLeveling.Text + "','" + txt_culvertsAndDrains.Text + "'" +
+                        ",'" + txt_RetainerWall.Text + "','" + txt_interiorRoadWays.Text + "','" + txt_Huts.Text + "','" + txt_incidentalCost.Text + "'," +
+                        "'" + txt_fencing.Text + "','" + txt_projectOfficer.Text + "','" + txt_boungryStones.Text + "','" + txt_pradeshiyaSabha.Text + "'," +
+                        "'" + txt_maintenance.Text + "','" + txt_donation.Text + "','" + txt_contingencies.Text + "','" + txt_totDevCost.Text + "'," +
+                        "'" + strUsername + "','" + DateTime.Now + "')";
+                    db.insertUpdateDelete(strsql);
+
+                    //Save Project Utilities
+                    strsql = "INSERT INTO ProjectUtilCost(projID,water,elec,totUtilCost,addedUser,addedDate)" +
+                        " VALUES('" + pId + "','" + txt_providingWater.Text + "','" + txt_providingElectricity.Text + "','" + txt_totUtilityCost.Text + "'," +
+                        "'" + strUsername + "','" + DateTime.Now + "')";
+                    db.insertUpdateDelete(strsql);
+
+                    //Save Project Traveling
+                    strsql = "INSERT INTO ProjectTravellingCost(projID,execDirectors,dgm,manager,officer,telephone,entertainment,totTravellingCost," +
+                        "addedUser,addedDate) " +
+                        "VALUES('" + pId + "','" + txt_execDirectors.Text + "','" + txt_DGM.Text + "','" + txt_managerProject.Text + "','" + txt_projOfficer.Text + "'," +
+                        "'" + txt_teleAllowance.Text + "','" + txt_entertainment.Text + "','" + txt_totTravCost.Text + "','" + strUsername + "','" + DateTime.Now + "')";
+                    db.insertUpdateDelete(strsql);
+
+                    //Save Project Advertising
+                    strsql = "INSERT INTO ProjectAdvertisingCost(projID,water,banners,handBills,radioTV,holdings,pressAd,mobile,totAdCost," +
+                        "addedUser,addedDate) " +
+                        "VALUES('" + pId + "','" + txt_water.Text + "','" + txt_banners.Text + "','" + txt_handbills.Text + "','" + txt_radioTV.Text + "'," +
+                        "'" + txt_holdings.Text + "','" + txt_press.Text + "','" + txt_mobileUnit.Text + "','" + txt_totAdCost.Text + "','" + strUsername + "','" + DateTime.Now + "')";
+                    db.insertUpdateDelete(strsql);
+
+                    //Save Cost Sales and Profitability
+
+                    //Clear Data Fields
+                    clearData();
                 }
                 
             }
