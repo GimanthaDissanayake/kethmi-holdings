@@ -163,6 +163,12 @@ namespace Kethmi_Holdings
                         ",sellableArea='"+txt_sellableArea.Text+"',changedUser='"+strUsername+"',changedDate='"+DateTime.Now+"' WHERE projID='" + pId+"'";
                     db.insertUpdateDelete(strsql);
 
+                    //Update Project Cost of Purchase
+                    strsql = "UPDATE ProjectCostofPurchase SET titleInsurance='" + txt_titleInsurance.Text + "',stampFees'" + txt_stampFees.Text + "'" +
+                        ",legalFees='" + txt_legalFees.Text + "',valuationReport='" + txt_valuationReport.Text + "',titleReports='" + txt_titleReports.Text + "'" +
+                        ",commision='" + txt_commision.Text + "',totCostOfPurchase='" + txt_totCostOfPurchase.Text + "'" +
+                        ",changedUser='" + strUsername + "',changedDate='" + DateTime.Now + "' WHERE projID='" + pId + "')";
+                    db.insertUpdateDelete(strsql);
                 }
                 
             }
