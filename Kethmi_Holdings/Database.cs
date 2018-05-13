@@ -65,7 +65,7 @@ namespace Kethmi_Holdings
             con.ConnectionString = strConn;
             con.Open();
             cmd = new SqlCommand(query, con);
-            cmd.ExecuteNonQuery();
+           cmd.ExecuteNonQuery();
             con.Close();
         }
         public DataTable select(String query)

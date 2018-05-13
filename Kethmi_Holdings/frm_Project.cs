@@ -146,11 +146,14 @@ namespace Kethmi_Holdings
             {
                 //update queries
                 db = new Database();
+                if (MessageBox.Show("Are you sure you want to Update data?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    //update Project Master
+                    strsql = "UPDATE ProjectMaster SET projName='" + txt_projectName.Text + "',date='" + dateTimePicker1.Value.ToShortDateString() + "'," +
+                        "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE projID='" + pId + "'";
+                    db.insertUpdateDelete(strsql);
+                }
                 
-                //update Project Master
-                strsql = "UPDATE ProjectMaster SET projName='" + txt_projectName.Text + "',date='" + dateTimePicker1.Value.ToShortDateString() + "',"+
-                    "changedDate='"+DateTime.Now+"',changedUser='"+strUsername+"' WHERE projID='"+pId+"'";
-                db.insertUpdateDelete(strsql);
             }
         }
 
