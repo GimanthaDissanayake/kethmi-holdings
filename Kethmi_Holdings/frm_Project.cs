@@ -266,16 +266,13 @@ namespace Kethmi_Holdings
             db = new Database();
             strsql = "SELECT projID as 'ID',projName as 'Project Name' FROM ProjectMaster";
             dataGridView_projectList.DataSource = db.select(strsql);
+            dataGridView_projectList.Enabled = true;
         }
         public void loadData(string searchString)
         {
             db = new Database();
             strsql = "SELECT projID as 'ID',projName as 'Project Name' FROM ProjectMaster where projName LIKE '%" + searchString + "%'";
             dataGridView_projectList.DataSource = db.select(strsql);
-        }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            ButtonSave();
         }
 
         public void ButtonNew()
