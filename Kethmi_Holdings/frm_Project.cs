@@ -67,6 +67,34 @@ namespace Kethmi_Holdings
             if (MessageBox.Show("Are you sure want to delete the entire project?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
+
+                SqlConnection objConn = new SqlConnection(strConn);
+                objConn.Open();
+                SqlTransaction sqlTrans = objConn.BeginTransaction();
+                SqlCommand objCmd = new SqlCommand();
+                objCmd.Transaction = sqlTrans;
+                objCmd.Connection = objConn;
+
+                try
+                {
+                    objCmd.CommandText = "UPDATE ProjectMaster SET isDeleted = 1," +
+                            "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE projID = '" + pId + "'";
+                    objCmd.ExecuteNonQuery();
+                    
+                    //Commit changes 
+                    sqlTrans.Commit();
+
+                    //Clear Data Fields
+                    clearData();
+                    loadData();
+                    btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
+                }
+                catch(Exception ex)
+                {
+                    sqlTrans.Rollback();
+                    MessageBox.Show(ex.Message.ToString());
+                }
+                
             }
         }
 
