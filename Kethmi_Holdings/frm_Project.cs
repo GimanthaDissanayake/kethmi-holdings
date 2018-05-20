@@ -292,7 +292,7 @@ namespace Kethmi_Holdings
         public void loadData()
         {
             db = new Database();
-            strsql = "SELECT projID as 'ID',projName as 'Project Name' FROM ProjectMaster";
+            strsql = "SELECT projID as 'ID',projName as 'Project Name' FROM ProjectMaster WHERE isDeleted=0";
             dataGridView_projectList.DataSource = db.select(strsql);
             dataGridView_projectList.Enabled = true;
         }
