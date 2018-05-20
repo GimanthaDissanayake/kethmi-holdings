@@ -1,0 +1,14 @@
+-----------------------------------------------------------------------------
+Changes done on : 20/05/2018      Changes done by : Gimantha Dissanayake
+
+//////////// isDeleted Column added to ProjectMaster ////////////
+alter table ProjectMaster
+add isDeleted int default 0 not null
+////////////////////////////////////////////////////////////////
+
+//////////// is Deleted Column added to Customer ////////////
+alter table Customer
+add isDeleted int default 0 not null
+////////////////////////////////////////////////////////////
+
+-----------------------------------------------------------------------------
