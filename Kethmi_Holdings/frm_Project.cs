@@ -86,7 +86,7 @@ namespace Kethmi_Holdings
                 {
                     //get Project ID
                     db = new Database();
-                    pId = Convert.ToInt32(db.getValue("SELECT TOP 1 projID FROM ProjectMaster ORDER BY projID DESC"));
+                    pId = Convert.ToInt32(db.getValue("SELECT TOP 1 projID FROM ProjectMaster ORDER BY projID DESC"))+1;
 
                     //Save to Project Master
                     objCmd.CommandText = "INSERT INTO ProjectMaster(projName,date,addedDate,addedUser)" +
@@ -585,6 +585,16 @@ namespace Kethmi_Holdings
             mode = "Edit";
             enableEditing(true);
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);
+        }
+
+        private void dataGridView_projectList_KeyDown(object sender, KeyEventArgs e)
+        {
+            MessageBox.Show("Fuck down");
+        }
+
+        private void dataGridView_projectList_KeyUp(object sender, KeyEventArgs e)
+        {
+            MessageBox.Show("Fuck up");
         }
     }
 }
