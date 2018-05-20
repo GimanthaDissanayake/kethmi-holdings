@@ -13,16 +13,18 @@ namespace Kethmi_Holdings
     public partial class frm_Recipts : Form
     {
         ButtonsStates btnStat = new ButtonsStates();
+
         public frm_Recipts()
         {
             InitializeComponent();
         }
 
         public bool inputAreaEnabled {set { gb_inputArea.Enabled = value; } }
+
         public bool searchEnabled { set { gb_search.Enabled = value; } }
 
-
         ButtonsStates lastButtonStates;
+
         private void frm_Recipts_Activated(object sender, EventArgs e)
         {
             lastButtonStates.restore();

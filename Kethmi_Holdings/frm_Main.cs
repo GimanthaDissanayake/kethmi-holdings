@@ -115,7 +115,7 @@ namespace Kethmi_Holdings
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            frmCustomers = new frm_Customers();
+            frmCustomers = new frm_Customers(strUsername);
             frmCustomers.FormClosed += new FormClosedEventHandler(frmCustomers_FormClosed);
             frmCustomers.MdiParent = this;
             frmCustomers.Show();
@@ -155,8 +155,11 @@ namespace Kethmi_Holdings
                 frmUserCtrl.gb_CurrentUsersEnabled = false;
                 frmUserCtrl.gb_InputAreaEnabled = true;
                 frmUserCtrl.ButtonAdd();
-            }
-            
+            }      
+            if(this.ActiveMdiChild == frmCustomers)
+            {
+                frmCustomers.ButtonNew();
+            }   
         }
 
         private void frm_Main_Load_1(object sender, EventArgs e)
@@ -203,7 +206,7 @@ namespace Kethmi_Holdings
 
         private void customerControlToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCustomers = new frm_Customers();
+            frmCustomers = new frm_Customers(strUsername);
             frmCustomers.MdiParent = this;
             frmCustomers.Show();
         }
