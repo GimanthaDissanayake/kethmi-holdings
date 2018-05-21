@@ -230,6 +230,10 @@ namespace Kethmi_Holdings
             {
                 frmProject.ButtonClear();
             }
+            else if(this.ActiveMdiChild == frmCustomers)
+            {
+                frmCustomers.ButtonClear();
+            }
             }
 
         private void btn_save_Click(object sender, EventArgs e)
@@ -244,6 +248,10 @@ namespace Kethmi_Holdings
             else if (this.ActiveMdiChild==frmProject)
             {
                 frmProject.ButtonSave();
+            }
+            else if(this.ActiveMdiChild==frmCustomers)
+            {
+                frmCustomers.ButtonSave();
             }
         }
 
@@ -271,6 +279,10 @@ namespace Kethmi_Holdings
             {
                 frmProject.ButtonEdit();
             }
+            else if(this.ActiveMdiChild == frmCustomers)
+            {
+                frmCustomers.ButtonEdit();
+            }            
         }
     }
 }
