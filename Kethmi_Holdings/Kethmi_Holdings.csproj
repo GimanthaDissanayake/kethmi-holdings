@@ -141,6 +141,7 @@
     <Compile Include="RptProjects.Designer.cs">
       <DependentUpon>RptProjects.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validation.cs" />
     <EmbeddedResource Include="frm_Advertising.resx">
       <DependentUpon>frm_Advertising.cs</DependentUpon>
     </EmbeddedResource>

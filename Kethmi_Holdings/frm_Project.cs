@@ -80,7 +80,7 @@ namespace Kethmi_Holdings
                     objCmd.CommandText = "UPDATE ProjectMaster SET isDeleted = 1," +
                             "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE projID = '" + pId + "'";
                     objCmd.ExecuteNonQuery();
-                    
+
                     //Commit changes 
                     sqlTrans.Commit();
 
@@ -89,186 +89,212 @@ namespace Kethmi_Holdings
                     loadData();
                     btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     sqlTrans.Rollback();
                     MessageBox.Show(ex.Message.ToString());
                 }
-                
+
             }
         }
 
+        //public void ButtonSave() {
+        //    MessageBox.Show(Validation.isStringWithoutNumbers("hel3lo").ToString());
+        //}
+
+        /// <summary>
+        /// Validate fields in frm_Projects check if they are all in prefered format, if it is
+        /// return true, else return false.
+        /// </summary>
+        /// <returns></returns>
+        public Boolean ValidateFields() {
+            // Validate Project Basic Details
+
+            // + Land Info
+            foreach (Control control in landInfo_gb.Controls) {
+                if (control is TextBox)
+                {
+                    if (!Validation.isNumber(control.Text))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            // + Profile Info, no Validations for the date since we get it from dtp
+            foreach (Control control in profileInfo_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (!Validation.isStringWithoutNumbers(control.Text))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            // + cost of purchase
+            foreach (Control control in costOfPurchase_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (!Validation.isNumber(control.Text))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            // + survey charges
+            foreach (Control control in surveyCharges_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (!Validation.isNumber(control.Text))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            // + develpoment
+            foreach (Control control in development_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (!Validation.isNumber(control.Text))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            // + utilities
+            foreach (Control control in utilities_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (!Validation.isNumber(control.Text))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            // + travelling
+            foreach (Control control in travelling_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (!Validation.isNumber(control.Text))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            // + advertising
+            foreach (Control control in advertising_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (!Validation.isNumber(control.Text))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            // cost, sales and profitability part should be validated.
+
+            return true;
+        }
 
         public void ButtonSave()
         {
-            SqlConnection objConn = new SqlConnection(strConn);                        
+            SqlConnection objConn = new SqlConnection(strConn);
             objConn.Open();
             SqlTransaction sqlTrans = objConn.BeginTransaction();
             SqlCommand objCmd = new SqlCommand();
             objCmd.Transaction = sqlTrans;
             objCmd.Connection = objConn;
 
-            if (mode == "New")
+            if (!ValidateFields())
             {
-                try
-                {
-                    //get Project ID
-                    db = new Database();
-                    pId = Convert.ToInt32(db.getValue("SELECT TOP 1 projID FROM ProjectMaster ORDER BY projID DESC"))+1;
-
-                    //Save to Project Master
-                    objCmd.CommandText = "INSERT INTO ProjectMaster(projName,date,addedDate,addedUser)" +
-                        " VALUES('" + txt_projectName.Text + "','" + dateTimePicker1.Value.ToShortDateString() + "','" + DateTime.Now + "','" + strUsername + "')";
-                    objCmd.ExecuteNonQuery();                   
-
-                    //Save Project Basic Details
-                    objCmd.CommandText = "INSERT INTO ProjectBasicDetails(projID,landOwner,location,brokerName,introduction," +
-                        "totPerchs,valExpectedByOwner,valAgreedByOwner,roadways,commonArea,reservation,acres,roods," +
-                        "perchs,sellableArea,addedUser,addedDate)" +
-                        " VALUES('" + pId + "','" + txt_owner.Text + "','" + txt_location.Text + "','" + txt_broker.Text + "','" + txt_introduction.Text + "'," +
-                        "'" + txt_totalPerches.Text + "','" + txt_valExpectedByOwner.Text + "','" + txt_agreedValuePP.Text + "'," +
-                        "'" + txt_roadways.Text + "','" + txt_commonArea.Text + "','" + txt_reservation.Text + "','" + txt_acres.Text + "'," +
-                        "'" + txt_roods.Text + "','" + txt_perches.Text + "','" + txt_sellableArea.Text + "','" + strUsername + "','" + DateTime.Now + "')";
-                    objCmd.ExecuteNonQuery();
-
-                    //Save Project Cost of Purchase
-                    objCmd.CommandText = "INSERT INTO ProjectCostofPurchase(projID,titleInsurance,stampFees,legalFees,valuationReport,titleReports," +
-                        "commision,totCostOfPurchase,addedUser,addedDate)" +
-                        " VALUES('" + pId + "','" + txt_titleInsurance.Text + "','" + txt_stampFees.Text + "','" + txt_legalFees.Text + "'," +
-                        "'" + txt_valuationReport.Text + "','" + txt_titleReports.Text + "','" + txt_commision.Text + "'," +
-                        "'" + txt_totCostOfPurchase.Text + "','" + strUsername + "','" + DateTime.Now + "')";
-                    objCmd.ExecuteNonQuery();
-
-                    //Save Project Survey Charges
-                    objCmd.CommandText = "INSERT INTO ProjectSurvayCharges(projID,parameterSurvay,dimaBlocks,blockingOutPlanes,individualPlans," +
-                        "contourSurvayPlans,totSurvayCost,addedUser,addedDate)" +
-                        " Values('" + pId + "','" + txt_parameterSurvey.Text + "','" + txt_dimaBlocks.Text + "','" + txt__blockingOutPlans.Text + "'," +
-                        "'" + txt_extract.Text + "','" + txt_ContourSurveyingPlans.Text + "','" + txt_totSurveyCost.Text + "','" + strUsername + "','" + DateTime.Now + "')";
-                    objCmd.ExecuteNonQuery();
-
-                    //Save Project Development Cost
-                    objCmd.CommandText = "INSERT INTO ProjectDevCost(projID,clearing,fillingLeveling,culvertsDrains,parapet,roadWays,huts," +
-                        "incidentalCost,fencing,watcherProjOfficer,boundryStones,pradeshiyaSabha,maintenance,donation" +
-                        ",contingencies,totDevCost,addedUser,addedDate)" +
-                        " VALUES('" + pId + "','" + txt_clearingOfLand.Text + "','" + txt_fillingAndLeveling.Text + "','" + txt_culvertsAndDrains.Text + "'" +
-                        ",'" + txt_RetainerWall.Text + "','" + txt_interiorRoadWays.Text + "','" + txt_Huts.Text + "','" + txt_incidentalCost.Text + "'," +
-                        "'" + txt_fencing.Text + "','" + txt_projectOfficer.Text + "','" + txt_boungryStones.Text + "','" + txt_pradeshiyaSabha.Text + "'," +
-                        "'" + txt_maintenance.Text + "','" + txt_donation.Text + "','" + txt_contingencies.Text + "','" + txt_totDevCost.Text + "'," +
-                        "'" + strUsername + "','" + DateTime.Now + "')";
-                    objCmd.ExecuteNonQuery();
-
-                    //Save Project Utilities
-                    objCmd.CommandText = "INSERT INTO ProjectUtilCost(projID,water,elec,totUtilCost,addedUser,addedDate)" +
-                        " VALUES('" + pId + "','" + txt_providingWater.Text + "','" + txt_providingElectricity.Text + "','" + txt_totUtilityCost.Text + "'," +
-                        "'" + strUsername + "','" + DateTime.Now + "')";
-                    objCmd.ExecuteNonQuery();
-
-                    //Save Project Traveling
-                    objCmd.CommandText = "INSERT INTO ProjectTravellingCost(projID,execDirectors,dgm,manager,officer,telephone,entertainment,totTravellingCost," +
-                        "addedUser,addedDate) " +
-                        "VALUES('" + pId + "','" + txt_execDirectors.Text + "','" + txt_DGM.Text + "','" + txt_managerProject.Text + "','" + txt_projOfficer.Text + "'," +
-                        "'" + txt_teleAllowance.Text + "','" + txt_entertainment.Text + "','" + txt_totTravCost.Text + "','" + strUsername + "','" + DateTime.Now + "')";
-                    objCmd.ExecuteNonQuery();
-
-                    //Save Project Advertising
-                    objCmd.CommandText = "INSERT INTO ProjectAdvertisingCost(projID,water,banners,handBills,radioTV,holdings,pressAd,mobile,totAdCost," +
-                        "addedUser,addedDate) " +
-                        "VALUES('" + pId + "','" + txt_water.Text + "','" + txt_banners.Text + "','" + txt_handbills.Text + "','" + txt_radioTV.Text + "'," +
-                        "'" + txt_holdings.Text + "','" + txt_press.Text + "','" + txt_mobileUnit.Text + "','" + txt_totAdCost.Text + "','" + strUsername + "','" + DateTime.Now + "')";
-                    objCmd.ExecuteNonQuery();
-
-                    //Save Cost Sales and Profitability
-
-                    //Commit changes 
-                    sqlTrans.Commit();
-
-                    //Clear Data Fields
-                    clearData();
-                    loadData();
-                    btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
-                }
-                catch(Exception ex)
-                {
-                    sqlTrans.Rollback();
-                    MessageBox.Show(ex.Message.ToString());
-                }
+                MessageBox.Show("There is a error of data, please check all fields are correctly filled and try again!", "Validation Error!", MessageBoxButtons.OK);
             }
-            else if (mode == "Edit")
+            else
             {
-                
-                    
-
-                if (MessageBox.Show("Are you sure you want to Update data?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (mode == "New")
                 {
                     try
                     {
                         //get Project ID
                         db = new Database();
-                        pId = Convert.ToInt32(dataGridView_projectList.SelectedRows[0].Cells[0].Value);
+                        pId = Convert.ToInt32(db.getValue("SELECT TOP 1 projID FROM ProjectMaster ORDER BY projID DESC")) + 1;
 
-                        //update Project Master
-                        objCmd.CommandText = "UPDATE ProjectMaster SET projName='" + txt_projectName.Text + "',date='" + dateTimePicker1.Value.ToShortDateString() + "'," +
-                            "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE projID='" + pId + "'";
+                        //Save to Project Master
+                        objCmd.CommandText = "INSERT INTO ProjectMaster(projName,date,addedDate,addedUser)" +
+                            " VALUES('" + txt_projectName.Text + "','" + dateTimePicker1.Value.ToShortDateString() + "','" + DateTime.Now + "','" + strUsername + "')";
                         objCmd.ExecuteNonQuery();
 
-                        //Update Project Basic Details
-                        objCmd.CommandText = "UPDATE ProjectBasicDetails SET landOwner='" + txt_owner.Text + "',location='" + txt_location.Text + "'" +
-                            ",brokerName='" + txt_broker.Text + "',introduction='" + txt_introduction.Text + "',totPerchs='" + txt_totalPerches.Text + "'" +
-                            ",valExpectedByOwner='" + txt_valExpectedByOwner.Text + "',valAgreedByOwner='" + txt_agreedValuePP.Text + "'" +
-                            ",roadways='" + txt_roadways.Text + "',commonArea='" + txt_commonArea.Text + "',reservation='" + txt_reservation.Text + "'" +
-                            ",acres='" + txt_acres.Text + "',roods='" + txt_roods.Text + "',perchs='" + txt_perches.Text + "'" +
-                            ",sellableArea='" + txt_sellableArea.Text + "',changedUser='" + strUsername + "',changedDate='" + DateTime.Now + "' WHERE projID='" + pId + "'";
+                        //Save Project Basic Details
+                        objCmd.CommandText = "INSERT INTO ProjectBasicDetails(projID,landOwner,location,brokerName,introduction," +
+                            "totPerchs,valExpectedByOwner,valAgreedByOwner,roadways,commonArea,reservation,acres,roods," +
+                            "perchs,sellableArea,addedUser,addedDate)" +
+                            " VALUES('" + pId + "','" + txt_owner.Text + "','" + txt_location.Text + "','" + txt_broker.Text + "','" + txt_introduction.Text + "'," +
+                            "'" + txt_totalPerches.Text + "','" + txt_valExpectedByOwner.Text + "','" + txt_agreedValuePP.Text + "'," +
+                            "'" + txt_roadways.Text + "','" + txt_commonArea.Text + "','" + txt_reservation.Text + "','" + txt_acres.Text + "'," +
+                            "'" + txt_roods.Text + "','" + txt_perches.Text + "','" + txt_sellableArea.Text + "','" + strUsername + "','" + DateTime.Now + "')";
                         objCmd.ExecuteNonQuery();
 
-                        //Update Project Cost of Purchase
-                        objCmd.CommandText = "UPDATE ProjectCostofPurchase SET titleInsurance='" + txt_titleInsurance.Text + "',stampFees'" + txt_stampFees.Text + "'" +
-                            ",legalFees='" + txt_legalFees.Text + "',valuationReport='" + txt_valuationReport.Text + "',titleReports='" + txt_titleReports.Text + "'" +
-                            ",commision='" + txt_commision.Text + "',totCostOfPurchase='" + txt_totCostOfPurchase.Text + "'" +
-                            ",changedUser='" + strUsername + "',changedDate='" + DateTime.Now + "' WHERE projID='" + pId + "')";
+                        //Save Project Cost of Purchase
+                        objCmd.CommandText = "INSERT INTO ProjectCostofPurchase(projID,titleInsurance,stampFees,legalFees,valuationReport,titleReports," +
+                            "commision,totCostOfPurchase,addedUser,addedDate)" +
+                            " VALUES('" + pId + "','" + txt_titleInsurance.Text + "','" + txt_stampFees.Text + "','" + txt_legalFees.Text + "'," +
+                            "'" + txt_valuationReport.Text + "','" + txt_titleReports.Text + "','" + txt_commision.Text + "'," +
+                            "'" + txt_totCostOfPurchase.Text + "','" + strUsername + "','" + DateTime.Now + "')";
                         objCmd.ExecuteNonQuery();
 
-                        //Update Project Survey Charges
-                        objCmd.CommandText = "UPDATE ProjectSurvayCharges SET parameterSurvay='" + txt_parameterSurvey.Text + "' " +
-                            ",dimaBlocks='" + txt_dimaBlocks.Text + "',blockingOutPlanes='" + txt__blockingOutPlans.Text + "'" +
-                            ",individualPlans='" + txt_extract.Text + "',contourSurvayPlans='" + txt_ContourSurveyingPlans.Text + "'" +
-                            ",totSurvayCost='" + txt_totSurveyCost.Text + "',changedUser='" + strUsername + "',changedDate='" + DateTime.Now + "'" +
-                            " WHERE projID='" + pId + "')";
+                        //Save Project Survey Charges
+                        objCmd.CommandText = "INSERT INTO ProjectSurvayCharges(projID,parameterSurvay,dimaBlocks,blockingOutPlanes,individualPlans," +
+                            "contourSurvayPlans,totSurvayCost,addedUser,addedDate)" +
+                            " Values('" + pId + "','" + txt_parameterSurvey.Text + "','" + txt_dimaBlocks.Text + "','" + txt__blockingOutPlans.Text + "'," +
+                            "'" + txt_extract.Text + "','" + txt_ContourSurveyingPlans.Text + "','" + txt_totSurveyCost.Text + "','" + strUsername + "','" + DateTime.Now + "')";
                         objCmd.ExecuteNonQuery();
 
-                        //Update Project Development Cost
-                        objCmd.CommandText = "UPDATE ProjectDevCost SET clearing='" + txt_clearingOfLand.Text + "',fillingLeveling='" + txt_fillingAndLeveling.Text + "'" +
-                            ",culvertsDrains='" + txt_culvertsAndDrains.Text + "',parapet='" + txt_RetainerWall.Text + "'" +
-                            ",roadWays='" + txt_interiorRoadWays.Text + "',huts='" + txt_Huts.Text + "',incidentalCost='" + txt_incidentalCost.Text + "'" +
-                            ",fencing='" + txt_fencing.Text + "',watcherProjOfficer='" + txt_projectOfficer.Text + "'" +
-                            ",boundryStones='" + txt_boungryStones.Text + "',pradeshiyaSabha='" + txt_pradeshiyaSabha.Text + "'" +
-                            ",maintenance='" + txt_maintenance.Text + "',donation='" + txt_donation.Text + "',contingencies='" + txt_contingencies.Text + "'" +
-                            ",totDevCost='" + txt_totDevCost.Text + "',changedUser='" + strUsername + "',changedDAte='" + DateTime.Now + "' " +
-                            "WHERE projID='" + pId + "')";
+                        //Save Project Development Cost
+                        objCmd.CommandText = "INSERT INTO ProjectDevCost(projID,clearing,fillingLeveling,culvertsDrains,parapet,roadWays,huts," +
+                            "incidentalCost,fencing,watcherProjOfficer,boundryStones,pradeshiyaSabha,maintenance,donation" +
+                            ",contingencies,totDevCost,addedUser,addedDate)" +
+                            " VALUES('" + pId + "','" + txt_clearingOfLand.Text + "','" + txt_fillingAndLeveling.Text + "','" + txt_culvertsAndDrains.Text + "'" +
+                            ",'" + txt_RetainerWall.Text + "','" + txt_interiorRoadWays.Text + "','" + txt_Huts.Text + "','" + txt_incidentalCost.Text + "'," +
+                            "'" + txt_fencing.Text + "','" + txt_projectOfficer.Text + "','" + txt_boungryStones.Text + "','" + txt_pradeshiyaSabha.Text + "'," +
+                            "'" + txt_maintenance.Text + "','" + txt_donation.Text + "','" + txt_contingencies.Text + "','" + txt_totDevCost.Text + "'," +
+                            "'" + strUsername + "','" + DateTime.Now + "')";
                         objCmd.ExecuteNonQuery();
 
-                        //Update Project Utilities
-                        objCmd.CommandText = "UPDATE ProjectUtilCost SET water='" + txt_providingWater.Text + "',elec='" + txt_providingElectricity.Text + "'" +
-                            ",totUtilCost='" + txt_totUtilityCost.Text + "',changedUser='" + strUsername + "',changedDAte='" + DateTime.Now + "' " +
-                            "WHERE projID='" + pId + "')";
+                        //Save Project Utilities
+                        objCmd.CommandText = "INSERT INTO ProjectUtilCost(projID,water,elec,totUtilCost,addedUser,addedDate)" +
+                            " VALUES('" + pId + "','" + txt_providingWater.Text + "','" + txt_providingElectricity.Text + "','" + txt_totUtilityCost.Text + "'," +
+                            "'" + strUsername + "','" + DateTime.Now + "')";
                         objCmd.ExecuteNonQuery();
 
-                        //Update Project Traveling
-                        objCmd.CommandText = "Update ProjectTravellingCost SET execDirectors='" + txt_execDirectors.Text + "',dgm='" + txt_DGM.Text + "'" +
-                            ",manager='" + txt_managerProject.Text + "',officer='" + txt_projOfficer.Text + "',telephone='" + txt_teleAllowance.Text + "'" +
-                            ",entertainment='" + txt_entertainment.Text + "',totTravellingCost='" + txt_totTravCost.Text + "'," +
-                            ",changedUser='" + strUsername + "',changedDAte='" + DateTime.Now + "' " +
-                            "WHERE projID='" + pId + "')";
+                        //Save Project Traveling
+                        objCmd.CommandText = "INSERT INTO ProjectTravellingCost(projID,execDirectors,dgm,manager,officer,telephone,entertainment,totTravellingCost," +
+                            "addedUser,addedDate) " +
+                            "VALUES('" + pId + "','" + txt_execDirectors.Text + "','" + txt_DGM.Text + "','" + txt_managerProject.Text + "','" + txt_projOfficer.Text + "'," +
+                            "'" + txt_teleAllowance.Text + "','" + txt_entertainment.Text + "','" + txt_totTravCost.Text + "','" + strUsername + "','" + DateTime.Now + "')";
                         objCmd.ExecuteNonQuery();
 
-                        //Update Project Advertising
-                        objCmd.CommandText = "Update ProjectAdvertisingCost SET water='" + txt_water.Text + "',banners='" + txt_banners.Text + "'" +
-                            ",handBills='" + txt_handbills.Text + "',radioTV='" + txt_radioTV.Text + "',holdings='" + txt_holdings.Text + "'" +
-                            ",pressAd='" + txt_press.Text + "',mobile='" + txt_mobileUnit.Text + "',totAdCost='" + txt_totAdCost.Text + "'," +
-                            ",changedUser='" + strUsername + "',changedDAte='" + DateTime.Now + "' " +
-                            "WHERE projID='" + pId + "')";
+                        //Save Project Advertising
+                        objCmd.CommandText = "INSERT INTO ProjectAdvertisingCost(projID,water,banners,handBills,radioTV,holdings,pressAd,mobile,totAdCost," +
+                            "addedUser,addedDate) " +
+                            "VALUES('" + pId + "','" + txt_water.Text + "','" + txt_banners.Text + "','" + txt_handbills.Text + "','" + txt_radioTV.Text + "'," +
+                            "'" + txt_holdings.Text + "','" + txt_press.Text + "','" + txt_mobileUnit.Text + "','" + txt_totAdCost.Text + "','" + strUsername + "','" + DateTime.Now + "')";
                         objCmd.ExecuteNonQuery();
 
-                        //Update Cost Sales and Profitability
+                        //Save Cost Sales and Profitability
 
                         //Commit changes 
                         sqlTrans.Commit();
@@ -278,15 +304,107 @@ namespace Kethmi_Holdings
                         loadData();
                         btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
                     }
-
                     catch (Exception ex)
                     {
                         sqlTrans.Rollback();
                         MessageBox.Show(ex.Message.ToString());
                     }
                 }
-                
+                else if (mode == "Edit")
+                {
+
+
+
+                    if (MessageBox.Show("Are you sure you want to Update data?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            //get Project ID
+                            db = new Database();
+                            pId = Convert.ToInt32(dataGridView_projectList.SelectedRows[0].Cells[0].Value);
+
+                            //update Project Master
+                            objCmd.CommandText = "UPDATE ProjectMaster SET projName='" + txt_projectName.Text + "',date='" + dateTimePicker1.Value.ToShortDateString() + "'," +
+                                "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE projID='" + pId + "'";
+                            objCmd.ExecuteNonQuery();
+
+                            //Update Project Basic Details
+                            objCmd.CommandText = "UPDATE ProjectBasicDetails SET landOwner='" + txt_owner.Text + "',location='" + txt_location.Text + "'" +
+                                ",brokerName='" + txt_broker.Text + "',introduction='" + txt_introduction.Text + "',totPerchs='" + txt_totalPerches.Text + "'" +
+                                ",valExpectedByOwner='" + txt_valExpectedByOwner.Text + "',valAgreedByOwner='" + txt_agreedValuePP.Text + "'" +
+                                ",roadways='" + txt_roadways.Text + "',commonArea='" + txt_commonArea.Text + "',reservation='" + txt_reservation.Text + "'" +
+                                ",acres='" + txt_acres.Text + "',roods='" + txt_roods.Text + "',perchs='" + txt_perches.Text + "'" +
+                                ",sellableArea='" + txt_sellableArea.Text + "',changedUser='" + strUsername + "',changedDate='" + DateTime.Now + "' WHERE projID='" + pId + "'";
+                            objCmd.ExecuteNonQuery();
+
+                            //Update Project Cost of Purchase
+                            objCmd.CommandText = "UPDATE ProjectCostofPurchase SET titleInsurance='" + txt_titleInsurance.Text + "',stampFees'" + txt_stampFees.Text + "'" +
+                                ",legalFees='" + txt_legalFees.Text + "',valuationReport='" + txt_valuationReport.Text + "',titleReports='" + txt_titleReports.Text + "'" +
+                                ",commision='" + txt_commision.Text + "',totCostOfPurchase='" + txt_totCostOfPurchase.Text + "'" +
+                                ",changedUser='" + strUsername + "',changedDate='" + DateTime.Now + "' WHERE projID='" + pId + "')";
+                            objCmd.ExecuteNonQuery();
+
+                            //Update Project Survey Charges
+                            objCmd.CommandText = "UPDATE ProjectSurvayCharges SET parameterSurvay='" + txt_parameterSurvey.Text + "' " +
+                                ",dimaBlocks='" + txt_dimaBlocks.Text + "',blockingOutPlanes='" + txt__blockingOutPlans.Text + "'" +
+                                ",individualPlans='" + txt_extract.Text + "',contourSurvayPlans='" + txt_ContourSurveyingPlans.Text + "'" +
+                                ",totSurvayCost='" + txt_totSurveyCost.Text + "',changedUser='" + strUsername + "',changedDate='" + DateTime.Now + "'" +
+                                " WHERE projID='" + pId + "')";
+                            objCmd.ExecuteNonQuery();
+
+                            //Update Project Development Cost
+                            objCmd.CommandText = "UPDATE ProjectDevCost SET clearing='" + txt_clearingOfLand.Text + "',fillingLeveling='" + txt_fillingAndLeveling.Text + "'" +
+                                ",culvertsDrains='" + txt_culvertsAndDrains.Text + "',parapet='" + txt_RetainerWall.Text + "'" +
+                                ",roadWays='" + txt_interiorRoadWays.Text + "',huts='" + txt_Huts.Text + "',incidentalCost='" + txt_incidentalCost.Text + "'" +
+                                ",fencing='" + txt_fencing.Text + "',watcherProjOfficer='" + txt_projectOfficer.Text + "'" +
+                                ",boundryStones='" + txt_boungryStones.Text + "',pradeshiyaSabha='" + txt_pradeshiyaSabha.Text + "'" +
+                                ",maintenance='" + txt_maintenance.Text + "',donation='" + txt_donation.Text + "',contingencies='" + txt_contingencies.Text + "'" +
+                                ",totDevCost='" + txt_totDevCost.Text + "',changedUser='" + strUsername + "',changedDAte='" + DateTime.Now + "' " +
+                                "WHERE projID='" + pId + "')";
+                            objCmd.ExecuteNonQuery();
+
+                            //Update Project Utilities
+                            objCmd.CommandText = "UPDATE ProjectUtilCost SET water='" + txt_providingWater.Text + "',elec='" + txt_providingElectricity.Text + "'" +
+                                ",totUtilCost='" + txt_totUtilityCost.Text + "',changedUser='" + strUsername + "',changedDAte='" + DateTime.Now + "' " +
+                                "WHERE projID='" + pId + "')";
+                            objCmd.ExecuteNonQuery();
+
+                            //Update Project Traveling
+                            objCmd.CommandText = "Update ProjectTravellingCost SET execDirectors='" + txt_execDirectors.Text + "',dgm='" + txt_DGM.Text + "'" +
+                                ",manager='" + txt_managerProject.Text + "',officer='" + txt_projOfficer.Text + "',telephone='" + txt_teleAllowance.Text + "'" +
+                                ",entertainment='" + txt_entertainment.Text + "',totTravellingCost='" + txt_totTravCost.Text + "'," +
+                                ",changedUser='" + strUsername + "',changedDAte='" + DateTime.Now + "' " +
+                                "WHERE projID='" + pId + "')";
+                            objCmd.ExecuteNonQuery();
+
+                            //Update Project Advertising
+                            objCmd.CommandText = "Update ProjectAdvertisingCost SET water='" + txt_water.Text + "',banners='" + txt_banners.Text + "'" +
+                                ",handBills='" + txt_handbills.Text + "',radioTV='" + txt_radioTV.Text + "',holdings='" + txt_holdings.Text + "'" +
+                                ",pressAd='" + txt_press.Text + "',mobile='" + txt_mobileUnit.Text + "',totAdCost='" + txt_totAdCost.Text + "'," +
+                                ",changedUser='" + strUsername + "',changedDAte='" + DateTime.Now + "' " +
+                                "WHERE projID='" + pId + "')";
+                            objCmd.ExecuteNonQuery();
+
+                            //Update Cost Sales and Profitability
+
+                            //Commit changes 
+                            sqlTrans.Commit();
+
+                            //Clear Data Fields
+                            clearData();
+                            loadData();
+                            btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
+                        }
+
+                        catch (Exception ex)
+                        {
+                            sqlTrans.Rollback();
+                            MessageBox.Show(ex.Message.ToString());
+                        }
+                    }
+                }
             }
+
         }
 
         public void loadData()
@@ -441,12 +559,6 @@ namespace Kethmi_Holdings
                 txt_mobileUnit.Text = row[7].ToString();
                 txt_totAdCost.Text = row[8].ToString();
             }
-
-
-            /*Fill Cost Sales & Profitability Tab*/
-            //Fill Cost
-
-            //Fill Sales & Profitability
 
 
             /*Disable Editing*/
@@ -625,4 +737,5 @@ namespace Kethmi_Holdings
             MessageBox.Show("Fuck up");
         }
     }
+    
 }
