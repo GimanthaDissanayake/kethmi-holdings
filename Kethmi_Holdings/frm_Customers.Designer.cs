@@ -53,6 +53,7 @@
             this.dataGridView_CustomerList.Name = "dataGridView_CustomerList";
             this.dataGridView_CustomerList.Size = new System.Drawing.Size(240, 417);
             this.dataGridView_CustomerList.TabIndex = 0;
+            this.dataGridView_CustomerList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_CustomerList_MouseClick);
             // 
             // label1
             // 

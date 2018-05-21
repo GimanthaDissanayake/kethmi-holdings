@@ -271,6 +271,10 @@ namespace Kethmi_Holdings
             {
                 frmProject.ButtonDelete();
             }
+            else if(this.ActiveMdiChild == frmCustomers)
+            {
+                frmCustomers.ButtonDelete();
+            }
         }
 
         private void btn_edit_Click(object sender, EventArgs e)

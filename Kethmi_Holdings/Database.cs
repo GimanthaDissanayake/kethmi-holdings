@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using System.Collections.Generic;
 
 namespace Kethmi_Holdings
 {
@@ -12,6 +13,7 @@ namespace Kethmi_Holdings
         private SqlConnection con;
         DataSet ds;
         private SqlCommand cmd;
+        private SqlDataReader dr;
         private SqlDataAdapter da;
         private DataTable dt;
         //use the app config connection string for the system. so we do not need to rebuild the application when changing the server.
@@ -49,6 +51,21 @@ namespace Kethmi_Holdings
             con.Close();
             return foundValue;
         }
+
+        public List<String> getList(String query, int index)
+        {
+            con.Open();
+            List<String> list = new List<String>();
+            cmd = new SqlCommand(query, con);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                list.Add(dr.GetString(index));
+            }
+            con.Close();
+            return list;
+        }
+
         /*
         public ReportDataSource getReportDataSource(String query)
         {
