@@ -725,17 +725,7 @@ namespace Kethmi_Holdings
             mode = "Edit";
             enableEditing(true);
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);
-        }
-
-        private void dataGridView_projectList_KeyDown(object sender, KeyEventArgs e)
-        {
-            MessageBox.Show("Fuck down");
-        }
-
-        private void dataGridView_projectList_KeyUp(object sender, KeyEventArgs e)
-        {
-            MessageBox.Show("Fuck up");
-        }
+        }        
     }
     
 }

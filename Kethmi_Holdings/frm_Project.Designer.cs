@@ -282,8 +282,6 @@
             this.dataGridView_projectList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_projectList.Size = new System.Drawing.Size(239, 390);
             this.dataGridView_projectList.TabIndex = 0;
-            this.dataGridView_projectList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_projectList_KeyDown);
-            this.dataGridView_projectList.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_projectList_KeyUp);
             this.dataGridView_projectList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_projectList_MouseClick);
             // 
             // label1
@@ -506,7 +504,7 @@
             this.tab_basic.Controls.Add(this.profileInfo_gb);
             this.tab_basic.Location = new System.Drawing.Point(4, 22);
             this.tab_basic.Name = "tab_basic";
-            this.tab_basic.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tab_basic.Padding = new System.Windows.Forms.Padding(3);
             this.tab_basic.Size = new System.Drawing.Size(730, 462);
             this.tab_basic.TabIndex = 0;
             this.tab_basic.Text = "Basic Details";
@@ -656,7 +654,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(131, 128);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(275, 20);
             this.dateTimePicker1.TabIndex = 13;
@@ -695,7 +693,7 @@
             this.tab_costofpurchase.Controls.Add(this.costOfPurchase_gb);
             this.tab_costofpurchase.Location = new System.Drawing.Point(4, 22);
             this.tab_costofpurchase.Name = "tab_costofpurchase";
-            this.tab_costofpurchase.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tab_costofpurchase.Padding = new System.Windows.Forms.Padding(3);
             this.tab_costofpurchase.Size = new System.Drawing.Size(730, 462);
             this.tab_costofpurchase.TabIndex = 1;
             this.tab_costofpurchase.Text = "Cost of Purchase";
@@ -999,7 +997,7 @@
             this.tabPage2.Controls.Add(this.development_gb);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(730, 462);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Development & Utility";
@@ -1411,7 +1409,7 @@
             this.tabPage3.Controls.Add(this.travelling_gb);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(730, 462);
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "Travelling & Advertising";
@@ -1760,7 +1758,7 @@
             this.tabPage6.Controls.Add(this.groupBox7);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(730, 462);
             this.tabPage6.TabIndex = 7;
             this.tabPage6.Text = "Cost, Sales and Profitability";
