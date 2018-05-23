@@ -12,6 +12,9 @@ namespace Kethmi_Holdings
 {
     public partial class frm_Recipts : Form
     {
+        int cusID, pId, recID;
+        Database db;
+
         ButtonsStates btnStat = new ButtonsStates();
 
         public frm_Recipts()
@@ -45,5 +48,54 @@ namespace Kethmi_Holdings
         {            
             btnStat.CloseToolStrip((frm_Main)this.MdiParent);
         }
+
+        private void getReceiptId()
+        {
+            db = new Database();
+            recID = Convert.ToInt32(db.getValue("SELECT TOP 1 reciptID FROM RecieptsMaster ORDER BY reciptID DESC"))+1;
+        }
+
+        private void getCusID()
+        {
+            db = new Database();
+            cusID = Convert.ToInt32(db.getValue("SELECT cusID FROM Customer WHERE name = '"+txt_CusName.Text+"'"));            
+        }
+
+        private void getProjID()
+        {
+            db = new Database();
+            pId = Convert.ToInt32(db.getValue("SELECT projID FROM ProjectMaster WHERE projName = '" + txt_ProjName.Text + "'"));
+        }
+
+        private void loadData()
+        {
+
+        }
+
+        public void ButtonNew()
+        {
+
+        }
+
+        public void ButtonEdit()
+        {
+
+        }
+
+        public void ButtonClear()
+        {
+
+        }
+
+        public void ButtonSave()
+        {
+
+        }
+
+        public void ButtonDelete()
+        {
+
+        }
+
     }
 }

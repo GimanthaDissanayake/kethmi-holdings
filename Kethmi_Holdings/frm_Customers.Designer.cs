@@ -48,9 +48,17 @@
             // 
             // dataGridView_CustomerList
             // 
+            this.dataGridView_CustomerList.AllowUserToAddRows = false;
+            this.dataGridView_CustomerList.AllowUserToDeleteRows = false;
+            this.dataGridView_CustomerList.AllowUserToResizeColumns = false;
+            this.dataGridView_CustomerList.AllowUserToResizeRows = false;
             this.dataGridView_CustomerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_CustomerList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView_CustomerList.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_CustomerList.Name = "dataGridView_CustomerList";
+            this.dataGridView_CustomerList.ReadOnly = true;
+            this.dataGridView_CustomerList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridView_CustomerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_CustomerList.Size = new System.Drawing.Size(240, 417);
             this.dataGridView_CustomerList.TabIndex = 0;
             this.dataGridView_CustomerList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_CustomerList_MouseClick);

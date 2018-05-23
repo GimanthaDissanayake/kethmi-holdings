@@ -144,22 +144,26 @@ namespace Kethmi_Holdings
             {
                 frmProject.ButtonNew();        
             }
-            if (this.ActiveMdiChild == frmRecipts) {
+            else if (this.ActiveMdiChild == frmRecipts) {
                 CommonClass.setToolTipButtonStates(false, false, false, true, false, true);
                 frmRecipts.inputAreaEnabled = true;
                 frmRecipts.searchEnabled = false;
             }
-            if (this.ActiveMdiChild == frmUserCtrl)
+            else if (this.ActiveMdiChild == frmUserCtrl)
             {
                 CommonClass.setToolTipButtonStates(false, false, true, false, false, true);
                 frmUserCtrl.gb_CurrentUsersEnabled = false;
                 frmUserCtrl.gb_InputAreaEnabled = true;
                 frmUserCtrl.ButtonAdd();
             }      
-            if(this.ActiveMdiChild == frmCustomers)
+            else if(this.ActiveMdiChild == frmCustomers)
             {
                 frmCustomers.ButtonNew();
             }   
+            else if(this.ActiveMdiChild == frmRecipts)
+            {
+                frmRecipts.ButtonNew();
+            }
         }
 
         private void frm_Main_Load_1(object sender, EventArgs e)
@@ -234,6 +238,10 @@ namespace Kethmi_Holdings
             {
                 frmCustomers.ButtonClear();
             }
+            else if(this.ActiveMdiChild == frmRecipts)
+            {
+                frmRecipts.ButtonClear();
+            }
             }
 
         private void btn_save_Click(object sender, EventArgs e)
@@ -245,13 +253,17 @@ namespace Kethmi_Holdings
                 frmUserCtrl.gb_InputAreaEnabled = true;
                 frmUserCtrl.ButtonSave();
             }
-            else if (this.ActiveMdiChild==frmProject)
+            else if (this.ActiveMdiChild == frmProject)
             {
                 frmProject.ButtonSave();
             }
-            else if(this.ActiveMdiChild==frmCustomers)
+            else if(this.ActiveMdiChild == frmCustomers)
             {
                 frmCustomers.ButtonSave();
+            }
+            else if(this.ActiveMdiChild == frmRecipts)
+            {
+                frmRecipts.ButtonSave();
             }
         }
 
@@ -275,6 +287,10 @@ namespace Kethmi_Holdings
             {
                 frmCustomers.ButtonDelete();
             }
+            else if(this.ActiveMdiChild == frmRecipts)
+            {
+                frmRecipts.ButtonDelete();
+            }
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
@@ -286,7 +302,11 @@ namespace Kethmi_Holdings
             else if(this.ActiveMdiChild == frmCustomers)
             {
                 frmCustomers.ButtonEdit();
-            }            
+            }  
+            else if(this.ActiveMdiChild == frmRecipts)
+            {
+                frmRecipts.ButtonEdit();
+            }          
         }
     }
 }

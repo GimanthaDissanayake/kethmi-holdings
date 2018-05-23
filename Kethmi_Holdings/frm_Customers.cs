@@ -56,6 +56,7 @@ namespace Kethmi_Holdings
 
         private void getProjID()
         {
+            db = new Database();
             pId = Convert.ToInt32(db.getValue("SELECT TOP 1 projID FROM ProjectMaster WHERE projName='"+cmb_ProjectName.Text+"'"));
         }
 
@@ -117,36 +118,11 @@ namespace Kethmi_Holdings
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);
         }
 
-        private void dataGridView_CustomerList_MouseClick(object sender, MouseEventArgs e)
-        {
-            db = new Database();
-            dt = new DataTable();
-
-            btnStat.ControlSideToolStrip(this.ParentForm, true, true, false, false, true, false);
-
-            cusID = Convert.ToInt32(dataGridView_CustomerList.SelectedRows[0].Cells[0].Value);
-
-            //Fill Customer Data
-            strsql = "SELECT * FROM Customer WHERE cusID='" + cusID + "'";
-            dt = db.select(strsql);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                txt_CusName.Text = row[1].ToString();
-                txt_NIC.Text = row[3].ToString();
-                txt_Phone.Text = row[2].ToString();
-
-                pId = Convert.ToInt32(row[4].ToString());
-                strsql = "SELECT projName FROM ProjectMaster WHERE projID = '" + pId + "'";
-                cmb_ProjectName.Text = db.getValue(strsql);
-                txt_Type.Text = row[5].ToString();
-                txt_Address.Text = row[6].ToString();
-            }
-        }
+        
 
         public void ButtonClear()
         {
-            if (MessageBox.Show("Are you sure want to cancal?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure want to cancel?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 clearData();
                 enableEditing(false);
@@ -259,6 +235,34 @@ namespace Kethmi_Holdings
                     sqlTrans.Rollback();
                     MessageBox.Show(ex.Message.ToString());
                 }
+            }
+        }
+
+        private void dataGridView_CustomerList_MouseClick(object sender, MouseEventArgs e)
+        {
+            db = new Database();
+            dt = new DataTable();
+
+            btnStat.ControlSideToolStrip(this.ParentForm, true, true, false, false, true, false);
+
+            cusID = Convert.ToInt32(dataGridView_CustomerList.SelectedRows[0].Cells[0].Value);
+            txt_CusID.Text = cusID.ToString();
+
+            //Fill Customer Data
+            strsql = "SELECT * FROM Customer WHERE cusID='" + cusID + "'";
+            dt = db.select(strsql);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                txt_CusName.Text = row[1].ToString();
+                txt_NIC.Text = row[3].ToString();
+                txt_Phone.Text = row[2].ToString();
+
+                pId = Convert.ToInt32(row[4].ToString());
+                strsql = "SELECT projName FROM ProjectMaster WHERE projID = '" + pId + "'";
+                cmb_ProjectName.Text = db.getValue(strsql);
+                txt_Type.Text = row[5].ToString();
+                txt_Address.Text = row[6].ToString();
             }
         }
 
