@@ -63,6 +63,7 @@
             this.dataGridView_ReceiptList.Name = "dataGridView_ReceiptList";
             this.dataGridView_ReceiptList.Size = new System.Drawing.Size(250, 372);
             this.dataGridView_ReceiptList.TabIndex = 0;
+            this.dataGridView_ReceiptList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_ReceiptList_MouseClick);
             // 
             // label1
             // 

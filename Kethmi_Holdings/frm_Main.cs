@@ -97,7 +97,7 @@ namespace Kethmi_Holdings
 
         private void btnReciepts_Click(object sender, EventArgs e)
         {
-            frmRecipts = new frm_Recipts();
+            frmRecipts = new frm_Recipts(strUsername);
             frmRecipts.FormClosed += new FormClosedEventHandler(frmRecipts_FormClosed);
             frmRecipts.MdiParent = this;
             frmRecipts.Show();
