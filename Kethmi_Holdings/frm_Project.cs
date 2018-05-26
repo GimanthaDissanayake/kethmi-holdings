@@ -247,8 +247,8 @@ namespace Kethmi_Holdings
                         getProjectID();
 
                         //Save to Project Master
-                        objCmd.CommandText = "INSERT INTO ProjectMaster(projName,date,addedDate,addedUser,isDeleted)" +
-                            " VALUES('" + txt_projectName.Text + "','" + dateTimePicker1.Value.ToShortDateString() + "','" + DateTime.Now + "','" + strUsername + "','false')";
+                        objCmd.CommandText = "INSERT INTO ProjectMaster(projID,projName,date,addedDate,addedUser,isDeleted)" +
+                            " VALUES('"+pId+"','" + txt_projectName.Text + "','" + dateTimePicker1.Value.ToShortDateString() + "','" + DateTime.Now + "','" + strUsername + "','false')";
                         objCmd.ExecuteNonQuery();
 
                         //Save Project Basic Details
