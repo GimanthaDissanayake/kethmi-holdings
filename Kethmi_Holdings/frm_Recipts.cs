@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace Kethmi_Holdings
         int cusID, pId, recID;
         String strUsername,mode="",strsql="";
         Database db;
+        DataTable dt;
         List<String> list;
 
         private string strConn = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
@@ -26,6 +28,7 @@ namespace Kethmi_Holdings
             InitializeComponent();
             loadCusName();
             loadProjName();
+            loadData();
             strUsername = s;
         }
 
@@ -88,7 +91,9 @@ namespace Kethmi_Holdings
         private void loadData()
         {
             db = new Database();
-            strsql = "SELECT reciptID as 'ID',name as 'Customer Name' FROM Customer WHERE isDeleted='false'";
+            strsql = "SELECT m.reciptID as 'ID',c.name as 'Customer Name',p.projName as 'Project Name' FROM RecieptsMaster m,"+
+                " ProjectMaster p, Customer c WHERE m.cusID = c.cusID AND "+
+                "m.projID = p.projID  AND m.isDeleted='false'";
             dataGridView_ReceiptList.DataSource = db.select(strsql);
             dataGridView_ReceiptList.Enabled = true;
         }
@@ -119,13 +124,18 @@ namespace Kethmi_Holdings
 
         private void clearData()
         {
+            dataGridView_PaymentTypes.DataSource = null;
+            dataGridView_PaymentTypes.Columns.Add("PaymentType", "Payment Type");
+            dataGridView_PaymentTypes.Columns.Add("Value", "Value");
+
             cmb_CusName.Text="";
             cmb_ProjName.Text = "";
             txt_ReceiptID.Clear();
             txt_Search.Clear();
-            txt_TotVal.Clear();
+            txt_TotVal.Text = "0.00";
             txt_Type.Clear();
-            txt_TypeAddOrRemove.Clear();
+            txt_PaymentType.Clear();
+            txt_Value.Clear();
             dateTimePicker_date.ResetText();
         }
 
@@ -134,11 +144,20 @@ namespace Kethmi_Holdings
             cmb_CusName.Enabled = value;
             cmb_ProjName.Enabled = value;
             txt_ReceiptID.Enabled = value;
-            txt_Search.Enabled = value;
-            txt_TotVal.Enabled = value;
             txt_Type.Enabled = value;
-            txt_TypeAddOrRemove.Enabled = value;
+            txt_Value.Enabled = value;
+            txt_PaymentType.Enabled = value;
             dateTimePicker_date.Enabled = value;
+        }
+
+        private void search()
+        {
+            db = new Database();
+            strsql = "SELECT m.reciptID as 'ID',c.name as 'Customer Name',p.projName as 'Project Name' FROM RecieptsMaster m," +
+                " ProjectMaster p, Customer c WHERE m.cusID = c.cusID AND " +
+                "m.projID = p.projID AND (c.name LIKE '" + txt_Search.Text + "%' OR c.name LIKE '" + txt_Search.Text + "%')  AND m.isDeleted='false'";
+            dataGridView_ReceiptList.DataSource = db.select(strsql);
+            dataGridView_ReceiptList.Enabled = true;
         }
 
         public void ButtonNew()
@@ -171,7 +190,31 @@ namespace Kethmi_Holdings
                 dataGridView_ReceiptList.Enabled = true;
                 btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
             }
-        }        
+        }
+
+        private void calTotal()
+        {
+            double tot = Convert.ToDouble(txt_Value.Text) + Convert.ToDouble(txt_TotVal.Text);
+            txt_TotVal.Text = tot.ToString();
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            dataGridView_PaymentTypes.Rows.Add(txt_PaymentType.Text,txt_Value.Text);
+            calTotal();
+            txt_Value.Clear();
+            txt_PaymentType.Clear();
+        }
+
+        private void btn_Remove_Click(object sender, EventArgs e)
+        {
+            dataGridView_PaymentTypes.Rows.RemoveAt(this.dataGridView_PaymentTypes.SelectedRows[0].Index);
+        }
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+            search();
+        }
 
         public void ButtonSave()
         {
@@ -182,7 +225,7 @@ namespace Kethmi_Holdings
             objCmd.Transaction = sqlTrans;
             objCmd.Connection = objConn;
 
-            if(mode == "New")
+            if(mode == Modes.NEW)
             {
                 try
                 {
@@ -198,9 +241,11 @@ namespace Kethmi_Holdings
                     objCmd.ExecuteNonQuery();
 
                     //Save to ReceiptDetails
-                    objCmd.CommandText = "INSERT INTO RecieptsDetails(reciptID,type,value) VALUES('" + txt_ReceiptID.Text + "','" + txt_Type.Text + "','" + txt_TotVal.Text + "')";
-                    objCmd.ExecuteNonQuery();
-
+                    for(int rowCount = 0; rowCount < dataGridView_PaymentTypes.Rows.Count; rowCount++)
+                    {
+                        objCmd.CommandText = "INSERT INTO RecieptsDetails(reciptID,type,value) VALUES('" + txt_ReceiptID.Text + "','" + dataGridView_PaymentTypes.Rows[rowCount].Cells[0].Value.ToString() + "','" + dataGridView_PaymentTypes.Rows[rowCount].Cells["Value"].Value.ToString() + "')";
+                        objCmd.ExecuteNonQuery();
+                    }
                     //Commit changes 
                     sqlTrans.Commit();
 
@@ -217,7 +262,7 @@ namespace Kethmi_Holdings
                     MessageBox.Show(ex.Message.ToString());
                 }
             }
-            else if(mode == "Edit")
+            else if(mode == Modes.EDIT)
             {
                 try
                 {
@@ -294,7 +339,34 @@ namespace Kethmi_Holdings
 
         private void dataGridView_ReceiptList_MouseClick(object sender, MouseEventArgs e)
         {
+            db = new Database();
+            dt = new DataTable();
+
             btnStat.ControlSideToolStrip(this.ParentForm, true, true, false, true, true, false);
+
+            recID = Convert.ToInt32(dataGridView_ReceiptList.SelectedRows[0].Cells[0].Value);
+            txt_ReceiptID.Text = recID.ToString();
+
+            strsql = "SELECT cusID FROM RecieptsMaster WHERE reciptID = '"+recID+"'";
+            cusID = Convert.ToInt32(db.getValue(strsql));
+            cmb_CusName.Text = dataGridView_ReceiptList.SelectedRows[0].Cells[1].Value.ToString();
+
+            strsql = "SELECT projID FROM RecieptsMaster WHERE reciptID = '" + recID + "'";
+            pId = Convert.ToInt32(db.getValue(strsql));
+            cmb_ProjName.Text = dataGridView_ReceiptList.SelectedRows[0].Cells[2].Value.ToString();
+
+            strsql = "SELECT type FROM RecieptsMaster WHERE reciptID = '" + recID + "'";
+            txt_Type.Text = db.getValue(strsql);
+
+            strsql = "SELECT date FROM RecieptsMaster WHERE reciptID = '" + recID + "'";
+            dateTimePicker_date.Text = db.getValue(strsql);
+
+            strsql = "SELECT totValue FROM RecieptsMaster WHERE reciptID = '" + recID + "'";
+            txt_TotVal.Text = db.getValue(strsql);
+
+            strsql = "SELECT type as 'Payment Type', value as 'Value' FROM RecieptsDetails WHERE reciptID = '" + recID + "'";
+            dataGridView_PaymentTypes.Columns.Clear();
+            dataGridView_PaymentTypes.DataSource = db.select(strsql);
         }
 
     }
