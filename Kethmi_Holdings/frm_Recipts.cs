@@ -50,6 +50,7 @@ namespace Kethmi_Holdings
         {
             // lastButtonStates = new ButtonsStates();
             btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
+            enableEditing(false);
         }
 
         private void frm_Recipts_FormClosing(object sender, FormClosingEventArgs e)
