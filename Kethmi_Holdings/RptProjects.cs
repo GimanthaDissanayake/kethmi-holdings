@@ -9,9 +9,10 @@ namespace Kethmi_Holdings
         Database db;
         String strsql;
         List<String> list;
-
         ButtonsStates btnStat = new ButtonsStates();
+        FormControl frmCtrl = new FormControl();
         string rptType = "";
+        string selectionFormula = "";
         public RptProjects()
         {
             InitializeComponent();
@@ -26,14 +27,8 @@ namespace Kethmi_Holdings
 
         private void loadProjName()
         {
-            db = new Database();
-            strsql = "SELECT projName FROM ProjectMaster WHERE isDeleted='false' UNION SELECT 'All'";
-            list = new List<String>();
-            list = db.getList(strsql, 0);
-            foreach (String projName in list)
-            {
-                cmbProjectList.Items.Add(projName);
-            }
+            strsql = "SELECT projID,projName FROM ProjectMaster WHERE isDeleted='false' UNION SELECT '0','All'";
+            frmCtrl.Fill_Combo(cmbProjectList, strsql, "projID", "projName");                       
         }
 
         public void ButtonPrint()
@@ -46,13 +41,16 @@ namespace Kethmi_Holdings
             if (rbtDetailReport.Checked)
             { 
                 rptType = "ProjectDetails";
+                if (cmbProjectList.Text!="All")
+                {
+                    selectionFormula = " {ProjectMaster.projID} = " + cmbProjectList.SelectedValue + "";
+                }
             }
             else
             {
                 rptType = "ProjectSummary";
-
             }
-            frm_ReportViewer vwr = new frm_ReportViewer(rptType);
+            frm_ReportViewer vwr = new frm_ReportViewer(rptType,selectionFormula);
             vwr.Show();
         }
 
