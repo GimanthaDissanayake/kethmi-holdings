@@ -13,7 +13,7 @@ namespace Kethmi_Holdings
     public partial class frm_UserControl : Form
     {
         Database db;
-        int userID;
+        int userID,isActive;
         string strsql = "";
         string userType = "";
         string strUsername = "";
@@ -46,7 +46,7 @@ namespace Kethmi_Holdings
         private void loadUserData()
         {
             db = new Database();
-            strsql = "SELECT userID as 'ID',username as 'Username',userType as 'Type' FROM UserDetails WHERE isDeleted=0";
+            strsql = "SELECT userID as 'ID',username as 'Username',userType as 'Type' FROM UserDetails WHERE isActive=1";
             dataGridViewUsers.DataSource = db.select(strsql);
             dataGridViewUsers.Enabled = true;
         }
@@ -75,6 +75,15 @@ namespace Kethmi_Holdings
             chkActive.Enabled = value;
         }
 
+        private void clearData()
+        {
+            txtPW.Clear();
+            txtUserName.Clear();
+            rbtAdmin.Checked = false;
+            rbtUser.Checked = false;
+            chkActive.Checked = false;
+        }
+
         public void ButtonNew()
         {
             setEnabled(true);
@@ -84,8 +93,8 @@ namespace Kethmi_Holdings
         public void ButtonClear()
         {
             if (MessageBox.Show("Are you sure want to cancel?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {                                
-                
+            {
+                clearData();
                 btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
             }
         }
@@ -98,12 +107,11 @@ namespace Kethmi_Holdings
             else
                 userType = "User";
 
-            db.select("SELECT * FROM UserDetails WHERE userID = {txtUserID.Text}");
-
-            strsql = "insert into userdetails (userid,username, password, addedDate, "+
-                "addedUser,usertype,active ) values ('"+txtUserID.Text+"','"+txtUserName.Text+"','"+txtPW.Text+"','"+DateTime.Now.ToString()+"','"+strUsername+"','"+userType+"','"+chkActive.Checked+"')";
+            strsql = "INSERT INTO UserDetails (username, password, addedDate, "+
+                "addedUser,usertype,isActive ) VALUES ('"+txtUserName.Text+"','"+txtPW.Text+"','"+DateTime.Now+"','"+strUsername+"','"+userType+"','"+chkActive.Checked+"')";
             db.insertUpdateDelete(strsql);
-
+            clearData();
+            loadUserData();
         }
 
         private void frm_UserControl_FormClosing(object sender, FormClosingEventArgs e)
