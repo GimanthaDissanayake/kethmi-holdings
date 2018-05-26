@@ -143,6 +143,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Reciept.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Reciept1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reciept.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RptCustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +208,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\Reciept.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reciept1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="RptCustomerDetails.resx">
       <DependentUpon>RptCustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
