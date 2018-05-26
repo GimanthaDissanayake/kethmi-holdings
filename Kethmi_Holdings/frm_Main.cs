@@ -21,6 +21,7 @@ namespace Kethmi_Holdings
         RptProjects rptProjects;
         RptCustomerDetails rptCusDetails;
         frm_UserControl frmUserCtrl;
+       
 
 
         string strUsername = "";
@@ -175,6 +176,7 @@ namespace Kethmi_Holdings
             rptProjects = new RptProjects();
             rptProjects.MdiParent = this;
             rptProjects.Show();
+            ts_side.Visible = true;
         }
 
         private void customerDetailsSheetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -309,6 +311,10 @@ namespace Kethmi_Holdings
             if (this.ActiveMdiChild == frmRecipts)
             {
                 frmRecipts.ButtonPrint();
+            }
+            else if (this.ActiveMdiChild== rptProjects)
+            {
+                rptProjects.ButtonPrint();
             }
         }
     }

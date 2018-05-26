@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RptProjects));
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -244,10 +245,14 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(82, 0);
             this.Name = "RptProjects";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Project Report";
+            this.Activated += new System.EventHandler(this.RptProjects_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RptProjects_FormClosing);
+            this.Load += new System.EventHandler(this.RptProjects_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

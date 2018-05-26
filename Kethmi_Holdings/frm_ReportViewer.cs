@@ -9,11 +9,16 @@ namespace Kethmi_Holdings
 {
     public partial class frm_ReportViewer : Form
     {
+        String rptName = "";
         public frm_ReportViewer()
         {
             InitializeComponent();
         }
-
+        public frm_ReportViewer(String type)
+        {
+            this.rptName = type;
+            InitializeComponent();
+        }
         private void frm_ReportViewer_Load(object sender, EventArgs e)
         {
             string strServer = ConfigurationManager.AppSettings["Server"].ToString();
@@ -25,9 +30,21 @@ namespace Kethmi_Holdings
             crConnection.Password = "smgsoft";
 
             ReportDocument myRpt = new ReportDocument();
-            //     myRpt.Load(Application.StartupPath + "\\Reports\\Reciept.rpt");
-            string path = Directory.GetCurrentDirectory()+ "\\Reports\\Reciept.rpt";
-            myRpt.Load(path);
+
+            if (rptName == "ProjectDetails")
+            {
+                myRpt.Load(Application.StartupPath + "\\Reports\\ProjectDetails.rpt");
+            }
+            else if (rptName == "")
+            {
+
+            }
+            else
+            {
+                myRpt.Load(Application.StartupPath + "\\Reports\\Reciept.rpt");
+                // string path = Directory.GetCurrentDirectory()+ "\\Reports\\Reciept.rpt";
+                //   myRpt.Load(path);
+            }
             AssignConnectionInfo(myRpt, crConnection);
             myRpt.SetDatabaseLogon(crConnection.UserID, crConnection.Password, strServer, crConnection.DatabaseName);
             crystalReportViewer1.ReportSource = myRpt;
