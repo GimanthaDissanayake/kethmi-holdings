@@ -96,6 +96,102 @@ namespace Kethmi_Holdings
             txt_sellableArea.Text = sellable.ToString();
         }
 
+        private void calTotCostOfPurchase()
+        {
+            double sum = 0.0;
+            foreach (Control control in costOfPurchase_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (control.Name != txt_totCostOfPurchase.Name)
+                    {
+                        sum += Convert.ToDouble(control.Text);
+                    }
+                }
+            }
+            txt_totCostOfPurchase.Text = sum.ToString();
+        }
+
+        private void calSurveyCharges()
+        {
+            double sum = 0.0;
+            foreach (Control control in surveyCharges_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (control.Name != txt_totSurveyCost.Name)
+                    {
+                        sum += Convert.ToDouble(control.Text);
+                    }
+                }
+            }
+            txt_totSurveyCost.Text = sum.ToString();
+        }
+
+        private void calDevelopment()
+        {
+            double sum = 0.0;
+            foreach (Control control in development_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (control.Name != txt_totDevCost.Name)
+                    {
+                        sum += Convert.ToDouble(control.Text);
+                    }
+                }
+            }
+            txt_totDevCost.Text = sum.ToString();
+        }
+
+        private void calUtilities()
+        {
+            double sum = 0.0;
+            foreach (Control control in utilities_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (control.Name != txt_totUtilityCost.Name)
+                    {
+                        sum += Convert.ToDouble(control.Text);
+                    }
+                }
+            }
+            txt_totUtilityCost.Text = sum.ToString();
+        }
+
+        private void calTravelling()
+        {
+            double sum = 0.0;
+            foreach (Control control in travelling_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (control.Name != txt_totTravCost.Name)
+                    {
+                        sum += Convert.ToDouble(control.Text);
+                    }
+                }
+            }
+            txt_totTravCost.Text = sum.ToString();
+        }
+
+        private void calAdvertising()
+        {
+            double sum = 0.0;
+            foreach (Control control in advertising_gb.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (control.Name != txt_totAdCost.Name)
+                    {
+                        sum += Convert.ToDouble(control.Text);
+                    }
+                }
+            }
+            txt_totAdCost.Text = sum.ToString();
+        }
+
         public void ButtonClear()
         {
             if (MessageBox.Show("Are you sure want to cancal?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -710,13 +806,11 @@ namespace Kethmi_Holdings
             txt_valuationReport.Enabled = value;
             txt_titleReports.Enabled = value;
             txt_commision.Enabled = value;
-            txt_totCostOfPurchase.Enabled = value;
             txt_parameterSurvey.Enabled = value;
             txt_dimaBlocks.Enabled = value;
             txt__blockingOutPlans.Enabled = value;
             txt_extract.Enabled = value;
             txt_ContourSurveyingPlans.Enabled = value;
-            txt_totSurveyCost.Enabled = value;
             txt_clearingOfLand.Enabled = value;
             txt_fillingAndLeveling.Enabled = value;
             txt_culvertsAndDrains.Enabled = value;
@@ -731,17 +825,14 @@ namespace Kethmi_Holdings
             txt_maintenance.Enabled = value;
             txt_donation.Enabled = value;
             txt_contingencies.Enabled = value;
-            txt_totDevCost.Enabled = value;
             txt_providingWater.Enabled = value;
             txt_providingElectricity.Enabled = value;
-            txt_totUtilityCost.Enabled = value;
             txt_execDirectors.Enabled = value;
             txt_DGM.Enabled = value;
             txt_managerProject.Enabled = value;
             txt_projOfficer.Enabled = value;
             txt_teleAllowance.Enabled = value;
             txt_entertainment.Enabled = value;
-            txt_totTravCost.Enabled = value;
             txt_water.Enabled = value;
             txt_banners.Enabled = value;
             txt_handbills.Enabled = value;
@@ -749,7 +840,6 @@ namespace Kethmi_Holdings
             txt_holdings.Enabled = value;
             txt_press.Enabled = value;
             txt_mobileUnit.Enabled = value;
-            txt_totAdCost.Enabled = value;
             /*s missing*/
         }
 
@@ -799,6 +889,206 @@ namespace Kethmi_Holdings
         private void txt_reservation_TextChanged(object sender, EventArgs e)
         {
             calSellableArea();
+        }
+
+        private void txt_commision_TextChanged(object sender, EventArgs e)
+        {
+            calTotCostOfPurchase();
+        }
+
+        private void txt_titleReports_TextChanged(object sender, EventArgs e)
+        {
+            calTotCostOfPurchase();
+        }
+
+        private void txt_valuationReport_TextChanged(object sender, EventArgs e)
+        {
+            calTotCostOfPurchase();
+        }
+
+        private void txt_legalFees_TextChanged(object sender, EventArgs e)
+        {
+            calTotCostOfPurchase();
+        }
+
+        private void txt_stampFees_TextChanged(object sender, EventArgs e)
+        {
+            calTotCostOfPurchase();
+        }
+
+        private void txt_titleInsurance_TextChanged(object sender, EventArgs e)
+        {
+            calTotCostOfPurchase();
+        }
+
+        private void txt_parameterSurvey_TextChanged(object sender, EventArgs e)
+        {
+            calSurveyCharges();
+        }
+
+        private void txt_dimaBlocks_TextChanged(object sender, EventArgs e)
+        {
+            calSurveyCharges();
+        }
+
+        private void txt__blockingOutPlans_TextChanged(object sender, EventArgs e)
+        {
+            calSurveyCharges();
+        }
+
+        private void txt_extract_TextChanged(object sender, EventArgs e)
+        {
+            calSurveyCharges();
+        }
+
+        private void txt_ContourSurveyingPlans_TextChanged(object sender, EventArgs e)
+        {
+            calSurveyCharges();
+        }
+
+        private void txt_contingencies_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_donation_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_maintenance_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_pradeshiyaSabha_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_boungryStones_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_projectOfficer_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_fencing_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_incidentalCost_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_Huts_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_interiorRoadWays_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_RetainerWall_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_culvertsAndDrains_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_fillingAndLeveling_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_clearingOfLand_TextChanged(object sender, EventArgs e)
+        {
+            calDevelopment();
+        }
+
+        private void txt_providingWater_TextChanged(object sender, EventArgs e)
+        {
+            calUtilities();
+        }
+
+        private void txt_providingElectricity_TextChanged(object sender, EventArgs e)
+        {
+            calUtilities();
+        }
+
+        private void txt_execDirectors_TextChanged(object sender, EventArgs e)
+        {
+            calTravelling();
+        }
+
+        private void txt_DGM_TextChanged(object sender, EventArgs e)
+        {
+            calTravelling();
+        }
+
+        private void txt_managerProject_TextChanged(object sender, EventArgs e)
+        {
+            calTravelling();
+        }
+
+        private void txt_projOfficer_TextChanged(object sender, EventArgs e)
+        {
+            calTravelling();
+        }
+
+        private void txt_teleAllowance_TextChanged(object sender, EventArgs e)
+        {
+            calTravelling();
+        }
+
+        private void txt_entertainment_TextChanged(object sender, EventArgs e)
+        {
+            calTravelling();
+        }
+
+        private void txt_water_TextChanged(object sender, EventArgs e)
+        {
+            calAdvertising();
+        }
+
+        private void txt_banners_TextChanged(object sender, EventArgs e)
+        {
+            calAdvertising();
+        }
+
+        private void txt_handbills_TextChanged(object sender, EventArgs e)
+        {
+            calAdvertising();
+        }
+
+        private void txt_radioTV_TextChanged(object sender, EventArgs e)
+        {
+            calAdvertising();
+        }
+
+        private void txt_holdings_TextChanged(object sender, EventArgs e)
+        {
+            calAdvertising();
+        }
+
+        private void txt_press_TextChanged(object sender, EventArgs e)
+        {
+            calAdvertising();
+        }
+
+        private void txt_mobileUnit_TextChanged(object sender, EventArgs e)
+        {
+            calAdvertising();
         }
     }
 }

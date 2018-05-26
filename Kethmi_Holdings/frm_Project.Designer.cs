@@ -386,7 +386,6 @@
             this.label9.Size = new System.Drawing.Size(96, 17);
             this.label9.TabIndex = 17;
             this.label9.Text = "Total Perches";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -799,6 +798,7 @@
             this.txt_parameterSurvey.Size = new System.Drawing.Size(239, 23);
             this.txt_parameterSurvey.TabIndex = 80;
             this.txt_parameterSurvey.Text = "0.00";
+            this.txt_parameterSurvey.TextChanged += new System.EventHandler(this.txt_parameterSurvey_TextChanged);
             // 
             // label5
             // 
@@ -820,6 +820,7 @@
             this.txt_dimaBlocks.Size = new System.Drawing.Size(239, 23);
             this.txt_dimaBlocks.TabIndex = 82;
             this.txt_dimaBlocks.Text = "0.00";
+            this.txt_dimaBlocks.TextChanged += new System.EventHandler(this.txt_dimaBlocks_TextChanged);
             // 
             // txt_totSurveyCost
             // 
@@ -862,6 +863,7 @@
             this.txt__blockingOutPlans.Size = new System.Drawing.Size(239, 23);
             this.txt__blockingOutPlans.TabIndex = 84;
             this.txt__blockingOutPlans.Text = "0.00";
+            this.txt__blockingOutPlans.TextChanged += new System.EventHandler(this.txt__blockingOutPlans_TextChanged);
             // 
             // txt_extract
             // 
@@ -872,6 +874,7 @@
             this.txt_extract.Size = new System.Drawing.Size(239, 23);
             this.txt_extract.TabIndex = 88;
             this.txt_extract.Text = "0.00";
+            this.txt_extract.TextChanged += new System.EventHandler(this.txt_extract_TextChanged);
             // 
             // label27
             // 
@@ -904,6 +907,7 @@
             this.txt_ContourSurveyingPlans.Size = new System.Drawing.Size(239, 23);
             this.txt_ContourSurveyingPlans.TabIndex = 86;
             this.txt_ContourSurveyingPlans.Text = "0.00";
+            this.txt_ContourSurveyingPlans.TextChanged += new System.EventHandler(this.txt_ContourSurveyingPlans_TextChanged);
             // 
             // costOfPurchase_gb
             // 
@@ -951,6 +955,7 @@
             this.txt_titleInsurance.Size = new System.Drawing.Size(189, 23);
             this.txt_titleInsurance.TabIndex = 52;
             this.txt_titleInsurance.Text = "0.00";
+            this.txt_titleInsurance.TextChanged += new System.EventHandler(this.txt_titleInsurance_TextChanged);
             // 
             // txt_stampFees
             // 
@@ -961,6 +966,7 @@
             this.txt_stampFees.Size = new System.Drawing.Size(189, 23);
             this.txt_stampFees.TabIndex = 54;
             this.txt_stampFees.Text = "0.00";
+            this.txt_stampFees.TextChanged += new System.EventHandler(this.txt_stampFees_TextChanged);
             // 
             // label15
             // 
@@ -982,6 +988,7 @@
             this.txt_legalFees.Size = new System.Drawing.Size(189, 23);
             this.txt_legalFees.TabIndex = 56;
             this.txt_legalFees.Text = "0.00";
+            this.txt_legalFees.TextChanged += new System.EventHandler(this.txt_legalFees_TextChanged);
             // 
             // label16
             // 
@@ -1003,6 +1010,7 @@
             this.txt_commision.Size = new System.Drawing.Size(189, 23);
             this.txt_commision.TabIndex = 58;
             this.txt_commision.Text = "0.00";
+            this.txt_commision.TextChanged += new System.EventHandler(this.txt_commision_TextChanged);
             // 
             // label17
             // 
@@ -1024,6 +1032,7 @@
             this.txt_titleReports.Size = new System.Drawing.Size(189, 23);
             this.txt_titleReports.TabIndex = 60;
             this.txt_titleReports.Text = "0.00";
+            this.txt_titleReports.TextChanged += new System.EventHandler(this.txt_titleReports_TextChanged);
             // 
             // label18
             // 
@@ -1045,6 +1054,7 @@
             this.txt_valuationReport.Size = new System.Drawing.Size(189, 23);
             this.txt_valuationReport.TabIndex = 62;
             this.txt_valuationReport.Text = "0.00";
+            this.txt_valuationReport.TextChanged += new System.EventHandler(this.txt_valuationReport_TextChanged);
             // 
             // label19
             // 
@@ -1139,6 +1149,7 @@
             this.txt_providingElectricity.Size = new System.Drawing.Size(125, 23);
             this.txt_providingElectricity.TabIndex = 115;
             this.txt_providingElectricity.Text = "0.00";
+            this.txt_providingElectricity.TextChanged += new System.EventHandler(this.txt_providingElectricity_TextChanged);
             // 
             // txt_providingWater
             // 
@@ -1149,6 +1160,7 @@
             this.txt_providingWater.Size = new System.Drawing.Size(125, 23);
             this.txt_providingWater.TabIndex = 114;
             this.txt_providingWater.Text = "0.00";
+            this.txt_providingWater.TextChanged += new System.EventHandler(this.txt_providingWater_TextChanged);
             // 
             // label52
             // 
@@ -1245,6 +1257,7 @@
             this.txt_clearingOfLand.Size = new System.Drawing.Size(125, 23);
             this.txt_clearingOfLand.TabIndex = 80;
             this.txt_clearingOfLand.Text = "0.00";
+            this.txt_clearingOfLand.TextChanged += new System.EventHandler(this.txt_clearingOfLand_TextChanged);
             // 
             // txt_totDevCost
             // 
@@ -1266,6 +1279,7 @@
             this.txt_fillingAndLeveling.Size = new System.Drawing.Size(125, 23);
             this.txt_fillingAndLeveling.TabIndex = 82;
             this.txt_fillingAndLeveling.Text = "0.00";
+            this.txt_fillingAndLeveling.TextChanged += new System.EventHandler(this.txt_fillingAndLeveling_TextChanged);
             // 
             // label26
             // 
@@ -1298,6 +1312,7 @@
             this.txt_contingencies.Size = new System.Drawing.Size(125, 23);
             this.txt_contingencies.TabIndex = 110;
             this.txt_contingencies.Text = "0.00";
+            this.txt_contingencies.TextChanged += new System.EventHandler(this.txt_contingencies_TextChanged);
             // 
             // txt_culvertsAndDrains
             // 
@@ -1308,6 +1323,7 @@
             this.txt_culvertsAndDrains.Size = new System.Drawing.Size(125, 23);
             this.txt_culvertsAndDrains.TabIndex = 84;
             this.txt_culvertsAndDrains.Text = "0.00";
+            this.txt_culvertsAndDrains.TextChanged += new System.EventHandler(this.txt_culvertsAndDrains_TextChanged);
             // 
             // label32
             // 
@@ -1329,6 +1345,7 @@
             this.txt_interiorRoadWays.Size = new System.Drawing.Size(125, 23);
             this.txt_interiorRoadWays.TabIndex = 86;
             this.txt_interiorRoadWays.Text = "0.00";
+            this.txt_interiorRoadWays.TextChanged += new System.EventHandler(this.txt_interiorRoadWays_TextChanged);
             // 
             // label41
             // 
@@ -1361,6 +1378,7 @@
             this.txt_donation.Size = new System.Drawing.Size(125, 23);
             this.txt_donation.TabIndex = 106;
             this.txt_donation.Text = "0.00";
+            this.txt_donation.TextChanged += new System.EventHandler(this.txt_donation_TextChanged);
             // 
             // txt_RetainerWall
             // 
@@ -1371,6 +1389,7 @@
             this.txt_RetainerWall.Size = new System.Drawing.Size(125, 23);
             this.txt_RetainerWall.TabIndex = 88;
             this.txt_RetainerWall.Text = "0.00";
+            this.txt_RetainerWall.TextChanged += new System.EventHandler(this.txt_RetainerWall_TextChanged);
             // 
             // label42
             // 
@@ -1403,6 +1422,7 @@
             this.txt_pradeshiyaSabha.Size = new System.Drawing.Size(125, 23);
             this.txt_pradeshiyaSabha.TabIndex = 104;
             this.txt_pradeshiyaSabha.Text = "0.00";
+            this.txt_pradeshiyaSabha.TextChanged += new System.EventHandler(this.txt_pradeshiyaSabha_TextChanged);
             // 
             // txt_Huts
             // 
@@ -1413,6 +1433,7 @@
             this.txt_Huts.Size = new System.Drawing.Size(125, 23);
             this.txt_Huts.TabIndex = 92;
             this.txt_Huts.Text = "0.00";
+            this.txt_Huts.TextChanged += new System.EventHandler(this.txt_Huts_TextChanged);
             // 
             // label43
             // 
@@ -1445,6 +1466,7 @@
             this.txt_maintenance.Size = new System.Drawing.Size(125, 23);
             this.txt_maintenance.TabIndex = 102;
             this.txt_maintenance.Text = "0.00";
+            this.txt_maintenance.TextChanged += new System.EventHandler(this.txt_maintenance_TextChanged);
             // 
             // txt_incidentalCost
             // 
@@ -1455,6 +1477,7 @@
             this.txt_incidentalCost.Size = new System.Drawing.Size(125, 23);
             this.txt_incidentalCost.TabIndex = 94;
             this.txt_incidentalCost.Text = "0.00";
+            this.txt_incidentalCost.TextChanged += new System.EventHandler(this.txt_incidentalCost_TextChanged);
             // 
             // label36
             // 
@@ -1487,6 +1510,7 @@
             this.txt_projectOfficer.Size = new System.Drawing.Size(125, 23);
             this.txt_projectOfficer.TabIndex = 100;
             this.txt_projectOfficer.Text = "0.00";
+            this.txt_projectOfficer.TextChanged += new System.EventHandler(this.txt_projectOfficer_TextChanged);
             // 
             // txt_fencing
             // 
@@ -1497,6 +1521,7 @@
             this.txt_fencing.Size = new System.Drawing.Size(125, 23);
             this.txt_fencing.TabIndex = 96;
             this.txt_fencing.Text = "0.00";
+            this.txt_fencing.TextChanged += new System.EventHandler(this.txt_fencing_TextChanged);
             // 
             // label37
             // 
@@ -1529,6 +1554,7 @@
             this.txt_boungryStones.Size = new System.Drawing.Size(125, 23);
             this.txt_boungryStones.TabIndex = 98;
             this.txt_boungryStones.Text = "0.00";
+            this.txt_boungryStones.TextChanged += new System.EventHandler(this.txt_boungryStones_TextChanged);
             // 
             // tabPage3
             // 
@@ -1580,6 +1606,7 @@
             this.txt_mobileUnit.Size = new System.Drawing.Size(125, 23);
             this.txt_mobileUnit.TabIndex = 125;
             this.txt_mobileUnit.Text = "0.00";
+            this.txt_mobileUnit.TextChanged += new System.EventHandler(this.txt_mobileUnit_TextChanged);
             // 
             // label63
             // 
@@ -1601,6 +1628,7 @@
             this.txt_press.Size = new System.Drawing.Size(125, 23);
             this.txt_press.TabIndex = 123;
             this.txt_press.Text = "0.00";
+            this.txt_press.TextChanged += new System.EventHandler(this.txt_press_TextChanged);
             // 
             // label62
             // 
@@ -1622,6 +1650,7 @@
             this.txt_holdings.Size = new System.Drawing.Size(125, 23);
             this.txt_holdings.TabIndex = 121;
             this.txt_holdings.Text = "0.00";
+            this.txt_holdings.TextChanged += new System.EventHandler(this.txt_holdings_TextChanged);
             // 
             // label61
             // 
@@ -1643,6 +1672,7 @@
             this.txt_handbills.Size = new System.Drawing.Size(125, 23);
             this.txt_handbills.TabIndex = 119;
             this.txt_handbills.Text = "0.00";
+            this.txt_handbills.TextChanged += new System.EventHandler(this.txt_handbills_TextChanged);
             // 
             // label60
             // 
@@ -1664,6 +1694,7 @@
             this.txt_radioTV.Size = new System.Drawing.Size(125, 23);
             this.txt_radioTV.TabIndex = 117;
             this.txt_radioTV.Text = "0.00";
+            this.txt_radioTV.TextChanged += new System.EventHandler(this.txt_radioTV_TextChanged);
             // 
             // label59
             // 
@@ -1707,6 +1738,7 @@
             this.txt_banners.Size = new System.Drawing.Size(125, 23);
             this.txt_banners.TabIndex = 115;
             this.txt_banners.Text = "0.00";
+            this.txt_banners.TextChanged += new System.EventHandler(this.txt_banners_TextChanged);
             // 
             // txt_water
             // 
@@ -1717,6 +1749,7 @@
             this.txt_water.Size = new System.Drawing.Size(125, 23);
             this.txt_water.TabIndex = 114;
             this.txt_water.Text = "0.00";
+            this.txt_water.TextChanged += new System.EventHandler(this.txt_water_TextChanged);
             // 
             // label57
             // 
@@ -1786,6 +1819,7 @@
             this.txt_execDirectors.Size = new System.Drawing.Size(132, 23);
             this.txt_execDirectors.TabIndex = 80;
             this.txt_execDirectors.Text = "0.00";
+            this.txt_execDirectors.TextChanged += new System.EventHandler(this.txt_execDirectors_TextChanged);
             // 
             // label54
             // 
@@ -1818,6 +1852,7 @@
             this.txt_entertainment.Size = new System.Drawing.Size(132, 23);
             this.txt_entertainment.TabIndex = 92;
             this.txt_entertainment.Text = "0.00";
+            this.txt_entertainment.TextChanged += new System.EventHandler(this.txt_entertainment_TextChanged);
             // 
             // txt_DGM
             // 
@@ -1828,6 +1863,7 @@
             this.txt_DGM.Size = new System.Drawing.Size(132, 23);
             this.txt_DGM.TabIndex = 82;
             this.txt_DGM.Text = "0.00";
+            this.txt_DGM.TextChanged += new System.EventHandler(this.txt_DGM_TextChanged);
             // 
             // label45
             // 
@@ -1871,6 +1907,7 @@
             this.txt_managerProject.Size = new System.Drawing.Size(132, 23);
             this.txt_managerProject.TabIndex = 84;
             this.txt_managerProject.Text = "0.00";
+            this.txt_managerProject.TextChanged += new System.EventHandler(this.txt_managerProject_TextChanged);
             // 
             // label46
             // 
@@ -1892,6 +1929,7 @@
             this.txt_teleAllowance.Size = new System.Drawing.Size(132, 23);
             this.txt_teleAllowance.TabIndex = 86;
             this.txt_teleAllowance.Text = "0.00";
+            this.txt_teleAllowance.TextChanged += new System.EventHandler(this.txt_teleAllowance_TextChanged);
             // 
             // txt_projOfficer
             // 
@@ -1902,6 +1940,7 @@
             this.txt_projOfficer.Size = new System.Drawing.Size(132, 23);
             this.txt_projOfficer.TabIndex = 88;
             this.txt_projOfficer.Text = "0.00";
+            this.txt_projOfficer.TextChanged += new System.EventHandler(this.txt_projOfficer_TextChanged);
             // 
             // label47
             // 

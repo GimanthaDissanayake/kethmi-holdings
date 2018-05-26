@@ -57,8 +57,6 @@
             this.advertisingDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminstrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,6 +65,8 @@
             this.tssl_loggedAs = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssl_status = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.receiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_side.SuspendLayout();
             this.ts_main.SuspendLayout();
             this.ms_header.SuspendLayout();
@@ -89,10 +89,10 @@
             this.btn_delete,
             this.btn_clear});
             this.ts_side.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.ts_side.Location = new System.Drawing.Point(0, 88);
+            this.ts_side.Location = new System.Drawing.Point(0, 110);
             this.ts_side.Name = "ts_side";
             this.ts_side.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.ts_side.Size = new System.Drawing.Size(81, 467);
+            this.ts_side.Size = new System.Drawing.Size(101, 584);
             this.ts_side.TabIndex = 4;
             this.ts_side.Text = "ts_tools";
             // 
@@ -106,7 +106,7 @@
             this.btn_add.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_add.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(79, 59);
+            this.btn_add.Size = new System.Drawing.Size(99, 62);
             this.btn_add.Tag = "";
             this.btn_add.Text = "New";
             this.btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -119,7 +119,7 @@
             this.btn_edit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_edit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(79, 59);
+            this.btn_edit.Size = new System.Drawing.Size(99, 62);
             this.btn_edit.Text = "Edit";
             this.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
@@ -131,7 +131,7 @@
             this.btn_save.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_save.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(79, 59);
+            this.btn_save.Size = new System.Drawing.Size(99, 62);
             this.btn_save.Text = "Save";
             this.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
@@ -143,7 +143,7 @@
             this.btn_print.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_print.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_print.Name = "btn_print";
-            this.btn_print.Size = new System.Drawing.Size(79, 59);
+            this.btn_print.Size = new System.Drawing.Size(99, 62);
             this.btn_print.Text = "Print";
             this.btn_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
@@ -155,7 +155,7 @@
             this.btn_delete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_delete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(79, 59);
+            this.btn_delete.Size = new System.Drawing.Size(99, 62);
             this.btn_delete.Text = "Delete";
             this.btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
@@ -167,7 +167,7 @@
             this.btn_clear.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_clear.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(79, 67);
+            this.btn_clear.Size = new System.Drawing.Size(99, 70);
             this.btn_clear.Text = "Cancel";
             this.btn_clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
@@ -188,10 +188,10 @@
             this.btnReciepts,
             this.toolStripSeparator9,
             this.btnCustomers});
-            this.ts_main.Location = new System.Drawing.Point(0, 24);
+            this.ts_main.Location = new System.Drawing.Point(0, 28);
             this.ts_main.Name = "ts_main";
             this.ts_main.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.ts_main.Size = new System.Drawing.Size(1096, 64);
+            this.ts_main.Size = new System.Drawing.Size(1370, 80);
             this.ts_main.TabIndex = 6;
             this.ts_main.Text = "toolStrip1";
             this.ts_main.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ts_main_ItemClicked);
@@ -202,7 +202,7 @@
             this.btnProjects.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnProjects.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnProjects.Name = "btnProjects";
-            this.btnProjects.Size = new System.Drawing.Size(53, 61);
+            this.btnProjects.Size = new System.Drawing.Size(65, 77);
             this.btnProjects.Text = "Projects";
             this.btnProjects.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnProjects.Click += new System.EventHandler(this.btnProjects_Click);
@@ -210,7 +210,7 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 64);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 80);
             // 
             // btnSales
             // 
@@ -227,7 +227,7 @@
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 64);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 80);
             // 
             // btnAdvertising
             // 
@@ -244,7 +244,7 @@
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 64);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 80);
             // 
             // btnReciepts
             // 
@@ -261,7 +261,7 @@
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 64);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 80);
             // 
             // btnCustomers
             // 
@@ -286,19 +286,21 @@
             this.operationsToolStripMenuItem,
             this.reportsToolStripMenuItem,
             this.adminstrationToolStripMenuItem,
-            this.searchToolStripMenuItem,
             this.aboutUsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.ms_header.Location = new System.Drawing.Point(0, 0);
             this.ms_header.Name = "ms_header";
-            this.ms_header.Size = new System.Drawing.Size(1096, 24);
+            this.ms_header.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.ms_header.Size = new System.Drawing.Size(1370, 28);
             this.ms_header.TabIndex = 1;
             this.ms_header.Text = "ms_header";
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.receiptToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
             this.fileToolStripMenuItem.Text = "Master Files";
             // 
             // operationsToolStripMenuItem
@@ -306,13 +308,13 @@
             this.operationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.projectToolStripMenuItem});
             this.operationsToolStripMenuItem.Name = "operationsToolStripMenuItem";
-            this.operationsToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.operationsToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.operationsToolStripMenuItem.Text = "Operations";
             // 
             // projectToolStripMenuItem
             // 
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
-            this.projectToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.projectToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.projectToolStripMenuItem.Text = " Projects";
             this.projectToolStripMenuItem.Click += new System.EventHandler(this.projectToolStripMenuItem_Click);
             // 
@@ -323,77 +325,63 @@
             this.customerDetailsSheetToolStripMenuItem,
             this.advertisingDetailsToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // projectManagementToolStripMenuItem
             // 
             this.projectManagementToolStripMenuItem.Name = "projectManagementToolStripMenuItem";
-            this.projectManagementToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.projectManagementToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
             this.projectManagementToolStripMenuItem.Text = "Project Management Report";
             this.projectManagementToolStripMenuItem.Click += new System.EventHandler(this.projectManagementToolStripMenuItem_Click);
             // 
             // customerDetailsSheetToolStripMenuItem
             // 
             this.customerDetailsSheetToolStripMenuItem.Name = "customerDetailsSheetToolStripMenuItem";
-            this.customerDetailsSheetToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.customerDetailsSheetToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
             this.customerDetailsSheetToolStripMenuItem.Text = "Customer Details Sheet";
             this.customerDetailsSheetToolStripMenuItem.Click += new System.EventHandler(this.customerDetailsSheetToolStripMenuItem_Click);
             // 
             // advertisingDetailsToolStripMenuItem
             // 
             this.advertisingDetailsToolStripMenuItem.Name = "advertisingDetailsToolStripMenuItem";
-            this.advertisingDetailsToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.advertisingDetailsToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
             this.advertisingDetailsToolStripMenuItem.Text = "Advertising Details Report";
             // 
             // adminstrationToolStripMenuItem
             // 
             this.adminstrationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userControlToolStripMenuItem,
-            this.customerControlToolStripMenuItem});
+            this.userControlToolStripMenuItem});
             this.adminstrationToolStripMenuItem.Name = "adminstrationToolStripMenuItem";
-            this.adminstrationToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.adminstrationToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.adminstrationToolStripMenuItem.Text = "Adminstration";
             // 
             // userControlToolStripMenuItem
             // 
             this.userControlToolStripMenuItem.Name = "userControlToolStripMenuItem";
-            this.userControlToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.userControlToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.userControlToolStripMenuItem.Text = "User Control";
             this.userControlToolStripMenuItem.Click += new System.EventHandler(this.userControlToolStripMenuItem_Click);
-            // 
-            // customerControlToolStripMenuItem
-            // 
-            this.customerControlToolStripMenuItem.Name = "customerControlToolStripMenuItem";
-            this.customerControlToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.customerControlToolStripMenuItem.Text = "Customer Control";
-            this.customerControlToolStripMenuItem.Click += new System.EventHandler(this.customerControlToolStripMenuItem_Click);
-            // 
-            // searchToolStripMenuItem
-            // 
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.searchToolStripMenuItem.Text = "Search";
             // 
             // aboutUsToolStripMenuItem
             // 
             this.aboutUsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutSystemToolStripMenuItem});
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
-            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
             this.aboutUsToolStripMenuItem.Text = " Help";
             // 
             // aboutSystemToolStripMenuItem
             // 
             this.aboutSystemToolStripMenuItem.Name = "aboutSystemToolStripMenuItem";
-            this.aboutSystemToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.aboutSystemToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.aboutSystemToolStripMenuItem.Text = "About System";
             this.aboutSystemToolStripMenuItem.Click += new System.EventHandler(this.aboutSystemToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -404,23 +392,24 @@
             this.tssl_time,
             this.tssl_loggedAs,
             this.tssl_status});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 533);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 669);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1096, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 18, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1370, 25);
             this.statusStrip1.TabIndex = 8;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // tssl_time
             // 
             this.tssl_time.Name = "tssl_time";
-            this.tssl_time.Size = new System.Drawing.Size(34, 17);
+            this.tssl_time.Size = new System.Drawing.Size(42, 20);
             this.tssl_time.Text = "Time";
             this.tssl_time.Click += new System.EventHandler(this.tssl_time_Click);
             // 
             // tssl_loggedAs
             // 
             this.tssl_loggedAs.Name = "tssl_loggedAs";
-            this.tssl_loggedAs.Size = new System.Drawing.Size(99, 17);
+            this.tssl_loggedAs.Size = new System.Drawing.Size(125, 20);
             this.tssl_loggedAs.Text = "logged username";
             // 
             // tssl_status
@@ -428,7 +417,7 @@
             this.tssl_status.BackColor = System.Drawing.Color.Chartreuse;
             this.tssl_status.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tssl_status.Name = "tssl_status";
-            this.tssl_status.Size = new System.Drawing.Size(81, 17);
+            this.tssl_status.Size = new System.Drawing.Size(101, 20);
             this.tssl_status.Text = "Status : Active";
             // 
             // timer1
@@ -436,13 +425,28 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // receiptToolStripMenuItem
+            // 
+            this.receiptToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paymentTypesToolStripMenuItem});
+            this.receiptToolStripMenuItem.Name = "receiptToolStripMenuItem";
+            this.receiptToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.receiptToolStripMenuItem.Text = "Receipt";
+            // 
+            // paymentTypesToolStripMenuItem
+            // 
+            this.paymentTypesToolStripMenuItem.Name = "paymentTypesToolStripMenuItem";
+            this.paymentTypesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.paymentTypesToolStripMenuItem.Text = "Payment Types";
+            this.paymentTypesToolStripMenuItem.Click += new System.EventHandler(this.paymentTypesToolStripMenuItem_Click);
+            // 
             // frm_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1096, 555);
+            this.ClientSize = new System.Drawing.Size(1370, 694);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ts_main);
             this.Controls.Add(this.ts_side);
@@ -450,6 +454,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.ms_header;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
@@ -477,7 +482,6 @@
         private System.Windows.Forms.ToolStripMenuItem operationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adminstrationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutUsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStrip ts_side;
@@ -502,13 +506,14 @@
         private System.Windows.Forms.ToolStripMenuItem advertisingDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userControlToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton btn_delete;
-        private System.Windows.Forms.ToolStripMenuItem customerControlToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tssl_time;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripStatusLabel tssl_loggedAs;
         private System.Windows.Forms.ToolStripStatusLabel tssl_status;
         private System.Windows.Forms.ToolStripMenuItem aboutSystemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem receiptToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paymentTypesToolStripMenuItem;
     }
 }
 

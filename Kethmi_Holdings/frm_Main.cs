@@ -340,5 +340,10 @@ namespace Kethmi_Holdings
         {
             tssl_time.Text = "Date and Time : "+DateTime.Now.ToString();
         }
+
+        private void paymentTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
