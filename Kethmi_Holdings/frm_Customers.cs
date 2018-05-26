@@ -50,7 +50,12 @@ namespace Kethmi_Holdings
         private void getCusID()
         {
             db = new Database();
-            cusID = Convert.ToInt32(db.getValue("SELECT TOP 1 cusID FROM Customer ORDER BY cusID DESC"))+1;
+            if (db.getValue("SELECT TOP 1 cusID FROM Customer ORDER BY cusID DESC") == "") {
+                cusID = 1;
+            } else {
+                cusID = Convert.ToInt32(db.getValue("SELECT TOP 1 cusID FROM Customer ORDER BY cusID DESC"))+1;
+            }
+
             txt_CusID.Text = cusID.ToString();
         }
 
@@ -132,13 +137,15 @@ namespace Kethmi_Holdings
         }
 
         private Boolean isValidFeilds() {
-            foreach (Control ctrl in Controls) {
-                if (ctrl.Text == "") {
-                    return false;
+            foreach (Control control in gb_details.Controls) {
+                if (control is TextBox) {
+                    if (control.Text == "") {
+                        return false;
+                    }
                 }
             }
 
-            if (!Validation.IsPhoneNumber(txt_Phone.Text))
+            if (!Validation.isPhoneNumber(txt_Phone.Text))
             {
                 return false;
             }
@@ -148,7 +155,7 @@ namespace Kethmi_Holdings
                 return false;
             }
 
-            if (!Validation.isStringWithoutNumbers(txt_Type.Text) && !Validation.isStringWithoutNumbers(txt_Address.Text) && !Validation.isStringWithoutNumbers(txt_CusName.Text)) {
+            if (!Validation.isStringWithoutNumbers(txt_Type.Text) && /*!Validation.isStringWithoutNumbers(txt_Address.Text) && */!Validation.isStringWithoutNumbers(txt_CusName.Text)) {
                 return false;
             }
 

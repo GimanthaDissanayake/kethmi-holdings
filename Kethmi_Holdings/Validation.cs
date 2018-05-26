@@ -45,8 +45,13 @@ namespace Kethmi_Holdings
             }
         }
 
-        public static Boolean IsPhoneNumber(String input){
-            return System.Text.RegularExpressions.Regex.Match(input, @"^(\+[0-9]{9})$").Success;
+        public static Boolean isPhoneNumber(String input)
+        {
+            if (System.Text.RegularExpressions.Regex.Match(input, @"^\d+(\d{1,2})?$").Success && input.Length == 10)
+            {
+                return true;
+            }
+            return false;
         }
 
     }

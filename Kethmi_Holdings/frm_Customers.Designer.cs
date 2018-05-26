@@ -43,7 +43,9 @@
             this.txt_Phone = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmb_ProjectName = new System.Windows.Forms.ComboBox();
+            this.gb_details = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CustomerList)).BeginInit();
+            this.gb_details.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView_CustomerList
@@ -66,7 +68,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(273, 66);
+            this.label1.Location = new System.Drawing.Point(6, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 1;
@@ -75,7 +77,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(273, 182);
+            this.label5.Location = new System.Drawing.Point(6, 162);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 5;
@@ -84,7 +86,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(273, 121);
+            this.label6.Location = new System.Drawing.Point(6, 101);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 6;
@@ -93,7 +95,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(273, 211);
+            this.label11.Location = new System.Drawing.Point(6, 191);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 13);
             this.label11.TabIndex = 11;
@@ -102,7 +104,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(273, 153);
+            this.label12.Location = new System.Drawing.Point(6, 133);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 13);
             this.label12.TabIndex = 12;
@@ -111,7 +113,7 @@
             // txt_CusName
             // 
             this.txt_CusName.Enabled = false;
-            this.txt_CusName.Location = new System.Drawing.Point(381, 63);
+            this.txt_CusName.Location = new System.Drawing.Point(114, 43);
             this.txt_CusName.Name = "txt_CusName";
             this.txt_CusName.Size = new System.Drawing.Size(194, 20);
             this.txt_CusName.TabIndex = 13;
@@ -119,7 +121,7 @@
             // txt_NIC
             // 
             this.txt_NIC.Enabled = false;
-            this.txt_NIC.Location = new System.Drawing.Point(381, 118);
+            this.txt_NIC.Location = new System.Drawing.Point(114, 98);
             this.txt_NIC.Name = "txt_NIC";
             this.txt_NIC.Size = new System.Drawing.Size(194, 20);
             this.txt_NIC.TabIndex = 14;
@@ -127,7 +129,7 @@
             // txt_Type
             // 
             this.txt_Type.Enabled = false;
-            this.txt_Type.Location = new System.Drawing.Point(381, 179);
+            this.txt_Type.Location = new System.Drawing.Point(114, 159);
             this.txt_Type.Name = "txt_Type";
             this.txt_Type.Size = new System.Drawing.Size(194, 20);
             this.txt_Type.TabIndex = 15;
@@ -135,7 +137,7 @@
             // txt_Address
             // 
             this.txt_Address.Enabled = false;
-            this.txt_Address.Location = new System.Drawing.Point(381, 211);
+            this.txt_Address.Location = new System.Drawing.Point(114, 191);
             this.txt_Address.Multiline = true;
             this.txt_Address.Name = "txt_Address";
             this.txt_Address.Size = new System.Drawing.Size(194, 51);
@@ -144,7 +146,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(273, 36);
+            this.label2.Location = new System.Drawing.Point(6, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 17;
@@ -152,7 +154,7 @@
             // 
             // txt_CusID
             // 
-            this.txt_CusID.Location = new System.Drawing.Point(381, 33);
+            this.txt_CusID.Location = new System.Drawing.Point(114, 13);
             this.txt_CusID.Name = "txt_CusID";
             this.txt_CusID.ReadOnly = true;
             this.txt_CusID.Size = new System.Drawing.Size(194, 20);
@@ -161,7 +163,7 @@
             // txt_Phone
             // 
             this.txt_Phone.Enabled = false;
-            this.txt_Phone.Location = new System.Drawing.Point(381, 89);
+            this.txt_Phone.Location = new System.Drawing.Point(114, 69);
             this.txt_Phone.Name = "txt_Phone";
             this.txt_Phone.Size = new System.Drawing.Size(194, 20);
             this.txt_Phone.TabIndex = 21;
@@ -169,7 +171,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(273, 92);
+            this.label3.Location = new System.Drawing.Point(6, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 20;
@@ -178,30 +180,40 @@
             // cmb_ProjectName
             // 
             this.cmb_ProjectName.FormattingEnabled = true;
-            this.cmb_ProjectName.Location = new System.Drawing.Point(381, 145);
+            this.cmb_ProjectName.Location = new System.Drawing.Point(114, 125);
             this.cmb_ProjectName.Name = "cmb_ProjectName";
             this.cmb_ProjectName.Size = new System.Drawing.Size(194, 21);
             this.cmb_ProjectName.TabIndex = 22;
+            // 
+            // gb_details
+            // 
+            this.gb_details.Controls.Add(this.label2);
+            this.gb_details.Controls.Add(this.cmb_ProjectName);
+            this.gb_details.Controls.Add(this.label1);
+            this.gb_details.Controls.Add(this.txt_Phone);
+            this.gb_details.Controls.Add(this.label5);
+            this.gb_details.Controls.Add(this.label3);
+            this.gb_details.Controls.Add(this.label6);
+            this.gb_details.Controls.Add(this.txt_CusID);
+            this.gb_details.Controls.Add(this.label11);
+            this.gb_details.Controls.Add(this.label12);
+            this.gb_details.Controls.Add(this.txt_Address);
+            this.gb_details.Controls.Add(this.txt_CusName);
+            this.gb_details.Controls.Add(this.txt_Type);
+            this.gb_details.Controls.Add(this.txt_NIC);
+            this.gb_details.Location = new System.Drawing.Point(270, 12);
+            this.gb_details.Name = "gb_details";
+            this.gb_details.Size = new System.Drawing.Size(319, 270);
+            this.gb_details.TabIndex = 23;
+            this.gb_details.TabStop = false;
+            this.gb_details.Text = "Details";
             // 
             // frm_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 443);
-            this.Controls.Add(this.cmb_ProjectName);
-            this.Controls.Add(this.txt_Phone);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_CusID);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_Address);
-            this.Controls.Add(this.txt_Type);
-            this.Controls.Add(this.txt_NIC);
-            this.Controls.Add(this.txt_CusName);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.gb_details);
             this.Controls.Add(this.dataGridView_CustomerList);
             this.Location = new System.Drawing.Point(82, 0);
             this.MaximizeBox = false;
@@ -212,8 +224,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Customers_FormClosing);
             this.Load += new System.EventHandler(this.frm_Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CustomerList)).EndInit();
+            this.gb_details.ResumeLayout(false);
+            this.gb_details.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -234,5 +247,6 @@
         private System.Windows.Forms.TextBox txt_Phone;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmb_ProjectName;
+        private System.Windows.Forms.GroupBox gb_details;
     }
 }
