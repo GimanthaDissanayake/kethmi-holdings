@@ -51,6 +51,51 @@ namespace Kethmi_Holdings
         {
         }
 
+        private double calRood(double totPerches)
+        {
+            int rood = Convert.ToInt32(Math.Floor(totPerches / 40));
+            if (rood > 0)
+            {
+                txt_roods.Text = rood.ToString();
+                totPerches -= (rood * 40);
+            }
+            else
+            {
+                txt_roods.Text = "0";
+            }
+            return totPerches;
+        }
+
+        private void calExtentOfLand()
+        {
+            double totPerches = Convert.ToDouble(txt_totalPerches.Text);
+            int acre = Convert.ToInt32(Math.Floor(totPerches / 160));
+            
+            if (acre > 0)
+            {
+                txt_acres.Text = acre.ToString();
+                totPerches -= (acre * 160);
+            } 
+            else
+            {
+                txt_acres.Text = "0";
+            }
+            totPerches = calRood(totPerches);
+            txt_perches.Text = totPerches.ToString();
+        }
+        
+        private void calSellableArea()
+        {
+            double sellable = Convert.ToDouble(txt_sellableArea.Text);
+            double roadways = Convert.ToDouble(txt_roadways.Text);
+            double common = Convert.ToDouble(txt_commonArea.Text);
+            double reservation = Convert.ToDouble(txt_reservation.Text);
+
+            sellable = Convert.ToDouble(txt_totalPerches.Text) - (roadways + common + reservation);
+
+            txt_sellableArea.Text = sellable.ToString();
+        }
+
         public void ButtonClear()
         {
             if (MessageBox.Show("Are you sure want to cancal?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -659,10 +704,6 @@ namespace Kethmi_Holdings
             txt_roadways.Enabled = value;
             txt_commonArea.Enabled = value;
             txt_reservation.Enabled = value;
-            txt_sellableArea.Enabled = value;
-            txt_acres.Enabled = value;
-            txt_roods.Enabled = value;
-            txt_perches.Enabled = value;
             txt_titleInsurance.Enabled = value;
             txt_stampFees.Enabled = value;
             txt_legalFees.Enabled = value;
@@ -738,6 +779,26 @@ namespace Kethmi_Holdings
             mode = "Edit";
             enableEditing(true);
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);
+        }
+
+        private void txt_totalPerches_TextChanged(object sender, EventArgs e)
+        {
+            calExtentOfLand();
+        }
+
+        private void txt_roadways_TextChanged(object sender, EventArgs e)
+        {
+            calSellableArea();
+        }
+
+        private void txt_commonArea_TextChanged(object sender, EventArgs e)
+        {
+            calSellableArea();
+        }
+
+        private void txt_reservation_TextChanged(object sender, EventArgs e)
+        {
+            calSellableArea();
         }
     }
 }
