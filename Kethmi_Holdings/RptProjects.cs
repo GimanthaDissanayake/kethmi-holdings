@@ -13,6 +13,10 @@ namespace Kethmi_Holdings
         FormControl frmCtrl = new FormControl();
         string rptType = "";
         string selectionFormula = "";
+        bool landDetails;
+        bool costOfPurchase;
+        bool dev;
+        bool travel;
         public RptProjects()
         {
             InitializeComponent();
@@ -45,13 +49,21 @@ namespace Kethmi_Holdings
                 {
                     selectionFormula = " {ProjectMaster.projID} = " + cmbProjectList.SelectedValue + "";
                 }
+                frm_ReportViewer vwr = new frm_ReportViewer(rptType, selectionFormula);
+                vwr.Show();
             }
             else
             {
                 rptType = "ProjectSummary";
+                landDetails = chkLandInfo.Checked;
+                costOfPurchase = chkCostOfPurchase.Checked;
+                dev = chkDevelopment.Checked;
+                travel = chkTravelling.Checked;
+
+                frm_ReportViewer vwr = new frm_ReportViewer(rptType, selectionFormula,landDetails,costOfPurchase,dev,travel);
+                vwr.Show();
             }
-            frm_ReportViewer vwr = new frm_ReportViewer(rptType,selectionFormula);
-            vwr.Show();
+            
         }
 
         private void RptProjects_Activated(object sender, EventArgs e)

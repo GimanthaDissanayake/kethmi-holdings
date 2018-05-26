@@ -32,10 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbProjectList = new System.Windows.Forms.ComboBox();
             this.grpSelection = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.chkCostOfPurchase = new System.Windows.Forms.CheckBox();
+            this.chkDevelopment = new System.Windows.Forms.CheckBox();
+            this.chkTravelling = new System.Windows.Forms.CheckBox();
+            this.chkLandInfo = new System.Windows.Forms.CheckBox();
             this.rbtDetailReport = new System.Windows.Forms.RadioButton();
             this.rbtSummaryRpt = new System.Windows.Forms.RadioButton();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
@@ -61,10 +61,10 @@
             // 
             // grpSelection
             // 
-            this.grpSelection.Controls.Add(this.checkBox2);
-            this.grpSelection.Controls.Add(this.checkBox6);
-            this.grpSelection.Controls.Add(this.checkBox7);
-            this.grpSelection.Controls.Add(this.checkBox8);
+            this.grpSelection.Controls.Add(this.chkCostOfPurchase);
+            this.grpSelection.Controls.Add(this.chkDevelopment);
+            this.grpSelection.Controls.Add(this.chkTravelling);
+            this.grpSelection.Controls.Add(this.chkLandInfo);
             this.grpSelection.Location = new System.Drawing.Point(21, 116);
             this.grpSelection.Name = "grpSelection";
             this.grpSelection.Size = new System.Drawing.Size(247, 127);
@@ -72,49 +72,49 @@
             this.grpSelection.TabStop = false;
             this.grpSelection.Text = "Select Data";
             // 
-            // checkBox2
+            // chkCostOfPurchase
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(23, 50);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBox2.Size = new System.Drawing.Size(112, 17);
-            this.checkBox2.TabIndex = 4;
-            this.checkBox2.Text = "Costs of Purchase";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkCostOfPurchase.AutoSize = true;
+            this.chkCostOfPurchase.Location = new System.Drawing.Point(23, 50);
+            this.chkCostOfPurchase.Name = "chkCostOfPurchase";
+            this.chkCostOfPurchase.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkCostOfPurchase.Size = new System.Drawing.Size(112, 17);
+            this.chkCostOfPurchase.TabIndex = 4;
+            this.chkCostOfPurchase.Text = "Costs of Purchase";
+            this.chkCostOfPurchase.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // chkDevelopment
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(23, 73);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBox6.Size = new System.Drawing.Size(125, 17);
-            this.checkBox6.TabIndex = 3;
-            this.checkBox6.Text = "Development / Utility";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chkDevelopment.AutoSize = true;
+            this.chkDevelopment.Location = new System.Drawing.Point(23, 73);
+            this.chkDevelopment.Name = "chkDevelopment";
+            this.chkDevelopment.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkDevelopment.Size = new System.Drawing.Size(125, 17);
+            this.chkDevelopment.TabIndex = 3;
+            this.chkDevelopment.Text = "Development / Utility";
+            this.chkDevelopment.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // chkTravelling
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(23, 96);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBox7.Size = new System.Drawing.Size(135, 17);
-            this.checkBox7.TabIndex = 2;
-            this.checkBox7.Text = "Travelling / Advertising";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.chkTravelling.AutoSize = true;
+            this.chkTravelling.Location = new System.Drawing.Point(23, 96);
+            this.chkTravelling.Name = "chkTravelling";
+            this.chkTravelling.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkTravelling.Size = new System.Drawing.Size(135, 17);
+            this.chkTravelling.TabIndex = 2;
+            this.chkTravelling.Text = "Travelling / Advertising";
+            this.chkTravelling.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // chkLandInfo
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(23, 27);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBox8.Size = new System.Drawing.Size(71, 17);
-            this.checkBox8.TabIndex = 0;
-            this.checkBox8.Text = "Land Info";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.chkLandInfo.AutoSize = true;
+            this.chkLandInfo.Location = new System.Drawing.Point(23, 27);
+            this.chkLandInfo.Name = "chkLandInfo";
+            this.chkLandInfo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkLandInfo.Size = new System.Drawing.Size(71, 17);
+            this.chkLandInfo.TabIndex = 0;
+            this.chkLandInfo.Text = "Land Info";
+            this.chkLandInfo.UseVisualStyleBackColor = true;
             // 
             // rbtDetailReport
             // 
@@ -181,10 +181,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbProjectList;
         private System.Windows.Forms.GroupBox grpSelection;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox chkCostOfPurchase;
+        private System.Windows.Forms.CheckBox chkDevelopment;
+        private System.Windows.Forms.CheckBox chkTravelling;
+        private System.Windows.Forms.CheckBox chkLandInfo;
         private System.Windows.Forms.RadioButton rbtDetailReport;
         private System.Windows.Forms.RadioButton rbtSummaryRpt;
         private System.Windows.Forms.CheckBox checkBox9;

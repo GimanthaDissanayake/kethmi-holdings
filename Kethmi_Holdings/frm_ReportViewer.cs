@@ -11,6 +11,10 @@ namespace Kethmi_Holdings
     {
         String rptName = "";
         string selectionFormula = "";
+        bool land;
+        bool cost;
+        bool dev;
+        bool travel;
         public frm_ReportViewer()
         {
             InitializeComponent();
@@ -19,6 +23,16 @@ namespace Kethmi_Holdings
         {
             this.rptName = type;
             this.selectionFormula = formula;
+            InitializeComponent();
+        }
+        public frm_ReportViewer(String type, string formula,bool land, bool cost, bool dev, bool travel)
+        {
+            this.rptName = type;
+            this.selectionFormula = formula;
+            this.land = land;
+            this.cost = cost;
+            this.dev = dev;
+            this.travel = travel;
             InitializeComponent();
         }
         private void frm_ReportViewer_Load(object sender, EventArgs e)
@@ -40,6 +54,7 @@ namespace Kethmi_Holdings
             else if (rptName == "ProjecrtSummary")
             {
                 myRpt.Load(Application.StartupPath + "\\Reports\\ProjectSummary.rpt");
+                myRpt.SetParameterValue("MyParameter", "Hello");
             }
             else
             {
