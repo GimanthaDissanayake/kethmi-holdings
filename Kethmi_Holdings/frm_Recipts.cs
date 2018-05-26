@@ -64,7 +64,14 @@ namespace Kethmi_Holdings
         private void getReceiptId()
         {
             db = new Database();
-            recID = Convert.ToInt32(db.getValue("SELECT TOP 1 reciptID FROM RecieptsMaster ORDER BY reciptID DESC") + 1);
+            if (db.getValue("SELECT TOP 1 reciptID FROM RecieptsMaster ORDER BY reciptID DESC") == "")
+            {
+                recID = 1;
+            }
+            else
+            {
+                recID = Convert.ToInt32(db.getValue("SELECT TOP 1 reciptID FROM RecieptsMaster ORDER BY reciptID DESC"))+1;
+            }
             txt_ReceiptID.Text = recID.ToString();
         }
 
@@ -135,12 +142,13 @@ namespace Kethmi_Holdings
 
         public void ButtonNew()
         {
+            clearData();
             getReceiptId();
             mode = "New";
        
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);
             dataGridView_ReceiptList.Enabled = false;
-            clearData();
+            
             enableEditing(true);
             cmb_CusName.Focus();
 
