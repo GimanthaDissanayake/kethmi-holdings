@@ -22,6 +22,16 @@ namespace Kethmi_Holdings
             return false;
         }
 
+        public static Boolean isValidNIC(String input)
+        {
+
+            if (System.Text.RegularExpressions.Regex.Match(input, @"^[0-9]{9}[x|X|v|V]$").Success)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static Boolean IsValidEmail(String input)
         {
             try

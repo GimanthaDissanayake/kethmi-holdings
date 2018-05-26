@@ -41,6 +41,7 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.gb_inputArea = new System.Windows.Forms.GroupBox();
             this.gb_currentUsers = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gb_inputArea.SuspendLayout();
             this.gb_currentUsers.SuspendLayout();
@@ -148,6 +149,7 @@
             // 
             // gb_inputArea
             // 
+            this.gb_inputArea.Controls.Add(this.button1);
             this.gb_inputArea.Controls.Add(this.label3);
             this.gb_inputArea.Controls.Add(this.label2);
             this.gb_inputArea.Controls.Add(this.txtUserName);
@@ -175,6 +177,15 @@
             this.gb_currentUsers.TabIndex = 14;
             this.gb_currentUsers.TabStop = false;
             this.gb_currentUsers.Text = "Current Users";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(147, 255);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "fuck";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frm_UserControl
             // 
@@ -214,5 +225,6 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.GroupBox gb_inputArea;
         private System.Windows.Forms.GroupBox gb_currentUsers;
+        private System.Windows.Forms.Button button1;
     }
 }

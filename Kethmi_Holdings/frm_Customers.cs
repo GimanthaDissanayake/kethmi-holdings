@@ -103,7 +103,7 @@ namespace Kethmi_Holdings
         public void ButtonNew()
         {
             getCusID();
-            mode = "New";
+            mode = Modes.NEW;
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);
             dataGridView_CustomerList.Enabled = false;
             clearData();
@@ -113,7 +113,7 @@ namespace Kethmi_Holdings
 
         public void ButtonEdit()
         {
-            mode = "Edit";
+            mode = Modes.EDIT;
             enableEditing(true);
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);
         }
@@ -131,6 +131,30 @@ namespace Kethmi_Holdings
             }
         }
 
+        private Boolean isValidFeilds() {
+            foreach (Control ctrl in Controls) {
+                if (ctrl.Text == "") {
+                    return false;
+                }
+            }
+
+            if (!Validation.IsPhoneNumber(txt_Phone.Text))
+            {
+                return false;
+            }
+
+            if (!Validation.isValidNIC(txt_NIC.Text))
+            {
+                return false;
+            }
+
+            if (!Validation.isStringWithoutNumbers(txt_Type.Text) && !Validation.isStringWithoutNumbers(txt_Address.Text) && !Validation.isStringWithoutNumbers(txt_CusName.Text)) {
+                return false;
+            }
+
+            return true;
+        }
+
         public void ButtonSave()
         {
             SqlConnection objConn = new SqlConnection(strConn);
@@ -140,52 +164,23 @@ namespace Kethmi_Holdings
             objCmd.Transaction = sqlTrans;
             objCmd.Connection = objConn;
 
-            if(mode == "New")
+
+            if (!isValidFeilds())
             {
-                try
-                {
-                    //get Project ID
-                    getProjID();
+                MessageBox.Show("Validation Error. Please check if all text boxes are filled correctly!");
+            }else { 
 
-                    //Save to Cutomers
-                    objCmd.CommandText = "INSERT INTO Customer(name,phone,nic,projID,type,address,addedUser,addedDate)" +
-                        " VALUES('" + txt_CusName.Text + "','" + txt_Phone.Text + "','"+txt_NIC.Text+"','"+pId+"','"+txt_Type.Text+"','"+txt_Address.Text+"',"+
-                        "'"+ strUsername + "','" + DateTime.Now + "')";
-                    objCmd.ExecuteNonQuery();
-
-                    //Commit changes 
-                    sqlTrans.Commit();
-
-                    //Clear Data Fields
-                    clearData();
-                    loadData();
-                    getCusID();
-                    btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
-                }
-                catch (Exception ex)
-                {
-                    sqlTrans.Rollback();
-                    MessageBox.Show(ex.Message.ToString());
-                }
-            }
-            else if(mode == "Edit")
-            {
-
-                if (MessageBox.Show("Are you sure you want to Update data?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (mode == Modes.NEW)
                 {
                     try
                     {
                         //get Project ID
                         getProjID();
 
-                        //get Customer ID
-                        db = new Database();
-                        cusID = Convert.ToInt32(dataGridView_CustomerList.SelectedRows[0].Cells[0].Value);
-
-                        //Update Customers
-                        objCmd.CommandText = "UPDATE Customer SET name='" + txt_CusName.Text + "',phone='" + txt_Phone.Text + "',nic='"+ txt_NIC.Text + "'," +
-                            "projID='"+pId+"',type='"+ txt_Type.Text + "',address='"+ txt_Address.Text + "'" +
-                            ",changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE cusID='" + cusID + "'";
+                        //Save to Cutomers
+                        objCmd.CommandText = "INSERT INTO Customer(name,phone,nic,projID,type,address,addedUser,addedDate)" +
+                            " VALUES('" + txt_CusName.Text + "','" + txt_Phone.Text + "','" + txt_NIC.Text + "','" + pId + "','" + txt_Type.Text + "','" + txt_Address.Text + "'," +
+                            "'" + strUsername + "','" + DateTime.Now + "')";
                         objCmd.ExecuteNonQuery();
 
                         //Commit changes 
@@ -194,6 +189,7 @@ namespace Kethmi_Holdings
                         //Clear Data Fields
                         clearData();
                         loadData();
+                        getCusID();
                         btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
                     }
                     catch (Exception ex)
@@ -201,7 +197,42 @@ namespace Kethmi_Holdings
                         sqlTrans.Rollback();
                         MessageBox.Show(ex.Message.ToString());
                     }
-                }                    
+                }
+                else if (mode == Modes.EDIT)
+                {
+
+                    if (MessageBox.Show("Are you sure you want to Update data?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            //get Project ID
+                            getProjID();
+
+                            //get Customer ID
+                            db = new Database();
+                            cusID = Convert.ToInt32(dataGridView_CustomerList.SelectedRows[0].Cells[0].Value);
+
+                            //Update Customers
+                            objCmd.CommandText = "UPDATE Customer SET name='" + txt_CusName.Text + "',phone='" + txt_Phone.Text + "',nic='" + txt_NIC.Text + "'," +
+                                "projID='" + pId + "',type='" + txt_Type.Text + "',address='" + txt_Address.Text + "'" +
+                                ",changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE cusID='" + cusID + "'";
+                            objCmd.ExecuteNonQuery();
+
+                            //Commit changes 
+                            sqlTrans.Commit();
+
+                            //Clear Data Fields
+                            clearData();
+                            loadData();
+                            btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
+                        }
+                        catch (Exception ex)
+                        {
+                            sqlTrans.Rollback();
+                            MessageBox.Show(ex.Message.ToString());
+                        }
+                    }
+                }
             }
         }
 
@@ -267,4 +298,9 @@ namespace Kethmi_Holdings
         }
 
     }
+}
+
+static class Modes {
+    public static String NEW = "New";
+    public static String EDIT = "Edit";
 }
