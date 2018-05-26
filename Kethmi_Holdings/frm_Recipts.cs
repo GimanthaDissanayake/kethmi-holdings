@@ -89,7 +89,10 @@ namespace Kethmi_Holdings
 
         private void loadData()
         {
-
+            db = new Database();
+            strsql = "SELECT reciptID as 'ID',name as 'Customer Name' FROM Customer WHERE isDeleted=0";
+            dataGridView_ReceiptList.DataSource = db.select(strsql);
+            dataGridView_ReceiptList.Enabled = true;
         }
 
         private void loadCusName()

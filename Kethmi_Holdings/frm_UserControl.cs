@@ -13,6 +13,7 @@ namespace Kethmi_Holdings
     public partial class frm_UserControl : Form
     {
         Database db;
+        int userID;
         string strsql = "";
         string userType = "";
         string strUsername = "";
@@ -20,6 +21,9 @@ namespace Kethmi_Holdings
         public frm_UserControl(string username)
         {
             InitializeComponent();
+            loadUserData();
+            setEnabled(false);
+            txtUserID.Enabled = false;
             this.strUsername = username;
         }     
 
@@ -38,9 +42,44 @@ namespace Kethmi_Holdings
         {
             btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
         }
+
+        private void loadUserData()
+        {
+            db = new Database();
+            strsql = "SELECT userID as 'ID',username as 'Username',userType as 'Type' FROM UserDetails WHERE isDeleted=0";
+            dataGridViewUsers.DataSource = db.select(strsql);
+            dataGridViewUsers.Enabled = true;
+        }
+
+        private void loadUserID()
+        {
+            Database db = new Database();
+            if (db.getValue("SELECT TOP 1 userID FROM UserDetails ORDER BY userID DESC") == "")
+            {
+                userID = 1;
+            }
+            else
+            {
+                userID = Convert.ToInt32(db.getValue("SELECT TOP 1 userID FROM UserDetails ORDER BY userID DESC")) + 1;
+            }
+            txtUserID.Text = userID.ToString();
+            strsql = "";
+        }
+
+        private void setEnabled(Boolean value)
+        {
+            txtPW.Enabled = value;
+            txtUserName.Enabled = value;
+            rbtAdmin.Enabled = value;
+            rbtUser.Enabled = value;
+            chkActive.Enabled = value;
+        }
+
         public void ButtonNew()
         {
+            setEnabled(true);
             btnStat.ControlSideToolStrip(this.ParentForm,false,false,true,false,false,true);
+            loadUserID();
         }
         public void ButtonClear()
         {
