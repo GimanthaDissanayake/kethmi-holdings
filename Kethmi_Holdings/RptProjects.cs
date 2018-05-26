@@ -1,10 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Kethmi_Holdings
 {
     public partial class RptProjects : Form
     {
+        Database db;
+        String strsql;
+        List<String> list;
+
         ButtonsStates btnStat = new ButtonsStates();
         string rptType = "";
         public RptProjects()
@@ -16,6 +21,19 @@ namespace Kethmi_Holdings
         {
             btnStat.ControlSideToolStrip(this.ParentForm,false, false, false, true, false, false);
             rbtDetailReport.Checked = true;
+            loadProjName();
+        }
+
+        private void loadProjName()
+        {
+            db = new Database();
+            strsql = "SELECT projName FROM ProjectMaster WHERE isDeleted='false' UNION SELECT 'All'";
+            list = new List<String>();
+            list = db.getList(strsql, 0);
+            foreach (String projName in list)
+            {
+                cmbProjectList.Items.Add(projName);
+            }
         }
 
         public void ButtonPrint()
