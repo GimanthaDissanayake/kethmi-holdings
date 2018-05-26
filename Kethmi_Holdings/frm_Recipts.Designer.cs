@@ -223,7 +223,6 @@
             this.gb_inputArea.Controls.Add(this.button1);
             this.gb_inputArea.Controls.Add(this.txt_TypeAddOrRemove);
             this.gb_inputArea.Controls.Add(this.label5);
-            this.gb_inputArea.Enabled = false;
             this.gb_inputArea.Location = new System.Drawing.Point(294, 12);
             this.gb_inputArea.Name = "gb_inputArea";
             this.gb_inputArea.Size = new System.Drawing.Size(372, 464);

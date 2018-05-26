@@ -15,7 +15,7 @@ namespace Kethmi_Holdings
     public partial class frm_Recipts : Form
     {
         int cusID, pId, recID;
-        String strUsername,mode="",strsql;
+        String strUsername,mode="",strsql="";
         Database db;
 
         private string strConn = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
@@ -32,22 +32,24 @@ namespace Kethmi_Holdings
 
         public bool searchEnabled { set { gb_search.Enabled = value; } }
 
-        ButtonsStates lastButtonStates;
+      //  ButtonsStates lastButtonStates;
 
         private void frm_Recipts_Activated(object sender, EventArgs e)
         {
-            lastButtonStates.restore();
+            //lastButtonStates.restore();
+            // btnStat.VisibleToolStrip((frm_Main)this.MdiParent);
             btnStat.VisibleToolStrip((frm_Main)this.MdiParent);
         }
 
         private void frm_Recipts_Deactivate(object sender, EventArgs e)
         {
-            lastButtonStates.save();
+           // lastButtonStates.save();
         }
 
         private void frm_Recipts_Load(object sender, EventArgs e)
         {
-            lastButtonStates = new ButtonsStates();
+            // lastButtonStates = new ButtonsStates();
+            btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
         }
 
         private void frm_Recipts_FormClosing(object sender, FormClosingEventArgs e)
@@ -58,7 +60,7 @@ namespace Kethmi_Holdings
         private void getReceiptId()
         {
             db = new Database();
-            recID = Convert.ToInt32(db.getValue("SELECT TOP 1 reciptID FROM RecieptsMaster ORDER BY reciptID DESC"))+1;
+            recID = Convert.ToInt32(db.getValue("SELECT TOP 1 reciptID FROM RecieptsMaster ORDER BY reciptID DESC") + 1);
             txt_ReceiptID.Text = recID.ToString();
         }
 
@@ -107,11 +109,13 @@ namespace Kethmi_Holdings
         {
             getReceiptId();
             mode = "New";
+       
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);
             dataGridView_ReceiptList.Enabled = false;
             clearData();
             enableEditing(true);
             txt_CusName.Focus();
+
         }
 
         public void ButtonEdit()
@@ -187,11 +191,11 @@ namespace Kethmi_Holdings
                     getProjID();
 
                     //Update ReceiptMaster
-                    objCmd.CommandText = "UPDATE RecieptsMaster SET WHERE reciptID = '"+txt_ReceiptID.Text+"'";
+                    objCmd.CommandText = "UPDATE RecieptsMaster SET cusID,projID,type,date,totValue,changedUser,changedDate WHERE reciptID = '" + txt_ReceiptID.Text+"'";
                     objCmd.ExecuteNonQuery();
 
                     //Update ReceiptDetails
-                    objCmd.CommandText = "UPDATE RecieptsDetails SET WHERE reciptID = '" + txt_ReceiptID.Text + "'";
+                    objCmd.CommandText = "UPDATE RecieptsDetails SET type,value WHERE reciptID = '" + txt_ReceiptID.Text + "'";
                     objCmd.ExecuteNonQuery();
 
                     //Commit changes 
@@ -247,7 +251,7 @@ namespace Kethmi_Holdings
 
         private void dataGridView_ReceiptList_MouseClick(object sender, MouseEventArgs e)
         {
-
+            btnStat.ControlSideToolStrip(this.ParentForm, true, true, false, true, true, false);
         }
 
     }
