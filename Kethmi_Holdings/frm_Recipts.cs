@@ -266,9 +266,9 @@ namespace Kethmi_Holdings
 
                 try
                 {
-                    //objCmd.CommandText = "UPDATE Customer SET isDeleted = 'true'," +
-                            //"changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE cusID = '" + cusID + "'";
-                    //objCmd.ExecuteNonQuery();
+                    objCmd.CommandText = "UPDATE RecieptsMaster SET isDeleted = 'true'," +
+                            "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE reciptID = '" + cusID + "'";
+                    objCmd.ExecuteNonQuery();
 
                     //Commit changes 
                     sqlTrans.Commit();
