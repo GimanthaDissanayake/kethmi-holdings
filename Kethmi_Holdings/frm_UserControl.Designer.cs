@@ -43,7 +43,7 @@
             this.gb_currentUsers = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.gb_inputArea.SuspendLayout();
             this.gb_currentUsers.SuspendLayout();
             this.SuspendLayout();
