@@ -15,7 +15,7 @@ namespace Kethmi_Holdings
     public partial class frm_Recipts : Form
     {
         int cusID, pId, recID;
-        String strUsername,mode="",strsql;
+        String strUsername,mode="",strsql="";
         Database db;
 
         private string strConn = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
@@ -191,11 +191,11 @@ namespace Kethmi_Holdings
                     getProjID();
 
                     //Update ReceiptMaster
-                    objCmd.CommandText = "UPDATE RecieptsMaster SET WHERE reciptID = '"+txt_ReceiptID.Text+"'";
+                    objCmd.CommandText = "UPDATE RecieptsMaster SET cusID,projID,type,date,totValue,changedUser,changedDate WHERE reciptID = '" + txt_ReceiptID.Text+"'";
                     objCmd.ExecuteNonQuery();
 
                     //Update ReceiptDetails
-                    objCmd.CommandText = "UPDATE RecieptsDetails SET WHERE reciptID = '" + txt_ReceiptID.Text + "'";
+                    objCmd.CommandText = "UPDATE RecieptsDetails SET type,value WHERE reciptID = '" + txt_ReceiptID.Text + "'";
                     objCmd.ExecuteNonQuery();
 
                     //Commit changes 
