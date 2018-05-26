@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using System.Configuration;
+using System.IO;
 
 namespace Kethmi_Holdings
 {
@@ -24,8 +25,9 @@ namespace Kethmi_Holdings
             crConnection.Password = "smgsoft";
 
             ReportDocument myRpt = new ReportDocument();
-            myRpt.Load(Application.StartupPath + "\\Reports\\Reciept.rpt");
-
+            //     myRpt.Load(Application.StartupPath + "\\Reports\\Reciept.rpt");
+            string path = Directory.GetCurrentDirectory()+ "\\Reports\\Reciept.rpt";
+            myRpt.Load(path);
             AssignConnectionInfo(myRpt, crConnection);
             myRpt.SetDatabaseLogon(crConnection.UserID, crConnection.Password, strServer, crConnection.DatabaseName);
             crystalReportViewer1.ReportSource = myRpt;
