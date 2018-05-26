@@ -739,5 +739,10 @@ namespace Kethmi_Holdings
             enableEditing(true);
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

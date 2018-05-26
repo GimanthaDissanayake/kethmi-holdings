@@ -369,6 +369,7 @@
             this.label9.Size = new System.Drawing.Size(73, 13);
             this.label9.TabIndex = 17;
             this.label9.Text = "Total Perches";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
