@@ -10,13 +10,15 @@ namespace Kethmi_Holdings
     public partial class frm_ReportViewer : Form
     {
         String rptName = "";
+        string selectionFormula = "";
         public frm_ReportViewer()
         {
             InitializeComponent();
         }
-        public frm_ReportViewer(String type)
+        public frm_ReportViewer(String type, string formula)
         {
             this.rptName = type;
+            this.selectionFormula = formula;
             InitializeComponent();
         }
         private void frm_ReportViewer_Load(object sender, EventArgs e)
@@ -48,6 +50,11 @@ namespace Kethmi_Holdings
             AssignConnectionInfo(myRpt, crConnection);
             myRpt.SetDatabaseLogon(crConnection.UserID, crConnection.Password, strServer, crConnection.DatabaseName);
             crystalReportViewer1.ReportSource = myRpt;
+            if (selectionFormula!="")
+            {
+                crystalReportViewer1.SelectionFormula = selectionFormula;
+            }
+            
        
           //  crystalReportViewer1.Refresh();
             crystalReportViewer1.Show();

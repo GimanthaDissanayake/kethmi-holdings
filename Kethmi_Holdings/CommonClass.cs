@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 
 namespace Kethmi_Holdings
@@ -107,6 +108,17 @@ namespace Kethmi_Holdings
             else
                 t.Items["btn_clear"].Enabled = false;
             
+        }
+    }
+    class FormControl
+    {        public void Fill_Combo(ComboBox drpControl, string strSql, string strValueField, string strTextField)
+        {
+            Database db = new Database();
+            DataSet ds = new DataSet();
+            ds = db.selectDS(strSql);            
+            drpControl.ValueMember = strValueField;
+            drpControl.DisplayMember = strTextField;
+            drpControl.DataSource = ds.Tables[0];
         }
     }
 }

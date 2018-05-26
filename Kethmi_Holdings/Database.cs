@@ -11,11 +11,12 @@ namespace Kethmi_Holdings
 
         #region feilds
         private SqlConnection con;
-        DataSet ds;
+        private DataSet ds;
         private SqlCommand cmd;
         private SqlDataReader dr;
         private SqlDataAdapter da;
         private DataTable dt;
+    
         //use the app config connection string for the system. so we do not need to rebuild the application when changing the server.
         private string strConn = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
 
@@ -94,9 +95,18 @@ namespace Kethmi_Holdings
             da.Fill(dt);
             con.Close();
             return dt;
-        }        
+        }
         #endregion
 
-
+        public DataSet selectDS(String query)
+        {
+            con.ConnectionString = strConn;
+            con.Open();
+            da = new SqlDataAdapter(query, con);
+            ds = new DataSet();
+            da.Fill(ds);
+            con.Close();
+            return ds;
+        }
     }
 }
