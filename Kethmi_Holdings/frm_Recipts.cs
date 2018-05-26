@@ -16,6 +16,7 @@ namespace Kethmi_Holdings
         Database db;
         DataTable dt;
         List<String> list;
+        string selectionFormula = "";
 
         private string strConn = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
 
@@ -333,7 +334,8 @@ namespace Kethmi_Holdings
         
         public void ButtonPrint()
         {
-            frm_ReportViewer rptVwr = new frm_ReportViewer();
+            selectionFormula = " {RecieptsMaster.reciptID}="+ txt_ReceiptID.Text + "";
+            frm_ReportViewer rptVwr = new frm_ReportViewer("Reciept",selectionFormula);
             rptVwr.Show();
         }        
 

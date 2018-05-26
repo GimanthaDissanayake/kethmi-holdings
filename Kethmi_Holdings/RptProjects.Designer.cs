@@ -38,7 +38,10 @@
             this.chkLandInfo = new System.Windows.Forms.CheckBox();
             this.rbtDetailReport = new System.Windows.Forms.RadioButton();
             this.rbtSummaryRpt = new System.Windows.Forms.RadioButton();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.chkLetterHead = new System.Windows.Forms.CheckBox();
+            this.chkSurway = new System.Windows.Forms.CheckBox();
+            this.chkUtil = new System.Windows.Forms.CheckBox();
+            this.chkAdvertising = new System.Windows.Forms.CheckBox();
             this.grpSelection.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,13 +64,16 @@
             // 
             // grpSelection
             // 
+            this.grpSelection.Controls.Add(this.chkAdvertising);
+            this.grpSelection.Controls.Add(this.chkUtil);
+            this.grpSelection.Controls.Add(this.chkSurway);
             this.grpSelection.Controls.Add(this.chkCostOfPurchase);
             this.grpSelection.Controls.Add(this.chkDevelopment);
             this.grpSelection.Controls.Add(this.chkTravelling);
             this.grpSelection.Controls.Add(this.chkLandInfo);
             this.grpSelection.Location = new System.Drawing.Point(21, 116);
             this.grpSelection.Name = "grpSelection";
-            this.grpSelection.Size = new System.Drawing.Size(247, 127);
+            this.grpSelection.Size = new System.Drawing.Size(361, 127);
             this.grpSelection.TabIndex = 10;
             this.grpSelection.TabStop = false;
             this.grpSelection.Text = "Select Data";
@@ -139,23 +145,58 @@
             this.rbtSummaryRpt.Text = "Project Summary Report";
             this.rbtSummaryRpt.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // chkLetterHead
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(30, 253);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBox9.Size = new System.Drawing.Size(117, 17);
-            this.checkBox9.TabIndex = 9;
-            this.checkBox9.Text = "Include LetterHead";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.chkLetterHead.AutoSize = true;
+            this.chkLetterHead.Checked = true;
+            this.chkLetterHead.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkLetterHead.Location = new System.Drawing.Point(30, 253);
+            this.chkLetterHead.Name = "chkLetterHead";
+            this.chkLetterHead.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkLetterHead.Size = new System.Drawing.Size(117, 17);
+            this.chkLetterHead.TabIndex = 9;
+            this.chkLetterHead.Text = "Include LetterHead";
+            this.chkLetterHead.UseVisualStyleBackColor = true;
+            // 
+            // chkSurway
+            // 
+            this.chkSurway.AutoSize = true;
+            this.chkSurway.Location = new System.Drawing.Point(192, 27);
+            this.chkSurway.Name = "chkSurway";
+            this.chkSurway.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkSurway.Size = new System.Drawing.Size(59, 17);
+            this.chkSurway.TabIndex = 5;
+            this.chkSurway.Text = "Survay";
+            this.chkSurway.UseVisualStyleBackColor = true;
+            // 
+            // chkUtil
+            // 
+            this.chkUtil.AutoSize = true;
+            this.chkUtil.Location = new System.Drawing.Point(192, 50);
+            this.chkUtil.Name = "chkUtil";
+            this.chkUtil.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkUtil.Size = new System.Drawing.Size(59, 17);
+            this.chkUtil.TabIndex = 6;
+            this.chkUtil.Text = "Utilities";
+            this.chkUtil.UseVisualStyleBackColor = true;
+            // 
+            // chkAdvertising
+            // 
+            this.chkAdvertising.AutoSize = true;
+            this.chkAdvertising.Location = new System.Drawing.Point(192, 73);
+            this.chkAdvertising.Name = "chkAdvertising";
+            this.chkAdvertising.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkAdvertising.Size = new System.Drawing.Size(78, 17);
+            this.chkAdvertising.TabIndex = 7;
+            this.chkAdvertising.Text = "Advertising";
+            this.chkAdvertising.UseVisualStyleBackColor = true;
             // 
             // RptProjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 282);
-            this.Controls.Add(this.checkBox9);
+            this.Controls.Add(this.chkLetterHead);
             this.Controls.Add(this.rbtSummaryRpt);
             this.Controls.Add(this.cmbProjectList);
             this.Controls.Add(this.label1);
@@ -187,6 +228,9 @@
         private System.Windows.Forms.CheckBox chkLandInfo;
         private System.Windows.Forms.RadioButton rbtDetailReport;
         private System.Windows.Forms.RadioButton rbtSummaryRpt;
-        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox chkLetterHead;
+        private System.Windows.Forms.CheckBox chkUtil;
+        private System.Windows.Forms.CheckBox chkSurway;
+        private System.Windows.Forms.CheckBox chkAdvertising;
     }
 }

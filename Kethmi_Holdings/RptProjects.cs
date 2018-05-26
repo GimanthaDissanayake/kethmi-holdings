@@ -17,6 +17,10 @@ namespace Kethmi_Holdings
         bool costOfPurchase;
         bool dev;
         bool travel;
+        bool survy;
+        bool util;
+        bool adv;
+        bool isLetterHead;
         public RptProjects()
         {
             InitializeComponent();
@@ -48,10 +52,12 @@ namespace Kethmi_Holdings
                 selectionFormula = " {ProjectMaster.projID} = " + cmbProjectList.SelectedValue + "";
             }
 
+            isLetterHead = chkLetterHead.Checked;
+
             if (rbtDetailReport.Checked)
             { 
-                rptType = "ProjectDetails";                
-                frm_ReportViewer vwr = new frm_ReportViewer(rptType, selectionFormula);
+                rptType = "ProjectDetails";                               
+                frm_ReportViewer vwr = new frm_ReportViewer(rptType, selectionFormula,isLetterHead);
                 vwr.Show();
             }
             else
@@ -61,8 +67,10 @@ namespace Kethmi_Holdings
                 costOfPurchase = chkCostOfPurchase.Checked;
                 dev = chkDevelopment.Checked;
                 travel = chkTravelling.Checked;
-
-                frm_ReportViewer vwr = new frm_ReportViewer(rptType, selectionFormula,landDetails,costOfPurchase,dev,travel);
+                survy = chkSurway.Checked;
+                util = chkUtil.Checked;
+                adv = chkAdvertising.Checked;                
+                frm_ReportViewer vwr = new frm_ReportViewer(rptType, selectionFormula,landDetails,costOfPurchase,dev,travel,survy,util,adv,isLetterHead);
                 vwr.Show();
             }
             

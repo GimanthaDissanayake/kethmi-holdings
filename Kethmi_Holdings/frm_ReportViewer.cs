@@ -15,6 +15,10 @@ namespace Kethmi_Holdings
         bool cost;
         bool dev;
         bool travel;
+        bool survay;
+        bool util;
+        bool adv;
+        bool isLetterHead;
         public frm_ReportViewer()
         {
             InitializeComponent();
@@ -25,7 +29,14 @@ namespace Kethmi_Holdings
             this.selectionFormula = formula;
             InitializeComponent();
         }
-        public frm_ReportViewer(String type, string formula,bool land, bool cost, bool dev, bool travel)
+        public frm_ReportViewer(String type, string formula,bool isLetterHead)
+        {
+            this.rptName = type;
+            this.selectionFormula = formula;
+            this.isLetterHead = isLetterHead;
+            InitializeComponent();
+        }
+        public frm_ReportViewer(String type, string formula,bool land, bool cost, bool dev, bool travel, bool survey, bool util, bool adv,bool isLetterHead)
         {
             this.rptName = type;
             this.selectionFormula = formula;
@@ -33,6 +44,10 @@ namespace Kethmi_Holdings
             this.cost = cost;
             this.dev = dev;
             this.travel = travel;
+            this.survay = survey;
+            this.util = util;
+            this.adv = adv;
+            this.isLetterHead = isLetterHead;
             InitializeComponent();
         }
         private void frm_ReportViewer_Load(object sender, EventArgs e)
@@ -50,20 +65,35 @@ namespace Kethmi_Holdings
             if (rptName == "ProjectDetails")
             {
                 myRpt.Load(Application.StartupPath + "\\Reports\\ProjectDetails.rpt");
+                myRpt.SetParameterValue("landDetails", true);
+                myRpt.SetParameterValue("costDetails", true);
+                myRpt.SetParameterValue("devDetails", true);
+                myRpt.SetParameterValue("travelDetails", true);
+                myRpt.SetParameterValue("survay", true);
+                myRpt.SetParameterValue("utilities", true);
+                myRpt.SetParameterValue("advertising", true);
+                myRpt.SetParameterValue("letterHead", isLetterHead);
             }
             else if (rptName == "ProjectSummary")
             {
-                myRpt.Load(Application.StartupPath + "\\Reports\\ProjectSummary.rpt");
+                myRpt.Load(Application.StartupPath + "\\Reports\\ProjectDetails.rpt");
                 myRpt.SetParameterValue("landDetails", land);
                 myRpt.SetParameterValue("costDetails", cost);
                 myRpt.SetParameterValue("devDetails", dev);
                 myRpt.SetParameterValue("travelDetails", travel);
+                myRpt.SetParameterValue("survay", survay);
+                myRpt.SetParameterValue("utilities", util);
+                myRpt.SetParameterValue("advertising", adv);
+                myRpt.SetParameterValue("letterHead", isLetterHead);
             }
             else if (rptName == "CustomerDetails")
             {
                 myRpt.Load(Application.StartupPath + "\\Reports\\Customers.rpt");
             }
-           
+            else if (rptName == "Reciept")
+            {
+                myRpt.Load(Application.StartupPath + "\\Reports\\Reciept.rpt");
+            }
 
 
             AssignConnectionInfo(myRpt, crConnection);
