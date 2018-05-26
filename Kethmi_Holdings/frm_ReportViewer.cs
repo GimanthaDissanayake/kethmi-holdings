@@ -51,10 +51,13 @@ namespace Kethmi_Holdings
             {
                 myRpt.Load(Application.StartupPath + "\\Reports\\ProjectDetails.rpt");
             }
-            else if (rptName == "ProjecrtSummary")
+            else if (rptName == "ProjectSummary")
             {
                 myRpt.Load(Application.StartupPath + "\\Reports\\ProjectSummary.rpt");
-                myRpt.SetParameterValue("MyParameter", "Hello");
+                myRpt.SetParameterValue("landDetails", land);
+                myRpt.SetParameterValue("costDetails", cost);
+                myRpt.SetParameterValue("devDetails", dev);
+                myRpt.SetParameterValue("travelDetails", travel);
             }
             else
             {

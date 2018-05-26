@@ -42,13 +42,15 @@ namespace Kethmi_Holdings
                 MessageBox.Show("Please select a project !!", "Warning", MessageBoxButtons.OK);
                 return;
             }
+            selectionFormula = "";
+            if (cmbProjectList.Text != "All")
+            {
+                selectionFormula = " {ProjectMaster.projID} = " + cmbProjectList.SelectedValue + "";
+            }
+
             if (rbtDetailReport.Checked)
             { 
-                rptType = "ProjectDetails";
-                if (cmbProjectList.Text!="All")
-                {
-                    selectionFormula = " {ProjectMaster.projID} = " + cmbProjectList.SelectedValue + "";
-                }
+                rptType = "ProjectDetails";                
                 frm_ReportViewer vwr = new frm_ReportViewer(rptType, selectionFormula);
                 vwr.Show();
             }
