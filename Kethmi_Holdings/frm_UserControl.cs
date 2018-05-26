@@ -16,32 +16,39 @@ namespace Kethmi_Holdings
         string strsql = "";
         string userType = "";
         string strUsername = "";
+        ButtonsStates btnStat = new ButtonsStates();
         public frm_UserControl(string username)
         {
             InitializeComponent();
             this.strUsername = username;
-        }
-
-        public bool gb_CurrentUsersEnabled {set { gb_currentUsers.Enabled = value; }}
-        public bool gb_InputAreaEnabled { set { gb_inputArea.Enabled = value; } }
+        }     
 
         private void frm_UserControl_Activated(object sender, EventArgs e)
         {
-            lastButtonStates.restore();
+            
         }
 
         private void frm_UserControl_Deactivate(object sender, EventArgs e)
-        {
-            lastButtonStates.save();
+        { 
+
         }
 
-        ButtonsStates lastButtonStates;
+      
         private void frm_UserControl_Load(object sender, EventArgs e)
         {
-            lastButtonStates = new ButtonsStates();
+            btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
         }
-        public void ButtonAdd()
+        public void ButtonNew()
         {
+            btnStat.ControlSideToolStrip(this.ParentForm,false,false,true,false,false,true);
+        }
+        public void ButtonClear()
+        {
+            if (MessageBox.Show("Are you sure want to cancel?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {                                
+                
+                btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
+            }
         }
 
         public void ButtonSave()
@@ -57,12 +64,23 @@ namespace Kethmi_Holdings
             strsql = "insert into userdetails (userid,username, password, addedDate, "+
                 "addedUser,usertype,active ) values ('"+txtUserID.Text+"','"+txtUserName.Text+"','"+txtPW.Text+"','"+DateTime.Now.ToString()+"','"+strUsername+"','"+userType+"','"+chkActive.Checked+"')";
             db.insertUpdateDelete(strsql);
+
         }
 
         private void frm_UserControl_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ButtonsStates btnStat = new ButtonsStates();
-            btnStat.CloseToolStrip((frm_Main)this.MdiParent);
+            
+        }
+
+        private void dataGridViewUsers_MouseClick(object sender, MouseEventArgs e)
+        {
+            btnStat.ControlSideToolStrip(this.ParentForm, true, true, false, false, true, false);
+        }
+
+        private void enableEditing(bool value)
+        {
+            txtUserName.Enabled = value;
+
         }
     }
 }

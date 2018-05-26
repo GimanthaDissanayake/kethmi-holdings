@@ -147,10 +147,7 @@ namespace Kethmi_Holdings
             
             else if (this.ActiveMdiChild == frmUserCtrl)
             {
-                CommonClass.setToolTipButtonStates(false, false, true, false, false, true);
-                frmUserCtrl.gb_CurrentUsersEnabled = false;
-                frmUserCtrl.gb_InputAreaEnabled = true;
-                frmUserCtrl.ButtonAdd();
+                frmUserCtrl.ButtonNew();
             }      
             else if(this.ActiveMdiChild == frmCustomers)
             {
@@ -159,7 +156,7 @@ namespace Kethmi_Holdings
             else if(this.ActiveMdiChild == frmRecipts)
             {
                 frmRecipts.ButtonNew();
-            }
+            }           
         }
 
         private void frm_Main_Load_1(object sender, EventArgs e)
@@ -193,8 +190,9 @@ namespace Kethmi_Holdings
             frmUserCtrl.MdiParent = this;
             frmUserCtrl.FormClosed += new FormClosedEventHandler(frmUserCtrl_FormClosed);
             frmUserCtrl.Show();
-            CommonClass.setToolTipButtonStates(true,true,false,false,false,false);
+          
             userControlToolStripMenuItem.Enabled = false;
+            ts_side.Visible = true;
 
         }
         private void frmUserCtrl_FormClosed(object sender, EventArgs e)
@@ -238,16 +236,17 @@ namespace Kethmi_Holdings
             {
                 frmRecipts.ButtonClear();
             }
+            else if (this.ActiveMdiChild== frmUserCtrl)
+            {
+                frmUserCtrl.ButtonClear();
+            }
             }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
             if (this.ActiveMdiChild == frmUserCtrl)
             {
-                CommonClass.setToolTipButtonStates(true, true, false, false, false, false);
-                frmUserCtrl.gb_CurrentUsersEnabled = false;
-                frmUserCtrl.gb_InputAreaEnabled = true;
-                frmUserCtrl.ButtonSave();
+                frmUserCtrl.ButtonSave();  
             }
             else if (this.ActiveMdiChild == frmProject)
             {
