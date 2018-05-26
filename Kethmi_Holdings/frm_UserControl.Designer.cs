@@ -41,9 +41,7 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.gb_inputArea = new System.Windows.Forms.GroupBox();
             this.gb_currentUsers = new System.Windows.Forms.GroupBox();
-        //    ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
-            this.button1 = new System.Windows.Forms.Button();
-       //     ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.gb_inputArea.SuspendLayout();
             this.gb_currentUsers.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +54,7 @@
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.Size = new System.Drawing.Size(305, 373);
             this.dataGridViewUsers.TabIndex = 0;
+            this.dataGridViewUsers.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewUsers_MouseClick);
             // 
             // label2
             // 
@@ -161,7 +160,6 @@
             // 
             // gb_inputArea
             // 
-            this.gb_inputArea.Controls.Add(this.button1);
             this.gb_inputArea.Controls.Add(this.label3);
             this.gb_inputArea.Controls.Add(this.label2);
             this.gb_inputArea.Controls.Add(this.txtUserName);
@@ -172,7 +170,6 @@
             this.gb_inputArea.Controls.Add(this.chkActive);
             this.gb_inputArea.Controls.Add(this.rbtUser);
             this.gb_inputArea.Controls.Add(this.rbtAdmin);
-            this.gb_inputArea.Enabled = false;
             this.gb_inputArea.Location = new System.Drawing.Point(357, 15);
             this.gb_inputArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gb_inputArea.Name = "gb_inputArea";
@@ -193,15 +190,6 @@
             this.gb_currentUsers.TabIndex = 14;
             this.gb_currentUsers.TabStop = false;
             this.gb_currentUsers.Text = "Current Users";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(147, 255);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "fuck";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // frm_UserControl
             // 
@@ -242,6 +230,5 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.GroupBox gb_inputArea;
         private System.Windows.Forms.GroupBox gb_currentUsers;
-        private System.Windows.Forms.Button button1;
     }
 }

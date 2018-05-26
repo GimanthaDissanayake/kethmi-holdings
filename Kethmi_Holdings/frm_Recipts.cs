@@ -17,6 +17,7 @@ namespace Kethmi_Holdings
         int cusID, pId, recID;
         String strUsername,mode="",strsql="";
         Database db;
+        List<String> list;
 
         private string strConn = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
 
@@ -25,6 +26,8 @@ namespace Kethmi_Holdings
         public frm_Recipts(String s)
         {
             InitializeComponent();
+            loadCusName();
+            loadProjName();
             strUsername = s;
         }
 
@@ -61,31 +64,65 @@ namespace Kethmi_Holdings
         private void getReceiptId()
         {
             db = new Database();
-            recID = Convert.ToInt32(db.getValue("SELECT TOP 1 reciptID FROM RecieptsMaster ORDER BY reciptID DESC") + 1);
+            if (db.getValue("SELECT TOP 1 reciptID FROM RecieptsMaster ORDER BY reciptID DESC") == "")
+            {
+                recID = 1;
+            }
+            else
+            {
+                recID = Convert.ToInt32(db.getValue("SELECT TOP 1 reciptID FROM RecieptsMaster ORDER BY reciptID DESC"))+1;
+            }
             txt_ReceiptID.Text = recID.ToString();
         }
 
         private void getCusID()
         {
             db = new Database();
-            cusID = Convert.ToInt32(db.getValue("SELECT cusID FROM Customer WHERE name = '"+txt_CusName.Text+"'"));            
+            cusID = Convert.ToInt32(db.getValue("SELECT cusID FROM Customer WHERE name = '"+cmb_CusName.Text+"'"));            
         }
 
         private void getProjID()
         {
             db = new Database();
-            pId = Convert.ToInt32(db.getValue("SELECT projID FROM ProjectMaster WHERE projName = '" + txt_ProjName.Text + "'"));
+            pId = Convert.ToInt32(db.getValue("SELECT projID FROM ProjectMaster WHERE projName = '" + cmb_ProjName.Text + "'"));
         }
 
         private void loadData()
         {
+            db = new Database();
+            strsql = "SELECT reciptID as 'ID',name as 'Customer Name' FROM Customer WHERE isDeleted=0";
+            dataGridView_ReceiptList.DataSource = db.select(strsql);
+            dataGridView_ReceiptList.Enabled = true;
+        }
 
+        private void loadCusName()
+        {
+            db = new Database();
+            strsql = "SELECT name FROM Customer WHERE isDeleted=0";
+            list = new List<String>();
+            list = db.getList(strsql, 0);
+            foreach (String name in list)
+            {
+                cmb_CusName.Items.Add(name);
+            }
+        }
+
+        private void loadProjName()
+        {
+            db = new Database();
+            strsql = "SELECT projName FROM ProjectMaster WHERE isDeleted=0";
+            list = new List<String>();
+            list = db.getList(strsql, 0);
+            foreach (String projName in list)
+            {
+                cmb_ProjName.Items.Add(projName);
+            }
         }
 
         private void clearData()
         {
-            txt_CusName.Clear();
-            txt_ProjName.Clear();
+            cmb_CusName.Text="";
+            cmb_ProjName.Text = "";
             txt_ReceiptID.Clear();
             txt_Search.Clear();
             txt_TotVal.Clear();
@@ -96,8 +133,8 @@ namespace Kethmi_Holdings
 
         private void enableEditing(bool value)
         {
-            txt_CusName.Enabled = value;
-            txt_ProjName.Enabled = value;
+            cmb_CusName.Enabled = value;
+            cmb_ProjName.Enabled = value;
             txt_ReceiptID.Enabled = value;
             txt_Search.Enabled = value;
             txt_TotVal.Enabled = value;
@@ -108,14 +145,15 @@ namespace Kethmi_Holdings
 
         public void ButtonNew()
         {
+            clearData();
             getReceiptId();
             mode = "New";
        
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);
             dataGridView_ReceiptList.Enabled = false;
-            clearData();
+            
             enableEditing(true);
-            txt_CusName.Focus();
+            cmb_CusName.Focus();
 
         }
 
