@@ -32,22 +32,24 @@ namespace Kethmi_Holdings
 
         public bool searchEnabled { set { gb_search.Enabled = value; } }
 
-        ButtonsStates lastButtonStates;
+      //  ButtonsStates lastButtonStates;
 
         private void frm_Recipts_Activated(object sender, EventArgs e)
         {
-            lastButtonStates.restore();
+            //lastButtonStates.restore();
+            // btnStat.VisibleToolStrip((frm_Main)this.MdiParent);
             btnStat.VisibleToolStrip((frm_Main)this.MdiParent);
         }
 
         private void frm_Recipts_Deactivate(object sender, EventArgs e)
         {
-            lastButtonStates.save();
+           // lastButtonStates.save();
         }
 
         private void frm_Recipts_Load(object sender, EventArgs e)
         {
-            lastButtonStates = new ButtonsStates();
+            // lastButtonStates = new ButtonsStates();
+            btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
         }
 
         private void frm_Recipts_FormClosing(object sender, FormClosingEventArgs e)
@@ -107,11 +109,13 @@ namespace Kethmi_Holdings
         {
             getReceiptId();
             mode = "New";
+       
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);
             dataGridView_ReceiptList.Enabled = false;
             clearData();
             enableEditing(true);
             txt_CusName.Focus();
+
         }
 
         public void ButtonEdit()

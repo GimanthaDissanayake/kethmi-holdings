@@ -143,12 +143,7 @@ namespace Kethmi_Holdings
             if (this.ActiveMdiChild == frmProject)
             {
                 frmProject.ButtonNew();        
-            }
-            else if (this.ActiveMdiChild == frmRecipts) {
-                CommonClass.setToolTipButtonStates(false, false, false, true, false, true);
-                frmRecipts.inputAreaEnabled = true;
-                frmRecipts.searchEnabled = false;
-            }
+            }            
             else if (this.ActiveMdiChild == frmUserCtrl)
             {
                 CommonClass.setToolTipButtonStates(false, false, true, false, false, true);
