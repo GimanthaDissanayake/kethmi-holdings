@@ -66,6 +66,7 @@
             this.tssl_loggedAs = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssl_status = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.aboutSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_side.SuspendLayout();
             this.ts_main.SuspendLayout();
             this.ms_header.SuspendLayout();
@@ -376,9 +377,11 @@
             // 
             // aboutUsToolStripMenuItem
             // 
+            this.aboutUsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutSystemToolStripMenuItem});
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
-            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.aboutUsToolStripMenuItem.Text = "About Us";
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.aboutUsToolStripMenuItem.Text = " Help";
             // 
             // exitToolStripMenuItem
             // 
@@ -423,6 +426,13 @@
             // timer1
             // 
             this.timer1.Interval = 1000;
+            // 
+            // aboutSystemToolStripMenuItem
+            // 
+            this.aboutSystemToolStripMenuItem.Name = "aboutSystemToolStripMenuItem";
+            this.aboutSystemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutSystemToolStripMenuItem.Text = "About System";
+            this.aboutSystemToolStripMenuItem.Click += new System.EventHandler(this.aboutSystemToolStripMenuItem_Click);
             // 
             // frm_Main
             // 
@@ -496,6 +506,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripStatusLabel tssl_loggedAs;
         private System.Windows.Forms.ToolStripStatusLabel tssl_status;
+        private System.Windows.Forms.ToolStripMenuItem aboutSystemToolStripMenuItem;
     }
 }
 

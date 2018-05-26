@@ -317,5 +317,10 @@ namespace Kethmi_Holdings
                 rptProjects.ButtonPrint();
             }
         }
+
+        private void aboutSystemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_About_System().Show();
+        }
     }
 }
