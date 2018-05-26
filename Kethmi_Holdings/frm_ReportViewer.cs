@@ -35,9 +35,9 @@ namespace Kethmi_Holdings
             {
                 myRpt.Load(Application.StartupPath + "\\Reports\\ProjectDetails.rpt");
             }
-            else if (rptName == "")
+            else if (rptName == "ProjecrtSummary")
             {
-
+                myRpt.Load(Application.StartupPath + "\\Reports\\ProjectSummary.rpt");
             }
             else
             {
