@@ -60,13 +60,13 @@
             this.customerControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tssl_time = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssl_loggedAs = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssl_status = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.aboutSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_side.SuspendLayout();
             this.ts_main.SuspendLayout();
             this.ms_header.SuspendLayout();
@@ -383,6 +383,13 @@
             this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.aboutUsToolStripMenuItem.Text = " Help";
             // 
+            // aboutSystemToolStripMenuItem
+            // 
+            this.aboutSystemToolStripMenuItem.Name = "aboutSystemToolStripMenuItem";
+            this.aboutSystemToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.aboutSystemToolStripMenuItem.Text = "About System";
+            this.aboutSystemToolStripMenuItem.Click += new System.EventHandler(this.aboutSystemToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -408,6 +415,7 @@
             this.tssl_time.Name = "tssl_time";
             this.tssl_time.Size = new System.Drawing.Size(34, 17);
             this.tssl_time.Text = "Time";
+            this.tssl_time.Click += new System.EventHandler(this.tssl_time_Click);
             // 
             // tssl_loggedAs
             // 
@@ -420,19 +428,13 @@
             this.tssl_status.BackColor = System.Drawing.Color.Chartreuse;
             this.tssl_status.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tssl_status.Name = "tssl_status";
-            this.tssl_status.Size = new System.Drawing.Size(38, 17);
-            this.tssl_status.Text = "status";
+            this.tssl_status.Size = new System.Drawing.Size(81, 17);
+            this.tssl_status.Text = "Status : Active";
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
-            // 
-            // aboutSystemToolStripMenuItem
-            // 
-            this.aboutSystemToolStripMenuItem.Name = "aboutSystemToolStripMenuItem";
-            this.aboutSystemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutSystemToolStripMenuItem.Text = "About System";
-            this.aboutSystemToolStripMenuItem.Click += new System.EventHandler(this.aboutSystemToolStripMenuItem_Click);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frm_Main
             // 

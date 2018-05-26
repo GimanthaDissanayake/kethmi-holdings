@@ -13,6 +13,7 @@ namespace Kethmi_Holdings
     public partial class frm_Login : Form
     {
         static string strUsername = "";
+        static string strPassword = "";
         public frm_Login()
         {
             InitializeComponent();
@@ -36,9 +37,19 @@ namespace Kethmi_Holdings
         private void btn_login_Click(object sender, EventArgs e)
         {
             strUsername = tb_username.Text;
-            this.Hide();
-            (new frm_Main(strUsername)).Show();
-            strUsername = tb_username.Text;
+            strPassword = tb_passsword.Text;
+
+            if (Validation.isValidUser(strUsername, strPassword))
+            {
+                this.Hide();
+                frm_Main main = new frm_Main(strUsername);
+                main.Show();
+            }
+            else {
+                tb_passsword.Text = "";
+                tb_username.Text = "";
+                MessageBox.Show("Username or Password is invalid!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
         }
     }
 }

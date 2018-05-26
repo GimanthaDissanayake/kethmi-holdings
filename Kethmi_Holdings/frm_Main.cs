@@ -28,6 +28,8 @@ namespace Kethmi_Holdings
         public frm_Main(string username)
         {
             InitializeComponent();
+            strUsername = username;
+            tssl_loggedAs.Text = "| Logged as : "+strUsername+" |";
             this.strUsername = username;
         }
 
@@ -162,6 +164,7 @@ namespace Kethmi_Holdings
 
         private void frm_Main_Load_1(object sender, EventArgs e)
         {
+            timer1.Start();
             ts_side.Visible = false;
             CommonClass.setToolTipButtonStates(false);
         }
@@ -320,7 +323,17 @@ namespace Kethmi_Holdings
 
         private void aboutSystemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frm_About_System().Show();
+            new frm_About_System().ShowDialog();
+        }
+
+        private void tssl_time_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tssl_time.Text = "Date and Time : "+DateTime.Now.ToString();
         }
     }
 }

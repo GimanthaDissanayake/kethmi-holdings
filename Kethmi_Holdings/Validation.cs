@@ -54,5 +54,24 @@ namespace Kethmi_Holdings
             return false;
         }
 
+        public static Boolean isValidUser(String username, String password) {
+            Database db = new Database();
+            String pwd = "";
+            pwd = db.getValue("SELECT password FROM UserDetails where username='"+username+"'");
+            if (pwd != "")
+            {
+                if (pwd == password)
+                {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                return false;
+            }
+        }
+
     }
 }

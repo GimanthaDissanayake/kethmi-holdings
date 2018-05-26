@@ -90,6 +90,7 @@
             this.tb_passsword.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_passsword.Location = new System.Drawing.Point(374, 226);
             this.tb_passsword.Name = "tb_passsword";
+            this.tb_passsword.PasswordChar = '*';
             this.tb_passsword.Size = new System.Drawing.Size(125, 20);
             this.tb_passsword.TabIndex = 5;
             this.tb_passsword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
