@@ -143,7 +143,8 @@ namespace Kethmi_Holdings
             if (this.ActiveMdiChild == frmProject)
             {
                 frmProject.ButtonNew();        
-            }            
+            }
+            
             else if (this.ActiveMdiChild == frmUserCtrl)
             {
                 CommonClass.setToolTipButtonStates(false, false, true, false, false, true);

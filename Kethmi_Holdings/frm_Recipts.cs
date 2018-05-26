@@ -60,7 +60,7 @@ namespace Kethmi_Holdings
         private void getReceiptId()
         {
             db = new Database();
-            recID = Convert.ToInt32(db.getValue("SELECT TOP 1 reciptID FROM RecieptsMaster ORDER BY reciptID DESC"))+1;
+            recID = Convert.ToInt32(db.getValue("SELECT TOP 1 reciptID FROM RecieptsMaster ORDER BY reciptID DESC") + 1);
             txt_ReceiptID.Text = recID.ToString();
         }
 
@@ -251,7 +251,7 @@ namespace Kethmi_Holdings
 
         private void dataGridView_ReceiptList_MouseClick(object sender, MouseEventArgs e)
         {
-
+            btnStat.ControlSideToolStrip(this.ParentForm, true, true, false, true, true, false);
         }
 
     }
