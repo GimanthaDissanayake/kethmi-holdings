@@ -77,7 +77,7 @@ namespace Kethmi_Holdings
 
                 try
                 {
-                    objCmd.CommandText = "UPDATE ProjectMaster SET isDeleted = 1," +
+                    objCmd.CommandText = "UPDATE ProjectMaster SET isDeleted = 'true'," +
                             "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE projID = '" + pId + "'";
                     objCmd.ExecuteNonQuery();
 
@@ -210,6 +210,19 @@ namespace Kethmi_Holdings
             return true;
         }
 
+        private void getProjectID()
+        {
+            db = new Database();
+            if (db.getValue("SELECT TOP 1 projID FROM ProjectMaster ORDER BY projID DESC") == "")
+            {
+                pId = 1;
+            }
+            else
+            {
+                pId = Convert.ToInt32(db.getValue("SELECT TOP 1 projID FROM ProjectMaster ORDER BY projID DESC")) + 1;
+            }
+        }
+
         public void ButtonSave()
         {
             SqlConnection objConn = new SqlConnection(strConn);
@@ -225,17 +238,17 @@ namespace Kethmi_Holdings
             }
             else
             {
-                if (mode == "New")
+                if (mode == Modes.NEW)
                 {
                     try
                     {
                         //get Project ID
                         db = new Database();
-                        pId = Convert.ToInt32(db.getValue("SELECT TOP 1 projID FROM ProjectMaster ORDER BY projID DESC")) + 1;
+                        getProjectID();
 
                         //Save to Project Master
-                        objCmd.CommandText = "INSERT INTO ProjectMaster(projName,date,addedDate,addedUser)" +
-                            " VALUES('" + txt_projectName.Text + "','" + dateTimePicker1.Value.ToShortDateString() + "','" + DateTime.Now + "','" + strUsername + "')";
+                        objCmd.CommandText = "INSERT INTO ProjectMaster(projName,date,addedDate,addedUser,isDeleted)" +
+                            " VALUES('" + txt_projectName.Text + "','" + dateTimePicker1.Value.ToShortDateString() + "','" + DateTime.Now + "','" + strUsername + "','false')";
                         objCmd.ExecuteNonQuery();
 
                         //Save Project Basic Details
@@ -310,7 +323,7 @@ namespace Kethmi_Holdings
                         MessageBox.Show(ex.Message.ToString());
                     }
                 }
-                else if (mode == "Edit")
+                else if (mode == Modes.EDIT)
                 {
 
 

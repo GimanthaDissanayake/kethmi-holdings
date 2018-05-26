@@ -68,7 +68,7 @@ namespace Kethmi_Holdings
         private void loadData()
         {
             db = new Database();
-            strsql = "SELECT cusID as 'ID',name as 'Customer Name' FROM Customer WHERE isDeleted=0";
+            strsql = "SELECT cusID as 'ID',name as 'Customer Name' FROM Customer WHERE isDeleted='false'";
             dataGridView_CustomerList.DataSource = db.select(strsql);
             dataGridView_CustomerList.Enabled = true;
         }
@@ -76,7 +76,7 @@ namespace Kethmi_Holdings
         private void loadProjectNames()
         {
             db = new Database();
-            strsql = "SELECT projName FROM ProjectMaster WHERE isDeleted=0";
+            strsql = "SELECT projName FROM ProjectMaster WHERE isDeleted='false'";
             list = new List<String>();
             list = db.getList(strsql, 0);
             foreach (String projName in list)
@@ -185,9 +185,9 @@ namespace Kethmi_Holdings
                         getProjID();
 
                         //Save to Cutomers
-                        objCmd.CommandText = "INSERT INTO Customer(name,phone,nic,projID,type,address,addedUser,addedDate)" +
+                        objCmd.CommandText = "INSERT INTO Customer(name,phone,nic,projID,type,address,addedUser,addedDate,isDeleted)" +
                             " VALUES('" + txt_CusName.Text + "','" + txt_Phone.Text + "','" + txt_NIC.Text + "','" + pId + "','" + txt_Type.Text + "','" + txt_Address.Text + "'," +
-                            "'" + strUsername + "','" + DateTime.Now + "')";
+                            "'" + strUsername + "','" + DateTime.Now + "','false')";
                         objCmd.ExecuteNonQuery();
 
                         //Commit changes 
@@ -256,7 +256,7 @@ namespace Kethmi_Holdings
 
                 try
                 {
-                    objCmd.CommandText = "UPDATE Customer SET isDeleted = 1," +
+                    objCmd.CommandText = "UPDATE Customer SET isDeleted = 'true'," +
                             "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE cusID = '" + cusID + "'";
                     objCmd.ExecuteNonQuery();
 

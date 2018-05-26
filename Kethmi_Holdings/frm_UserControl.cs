@@ -17,6 +17,7 @@ namespace Kethmi_Holdings
         string strsql = "";
         string userType = "";
         string strUsername = "";
+        string mode;
         ButtonsStates btnStat = new ButtonsStates();
         public frm_UserControl(string username)
         {
@@ -101,17 +102,24 @@ namespace Kethmi_Holdings
 
         public void ButtonSave()
         {
-            db = new Database();
-            if (rbtAdmin.Checked)
-                userType = "Admin";
-            else
-                userType = "User";
+            if(mode== Modes.NEW)
+            {
+                db = new Database();
+                if (rbtAdmin.Checked)
+                    userType = "Admin";
+                else
+                    userType = "User";
 
-            strsql = "INSERT INTO UserDetails (username, password, addedDate, "+
-                "addedUser,usertype,isActive ) VALUES ('"+txtUserName.Text+"','"+txtPW.Text+"','"+DateTime.Now+"','"+strUsername+"','"+userType+"','"+chkActive.Checked+"')";
-            db.insertUpdateDelete(strsql);
-            clearData();
-            loadUserData();
+                strsql = "INSERT INTO UserDetails (username, password, addedDate, " +
+                    "addedUser,usertype,isActive ) VALUES ('" + txtUserName.Text + "','" + txtPW.Text + "','" + DateTime.Now + "','" + strUsername + "','" + userType + "','" + chkActive.Checked + "')";
+                db.insertUpdateDelete(strsql);
+                clearData();
+                loadUserData();
+            }  
+            else if(mode == Modes.EDIT)
+            {
+
+            }          
         }
 
         private void frm_UserControl_FormClosing(object sender, FormClosingEventArgs e)
