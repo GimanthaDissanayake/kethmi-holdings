@@ -187,6 +187,7 @@ namespace Kethmi_Holdings
             rptCusDetails = new RptCustomerDetails();
             rptCusDetails.MdiParent = this;
             rptCusDetails.Show();
+            ts_side.Visible = true;
         }
 
         private void userControlToolStripMenuItem_Click(object sender, EventArgs e)
@@ -318,6 +319,10 @@ namespace Kethmi_Holdings
             else if (this.ActiveMdiChild== rptProjects)
             {
                 rptProjects.ButtonPrint();
+            }
+            else if (this.ActiveMdiChild== rptCusDetails)
+            {
+                rptCusDetails.ButtonPrint();
             }
         }
 

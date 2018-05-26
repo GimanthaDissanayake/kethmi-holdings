@@ -59,12 +59,13 @@ namespace Kethmi_Holdings
                 myRpt.SetParameterValue("devDetails", dev);
                 myRpt.SetParameterValue("travelDetails", travel);
             }
-            else
+            else if (rptName == "CustomerDetails")
             {
-                myRpt.Load(Application.StartupPath + "\\Reports\\Reciept.rpt");
-                // string path = Directory.GetCurrentDirectory()+ "\\Reports\\Reciept.rpt";
-                //   myRpt.Load(path);
+                myRpt.Load(Application.StartupPath + "\\Reports\\Customers.rpt");
             }
+           
+
+
             AssignConnectionInfo(myRpt, crConnection);
             myRpt.SetDatabaseLogon(crConnection.UserID, crConnection.Password, strServer, crConnection.DatabaseName);
             crystalReportViewer1.ReportSource = myRpt;

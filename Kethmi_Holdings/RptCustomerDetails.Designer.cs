@@ -28,50 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RptCustomerDetails));
+            this.cmbCustomer = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmbCustomer
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(106, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cmbCustomer.FormattingEnabled = true;
+            this.cmbCustomer.Location = new System.Drawing.Point(106, 21);
+            this.cmbCustomer.Name = "cmbCustomer";
+            this.cmbCustomer.Size = new System.Drawing.Size(168, 21);
+            this.cmbCustomer.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Select Project";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(16, 59);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(98, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Contact Details";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label1.Text = "Select Customer";
             // 
             // RptCustomerDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(286, 86);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbCustomer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(82, 0);
             this.Name = "RptCustomerDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "RptCustomerDetails";
+            this.Activated += new System.EventHandler(this.RptCustomerDetails_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RptCustomerDetails_FormClosing);
+            this.Load += new System.EventHandler(this.RptCustomerDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,8 +72,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCustomer;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
