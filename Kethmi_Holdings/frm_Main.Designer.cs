@@ -145,6 +145,7 @@
             this.btn_print.Size = new System.Drawing.Size(79, 59);
             this.btn_print.Text = "Print";
             this.btn_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // btn_delete
             // 

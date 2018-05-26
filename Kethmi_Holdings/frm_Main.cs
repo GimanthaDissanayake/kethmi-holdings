@@ -303,5 +303,13 @@ namespace Kethmi_Holdings
                 frmRecipts.ButtonEdit();
             }          
         }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild == frmRecipts)
+            {
+                frmRecipts.ButtonPrint();
+            }
+        }
     }
 }

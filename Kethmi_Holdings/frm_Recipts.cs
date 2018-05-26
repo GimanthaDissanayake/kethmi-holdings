@@ -2,13 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Kethmi_Holdings
 {
@@ -22,6 +18,8 @@ namespace Kethmi_Holdings
         private string strConn = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
 
         ButtonsStates btnStat = new ButtonsStates();
+
+        
 
         public frm_Recipts(String s)
         {
@@ -287,6 +285,12 @@ namespace Kethmi_Holdings
                 }
             }
         }
+        
+        public void ButtonPrint()
+        {
+            frm_ReportViewer rptVwr = new frm_ReportViewer();
+            rptVwr.Show();
+        }        
 
         private void dataGridView_ReceiptList_MouseClick(object sender, MouseEventArgs e)
         {
