@@ -88,7 +88,7 @@ namespace Kethmi_Holdings
         private void loadData()
         {
             db = new Database();
-            strsql = "SELECT reciptID as 'ID',name as 'Customer Name' FROM Customer WHERE isDeleted=0";
+            strsql = "SELECT reciptID as 'ID',name as 'Customer Name' FROM Customer WHERE isDeleted='false'";
             dataGridView_ReceiptList.DataSource = db.select(strsql);
             dataGridView_ReceiptList.Enabled = true;
         }
@@ -96,7 +96,7 @@ namespace Kethmi_Holdings
         private void loadCusName()
         {
             db = new Database();
-            strsql = "SELECT name FROM Customer WHERE isDeleted=0";
+            strsql = "SELECT name FROM Customer WHERE isDeleted='false'";
             list = new List<String>();
             list = db.getList(strsql, 0);
             foreach (String name in list)
@@ -108,7 +108,7 @@ namespace Kethmi_Holdings
         private void loadProjName()
         {
             db = new Database();
-            strsql = "SELECT projName FROM ProjectMaster WHERE isDeleted=0";
+            strsql = "SELECT projName FROM ProjectMaster WHERE isDeleted='false'";
             list = new List<String>();
             list = db.getList(strsql, 0);
             foreach (String projName in list)
@@ -193,8 +193,8 @@ namespace Kethmi_Holdings
                     getProjID();
 
                     //Save to ReceiptMaster
-                    objCmd.CommandText = "INSERT INTO RecieptsMaster(reciptID,cusID,projID,type,date,totValue,addedUser,addedDate) VALUES('"+txt_ReceiptID.Text+"','"+cusID+"','"+pId+"',"+
-                        "'"+txt_Type.Text+"','"+dateTimePicker_date.Value.ToShortDateString()+"','"+txt_TotVal.Text+"','"+strUsername+"','"+DateTime.Now+"')";
+                    objCmd.CommandText = "INSERT INTO RecieptsMaster(reciptID,cusID,projID,type,date,totValue,addedUser,addedDate,isDeleted) VALUES('"+txt_ReceiptID.Text+"','"+cusID+"','"+pId+"',"+
+                        "'"+txt_Type.Text+"','"+dateTimePicker_date.Value.ToShortDateString()+"','"+txt_TotVal.Text+"','"+strUsername+"','"+DateTime.Now+"','false')";
                     objCmd.ExecuteNonQuery();
 
                     //Save to ReceiptDetails
@@ -266,7 +266,7 @@ namespace Kethmi_Holdings
 
                 try
                 {
-                    //objCmd.CommandText = "UPDATE Customer SET isDeleted = 1," +
+                    //objCmd.CommandText = "UPDATE Customer SET isDeleted = 'true'," +
                             //"changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE cusID = '" + cusID + "'";
                     //objCmd.ExecuteNonQuery();
 
