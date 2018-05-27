@@ -307,7 +307,11 @@ namespace Kethmi_Holdings
             else if(this.ActiveMdiChild == frmRecipts)
             {
                 frmRecipts.ButtonEdit();
-            }          
+            }
+            else if (this.ActiveMdiChild == frmUserCtrl)
+            {
+                frmUserCtrl.ButtonEdit();
+            }
         }
 
         private void btn_print_Click(object sender, EventArgs e)
