@@ -75,11 +75,11 @@
   <ItemGroup>
     <Compile Include="CommonClass.cs" />
     <Compile Include="Database.cs" />
-    <Compile Include="frm_About_Us.cs">
+    <Compile Include="frm_About_System.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_About_Us.Designer.cs">
-      <DependentUpon>frm_About_Us.cs</DependentUpon>
+    <Compile Include="frm_About_System.Designer.cs">
+      <DependentUpon>frm_About_System.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Advertising.cs">
       <SubType>Form</SubType>
@@ -189,8 +189,8 @@
       <DependentUpon>RptProjects.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs" />
-    <EmbeddedResource Include="frm_About_Us.resx">
-      <DependentUpon>frm_About_Us.cs</DependentUpon>
+    <EmbeddedResource Include="frm_About_System.resx">
+      <DependentUpon>frm_About_System.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Advertising.resx">
       <DependentUpon>frm_Advertising.cs</DependentUpon>

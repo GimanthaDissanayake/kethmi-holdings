@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btn_done = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -164,11 +165,22 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Copyright © 2018 by xGen Technologies | All rights reserved.";
             // 
+            // btn_done
+            // 
+            this.btn_done.Location = new System.Drawing.Point(256, 317);
+            this.btn_done.Name = "btn_done";
+            this.btn_done.Size = new System.Drawing.Size(75, 23);
+            this.btn_done.TabIndex = 12;
+            this.btn_done.Text = "Done.";
+            this.btn_done.UseVisualStyleBackColor = true;
+            this.btn_done.Click += new System.EventHandler(this.btn_done_Click);
+            // 
             // frm_About_System
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 332);
+            this.ClientSize = new System.Drawing.Size(577, 345);
+            this.Controls.Add(this.btn_done);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
@@ -177,6 +189,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_About_System";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -204,5 +217,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btn_done;
     }
 }

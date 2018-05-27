@@ -16,5 +16,10 @@ namespace Kethmi_Holdings
         {
             InitializeComponent();
         }
+
+        private void btn_done_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
