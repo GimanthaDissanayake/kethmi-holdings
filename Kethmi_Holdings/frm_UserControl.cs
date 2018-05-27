@@ -53,7 +53,7 @@ namespace Kethmi_Holdings
         private void loadUserData()
         {
             db = new Database();
-            strsql = "SELECT userID as 'ID',username as 'Username',userType as 'Type' FROM UserDetails WHERE isActive=1";
+            strsql = "SELECT userID as 'ID',username as 'Username',userType as 'Type' FROM UserDetails";
             dataGridViewUsers.DataSource = db.select(strsql);
             dataGridViewUsers.Enabled = true;
         }
@@ -93,7 +93,7 @@ namespace Kethmi_Holdings
 
         public void ButtonNew()
         {
-            mode = "new";
+            mode = "New";
             setEnabled(true);
             btnStat.ControlSideToolStrip(this.ParentForm,false,false,true,false,false,true);
             loadUserID();
@@ -152,7 +152,7 @@ namespace Kethmi_Holdings
 
                         //update user details
                         strsql = "UPDATE UserDetails SET username = '"+txtUserName.Text+"',password = '"+txtPW.Text+"',userType = '"+userType+ "',isActive = '" + chkActive.Checked + "'," +
-                            "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE projID = '" + userID + "'";
+                            "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE userID = '" + userID + "'";
                         db.insertUpdateDelete(strsql);
 
                         //Clear Data Fields
@@ -171,12 +171,32 @@ namespace Kethmi_Holdings
 
         private void frm_UserControl_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            btnStat.CloseToolStrip((frm_Main)this.MdiParent);
         }
 
         private void dataGridViewUsers_MouseClick(object sender, MouseEventArgs e)
         {
-            btnStat.ControlSideToolStrip(this.ParentForm, true, true, false, false, true, false);
+            db = new Database();
+
+            btnStat.ControlSideToolStrip(this.ParentForm, true, true, false, false, false, false);
+            userID = Convert.ToInt32(dataGridViewUsers.SelectedRows[0].Cells[0].Value);
+            txtUserID.Text = userID.ToString();
+            txtUserName.Text = dataGridViewUsers.SelectedRows[0].Cells[1].Value.ToString();
+            txtPW.Text = dataGridViewUsers.SelectedRows[0].Cells[2].Value.ToString();
+
+            strsql = "SELECT userType FROM userDetails WHERE userID = '"+ userID + "'";
+            userType = db.getValue(strsql);
+            if (userType == "Admin")
+                rbtAdmin.Checked = true;
+            else
+                rbtUser.Checked = true;
+
+            strsql = "SELECT isActive From userDetails WHERE userID = '" + userID + "'";
+            if (db.getValue(strsql) == "True")
+                chkActive.Checked = true;
+            else
+                chkActive.Checked = false;
+            Console.WriteLine(db.getValue(strsql));
         }
 
         private void enableEditing(bool value)

@@ -53,9 +53,10 @@
             this.dataGridViewUsers.AllowUserToResizeColumns = false;
             this.dataGridViewUsers.AllowUserToResizeRows = false;
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsers.ColumnHeadersVisible = false;
             this.dataGridViewUsers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridViewUsers.Location = new System.Drawing.Point(13, 23);
-            this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.ReadOnly = true;
             this.dataGridViewUsers.RowHeadersVisible = false;
@@ -109,7 +110,7 @@
             // 
             this.chkActive.AutoSize = true;
             this.chkActive.Location = new System.Drawing.Point(25, 177);
-            this.chkActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkActive.Margin = new System.Windows.Forms.Padding(4);
             this.chkActive.Name = "chkActive";
             this.chkActive.Size = new System.Drawing.Size(114, 21);
             this.chkActive.TabIndex = 6;
@@ -120,7 +121,7 @@
             // 
             this.rbtAdmin.AutoSize = true;
             this.rbtAdmin.Location = new System.Drawing.Point(155, 135);
-            this.rbtAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.rbtAdmin.Name = "rbtAdmin";
             this.rbtAdmin.Size = new System.Drawing.Size(68, 21);
             this.rbtAdmin.TabIndex = 7;
@@ -132,7 +133,7 @@
             // 
             this.rbtUser.AutoSize = true;
             this.rbtUser.Location = new System.Drawing.Point(235, 135);
-            this.rbtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtUser.Margin = new System.Windows.Forms.Padding(4);
             this.rbtUser.Name = "rbtUser";
             this.rbtUser.Size = new System.Drawing.Size(59, 21);
             this.rbtUser.TabIndex = 8;
@@ -143,7 +144,7 @@
             // txtPW
             // 
             this.txtPW.Location = new System.Drawing.Point(155, 97);
-            this.txtPW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPW.Margin = new System.Windows.Forms.Padding(4);
             this.txtPW.MaxLength = 45;
             this.txtPW.Name = "txtPW";
             this.txtPW.Size = new System.Drawing.Size(329, 22);
@@ -152,7 +153,7 @@
             // txtUserID
             // 
             this.txtUserID.Location = new System.Drawing.Point(155, 59);
-            this.txtUserID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserID.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserID.MaxLength = 45;
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(329, 22);
@@ -161,7 +162,7 @@
             // txtUserName
             // 
             this.txtUserName.Location = new System.Drawing.Point(155, 27);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.MaxLength = 45;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(329, 22);
@@ -180,9 +181,9 @@
             this.gb_inputArea.Controls.Add(this.rbtUser);
             this.gb_inputArea.Controls.Add(this.rbtAdmin);
             this.gb_inputArea.Location = new System.Drawing.Point(357, 15);
-            this.gb_inputArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gb_inputArea.Margin = new System.Windows.Forms.Padding(4);
             this.gb_inputArea.Name = "gb_inputArea";
-            this.gb_inputArea.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gb_inputArea.Padding = new System.Windows.Forms.Padding(4);
             this.gb_inputArea.Size = new System.Drawing.Size(517, 414);
             this.gb_inputArea.TabIndex = 13;
             this.gb_inputArea.TabStop = false;
@@ -192,9 +193,9 @@
             // 
             this.gb_currentUsers.Controls.Add(this.dataGridViewUsers);
             this.gb_currentUsers.Location = new System.Drawing.Point(16, 15);
-            this.gb_currentUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gb_currentUsers.Margin = new System.Windows.Forms.Padding(4);
             this.gb_currentUsers.Name = "gb_currentUsers";
-            this.gb_currentUsers.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gb_currentUsers.Padding = new System.Windows.Forms.Padding(4);
             this.gb_currentUsers.Size = new System.Drawing.Size(333, 414);
             this.gb_currentUsers.TabIndex = 14;
             this.gb_currentUsers.TabStop = false;
@@ -208,7 +209,7 @@
             this.Controls.Add(this.gb_currentUsers);
             this.Controls.Add(this.gb_inputArea);
             this.Location = new System.Drawing.Point(82, 0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_UserControl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "User Control";
