@@ -235,7 +235,6 @@ namespace Kethmi_Holdings
                     sqlTrans.Rollback();
                     MessageBox.Show(ex.Message.ToString());
                 }
-
             }
         }
 
