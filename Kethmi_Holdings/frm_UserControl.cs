@@ -45,8 +45,7 @@ namespace Kethmi_Holdings
         }
 
       
-        private void frm_UserControl_Load(object sender, EventArgs e)
-        {
+        private void frm_UserControl_Load(object sender, EventArgs e){
             btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
         }
 
@@ -73,18 +72,13 @@ namespace Kethmi_Holdings
             strsql = "";
         }
 
-        private void setEnabled(Boolean value)
-        {
-            txtPW.Enabled = value;
-            txtUserName.Enabled = value;
-            rbtAdmin.Enabled = value;
-            rbtUser.Enabled = value;
-            chkActive.Enabled = value;
-        }
+        
 
         private void clearData()
         {
             txtPW.Clear();
+            txtConfirm.Clear();
+            txtUserID.Clear();
             txtUserName.Clear();
             rbtAdmin.Checked = false;
             rbtUser.Checked = false;
@@ -93,7 +87,12 @@ namespace Kethmi_Holdings
 
         public void ButtonNew()
         {
-            mode = "New";
+            mode = Modes.NEW;
+            dataGridViewUsers.Enabled = false;
+            clearData();
+            chkActive.Checked = true;
+            rbtUser.Checked = true;
+            gb_inputArea.Visible = true;
             setEnabled(true);
             btnStat.ControlSideToolStrip(this.ParentForm,false,false,true,false,false,true);
             loadUserID();
@@ -102,70 +101,100 @@ namespace Kethmi_Holdings
         {
             if (MessageBox.Show("Are you sure want to cancel?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                clearData();
-                enableEditing(false);
                 dataGridViewUsers.Enabled = true;
+                clearData();
+                setEnabled(false);
                 btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
             }
         }
 
         public void ButtonEdit()
         {
-            mode = "Edit";
+            mode = Modes.EDIT;
+            dataGridViewUsers.Enabled = false;
             txtUserID.Enabled = false;
-            enableEditing(true);
+            txtConfirm.Clear();
+            txtPW.Clear();
+            setEnabled(true);
+            txtUserName.Enabled = false;
             btnStat.ControlSideToolStrip(this.ParentForm, false, false, true, false, false, true);        
+        }
+
+        private Boolean ValidateForm() {
+            if (!Validation.isStringWithoutNumbers(txtUserName.Text)) {
+                return false;
+            }
+            if (txtPW.Text != txtConfirm.Text) {
+                return false;
+            }
+            if (txtConfirm.Text == "" || txtPW.Text == "" || txtUserID.Text == "" || txtUserName.Text == "") {
+                return false;
+            }
+
+            return true;
         }
 
         public void ButtonSave()
         {
-            if (mode == Modes.NEW)
+            if (!ValidateForm())
             {
-                db = new Database();
-                if (rbtAdmin.Checked)
-                    userType = "Admin";
-                else
-                    userType = "User";
-
-                strsql = "INSERT INTO UserDetails (username, password, addedDate, " +
-                    "addedUser,usertype,isActive ) VALUES ('" + txtUserName.Text + "','" + txtPW.Text + "','" + DateTime.Now + "','" + strUsername + "','" + userType + "','" + chkActive.Checked + "')";
-                db.insertUpdateDelete(strsql);
-                clearData();
-                loadUserData();
+                MessageBox.Show("Something went wrong with the entered data! Please check and try again!");
             }
-            else if (mode == Modes.EDIT)
-            {
-                if (MessageBox.Show("Are you sure you want to Update data?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            else {
+                if (mode == Modes.NEW)
                 {
-                    try
+                    db = new Database();
+                    if (rbtAdmin.Checked)
+                        userType = "Admin";
+                    else
+                        userType = "User";
+
+                    strsql = "INSERT INTO UserDetails (username, password, addedDate, " +
+                        "addedUser,usertype,isActive ) VALUES ('" + txtUserName.Text + "','" + txtPW.Text + "','" + DateTime.Now + "','" + strUsername + "','" + userType + "','" + chkActive.Checked + "')";
+                    db.insertUpdateDelete(strsql);
+                    clearData();
+                    loadUserData();
+                    setEnabled(false);
+                    dataGridViewUsers.Enabled = true;
+                }
+                else if (mode == Modes.EDIT)
+                {
+                    if (MessageBox.Show("Are you sure you want to Update data?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        db = new Database();
+                        try
+                        {
+                            db = new Database();
 
-                        //get userID
-                        userID = Convert.ToInt32(dataGridViewUsers.SelectedRows[0].Cells[0].Value);
+                            //get userID
+                            userID = Convert.ToInt32(dataGridViewUsers.SelectedRows[0].Cells[0].Value);
 
-                        //set user type
-                        if (rbtAdmin.Checked)
-                            userType = "Admin";
-                        else
-                            userType = "User";
+                            //set user type
+                            if (rbtAdmin.Checked)
+                                userType = "Admin";
+                            else
+                                userType = "User";
 
-                        //update user details
-                        strsql = "UPDATE UserDetails SET username = '"+txtUserName.Text+"',password = '"+txtPW.Text+"',userType = '"+userType+ "',isActive = '" + chkActive.Checked + "'," +
-                            "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE userID = '" + userID + "'";
-                        db.insertUpdateDelete(strsql);
+                            //update user details
+                            strsql = "UPDATE UserDetails SET username = '" + txtUserName.Text + "',password = '" + txtPW.Text + "',userType = '" + userType + "',isActive = '" + chkActive.Checked + "'," +
+                                "changedDate='" + DateTime.Now + "',changedUser='" + strUsername + "' WHERE userID = '" + userID + "'";
+                            db.insertUpdateDelete(strsql);
 
-                        //Clear Data Fields
-                        clearData();
-                        loadUserData();
-                        btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
+                            //Clear Data Fields
+                            clearData();
+                            loadUserData();
+                            btnStat.ControlSideToolStrip(this.ParentForm, true, false, false, false, false, false);
 
-                    }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message.ToString());
+                        }
+
+                        setEnabled(false);
+                        dataGridViewUsers.Enabled = true;
                     }
                 }
+                
             }         
         }
 
@@ -178,11 +207,13 @@ namespace Kethmi_Holdings
         {
             db = new Database();
 
+            gb_inputArea.Visible = true;
+
             btnStat.ControlSideToolStrip(this.ParentForm, true, true, false, false, false, false);
             userID = Convert.ToInt32(dataGridViewUsers.SelectedRows[0].Cells[0].Value);
             txtUserID.Text = userID.ToString();
             txtUserName.Text = dataGridViewUsers.SelectedRows[0].Cells[1].Value.ToString();
-            txtPW.Text = dataGridViewUsers.SelectedRows[0].Cells[2].Value.ToString();
+            txtConfirm.Text = txtPW.Text = "******";
 
             strsql = "SELECT userType FROM userDetails WHERE userID = '"+ userID + "'";
             userType = db.getValue(strsql);
@@ -199,10 +230,21 @@ namespace Kethmi_Holdings
             Console.WriteLine(db.getValue(strsql));
         }
 
-        private void enableEditing(bool value)
+        /*private void enableEditing(bool value)
         {
             txtUserName.Enabled = value;
             txtPW.Enabled = value;
+            rbtAdmin.Enabled = value;
+            rbtUser.Enabled = value;
+            chkActive.Enabled = value;
+            txtConfirm.Enabled = value;
+        }*/
+
+        private void setEnabled(Boolean value)
+        {
+            txtPW.Enabled = value;
+            txtConfirm.Enabled = value;
+            txtUserName.Enabled = value;
             rbtAdmin.Enabled = value;
             rbtUser.Enabled = value;
             chkActive.Enabled = value;
