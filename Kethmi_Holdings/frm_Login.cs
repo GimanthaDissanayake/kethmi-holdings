@@ -38,10 +38,7 @@ namespace Kethmi_Holdings
         {
             strUsername = tb_username.Text;
             strPassword = tb_passsword.Text;
-            this.Hide();
-            frm_Main main = new frm_Main(strUsername);
-            main.Show();
-            /*  if (Validation.isValidUser(strUsername, strPassword))
+              if (Validation.isValidUser(strUsername, strPassword))
               {
                   this.Hide();
                   frm_Main main = new frm_Main(strUsername);
@@ -51,7 +48,7 @@ namespace Kethmi_Holdings
                   tb_passsword.Text = "";
                   tb_username.Text = "";
                   MessageBox.Show("Username or Password is invalid!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-              }*/
+              }
         }
     }
 }
