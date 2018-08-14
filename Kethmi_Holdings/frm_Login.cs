@@ -22,6 +22,7 @@ namespace Kethmi_Holdings
         private void frm_Login_Load(object sender, EventArgs e)
         {
             db = new Database();
+            tb_username.Focus();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

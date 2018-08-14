@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_UserControl));
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,51 +55,57 @@
             this.dataGridViewUsers.AllowUserToDeleteRows = false;
             this.dataGridViewUsers.AllowUserToResizeColumns = false;
             this.dataGridViewUsers.AllowUserToResizeRows = false;
+            this.dataGridViewUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(10, 19);
+            this.dataGridViewUsers.Location = new System.Drawing.Point(20, 37);
+            this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.ReadOnly = true;
             this.dataGridViewUsers.RowHeadersVisible = false;
             this.dataGridViewUsers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(299, 303);
+            this.dataGridViewUsers.Size = new System.Drawing.Size(598, 583);
             this.dataGridViewUsers.TabIndex = 0;
             this.dataGridViewUsers.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewUsers_MouseClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 49);
+            this.label2.Location = new System.Drawing.Point(30, 94);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(83, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "User ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 22);
+            this.label3.Location = new System.Drawing.Point(30, 42);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(119, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "User Name";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 78);
+            this.label4.Location = new System.Drawing.Point(30, 150);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.Size = new System.Drawing.Size(106, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "Password";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 129);
+            this.label5.Location = new System.Drawing.Point(30, 248);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.Size = new System.Drawing.Size(111, 25);
             this.label5.TabIndex = 5;
             this.label5.Text = "User Type";
             // 
@@ -107,9 +114,10 @@
             this.chkActive.AutoSize = true;
             this.chkActive.Checked = true;
             this.chkActive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkActive.Location = new System.Drawing.Point(18, 160);
+            this.chkActive.Location = new System.Drawing.Point(36, 308);
+            this.chkActive.Margin = new System.Windows.Forms.Padding(6);
             this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(90, 17);
+            this.chkActive.Size = new System.Drawing.Size(172, 29);
             this.chkActive.TabIndex = 6;
             this.chkActive.Text = "Activate User";
             this.chkActive.UseVisualStyleBackColor = true;
@@ -117,9 +125,10 @@
             // rbtAdmin
             // 
             this.rbtAdmin.AutoSize = true;
-            this.rbtAdmin.Location = new System.Drawing.Point(117, 127);
+            this.rbtAdmin.Location = new System.Drawing.Point(234, 244);
+            this.rbtAdmin.Margin = new System.Windows.Forms.Padding(6);
             this.rbtAdmin.Name = "rbtAdmin";
-            this.rbtAdmin.Size = new System.Drawing.Size(54, 17);
+            this.rbtAdmin.Size = new System.Drawing.Size(103, 29);
             this.rbtAdmin.TabIndex = 7;
             this.rbtAdmin.TabStop = true;
             this.rbtAdmin.Text = "Admin";
@@ -129,9 +138,10 @@
             // 
             this.rbtUser.AutoSize = true;
             this.rbtUser.Checked = true;
-            this.rbtUser.Location = new System.Drawing.Point(177, 127);
+            this.rbtUser.Location = new System.Drawing.Point(354, 244);
+            this.rbtUser.Margin = new System.Windows.Forms.Padding(6);
             this.rbtUser.Name = "rbtUser";
-            this.rbtUser.Size = new System.Drawing.Size(47, 17);
+            this.rbtUser.Size = new System.Drawing.Size(88, 29);
             this.rbtUser.TabIndex = 8;
             this.rbtUser.TabStop = true;
             this.rbtUser.Text = "User";
@@ -139,27 +149,30 @@
             // 
             // txtPW
             // 
-            this.txtPW.Location = new System.Drawing.Point(117, 76);
+            this.txtPW.Location = new System.Drawing.Point(234, 146);
+            this.txtPW.Margin = new System.Windows.Forms.Padding(6);
             this.txtPW.MaxLength = 45;
             this.txtPW.Name = "txtPW";
             this.txtPW.PasswordChar = '*';
-            this.txtPW.Size = new System.Drawing.Size(173, 20);
+            this.txtPW.Size = new System.Drawing.Size(342, 31);
             this.txtPW.TabIndex = 9;
             // 
             // txtUserID
             // 
-            this.txtUserID.Location = new System.Drawing.Point(117, 45);
+            this.txtUserID.Location = new System.Drawing.Point(234, 87);
+            this.txtUserID.Margin = new System.Windows.Forms.Padding(6);
             this.txtUserID.MaxLength = 45;
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(173, 20);
+            this.txtUserID.Size = new System.Drawing.Size(342, 31);
             this.txtUserID.TabIndex = 10;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(117, 19);
+            this.txtUserName.Location = new System.Drawing.Point(234, 37);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(6);
             this.txtUserName.MaxLength = 45;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(173, 20);
+            this.txtUserName.Size = new System.Drawing.Size(342, 31);
             this.txtUserName.TabIndex = 11;
             // 
             // gb_inputArea
@@ -176,9 +189,11 @@
             this.gb_inputArea.Controls.Add(this.chkActive);
             this.gb_inputArea.Controls.Add(this.rbtUser);
             this.gb_inputArea.Controls.Add(this.rbtAdmin);
-            this.gb_inputArea.Location = new System.Drawing.Point(333, 12);
+            this.gb_inputArea.Location = new System.Drawing.Point(666, 23);
+            this.gb_inputArea.Margin = new System.Windows.Forms.Padding(6);
             this.gb_inputArea.Name = "gb_inputArea";
-            this.gb_inputArea.Size = new System.Drawing.Size(323, 336);
+            this.gb_inputArea.Padding = new System.Windows.Forms.Padding(6);
+            this.gb_inputArea.Size = new System.Drawing.Size(646, 646);
             this.gb_inputArea.TabIndex = 13;
             this.gb_inputArea.TabStop = false;
             this.gb_inputArea.Text = "Input Area";
@@ -187,40 +202,46 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 105);
+            this.label1.Location = new System.Drawing.Point(30, 202);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(86, 25);
             this.label1.TabIndex = 12;
             this.label1.Text = "Confirm";
             // 
             // txtConfirm
             // 
             this.txtConfirm.Enabled = false;
-            this.txtConfirm.Location = new System.Drawing.Point(117, 102);
+            this.txtConfirm.Location = new System.Drawing.Point(234, 196);
+            this.txtConfirm.Margin = new System.Windows.Forms.Padding(6);
             this.txtConfirm.MaxLength = 45;
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.PasswordChar = '*';
-            this.txtConfirm.Size = new System.Drawing.Size(173, 20);
+            this.txtConfirm.Size = new System.Drawing.Size(342, 31);
             this.txtConfirm.TabIndex = 13;
             // 
             // gb_currentUsers
             // 
             this.gb_currentUsers.Controls.Add(this.dataGridViewUsers);
-            this.gb_currentUsers.Location = new System.Drawing.Point(12, 12);
+            this.gb_currentUsers.Location = new System.Drawing.Point(24, 23);
+            this.gb_currentUsers.Margin = new System.Windows.Forms.Padding(6);
             this.gb_currentUsers.Name = "gb_currentUsers";
-            this.gb_currentUsers.Size = new System.Drawing.Size(315, 336);
+            this.gb_currentUsers.Padding = new System.Windows.Forms.Padding(6);
+            this.gb_currentUsers.Size = new System.Drawing.Size(630, 646);
             this.gb_currentUsers.TabIndex = 14;
             this.gb_currentUsers.TabStop = false;
             this.gb_currentUsers.Text = "Current Users";
             // 
             // frm_UserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 354);
+            this.ClientSize = new System.Drawing.Size(1336, 681);
             this.Controls.Add(this.gb_currentUsers);
             this.Controls.Add(this.gb_inputArea);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(82, 0);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frm_UserControl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "User Control";
